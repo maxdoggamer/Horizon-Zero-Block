@@ -592,6 +592,39 @@
       "locked_code": false,
       "registry_name": "watcher_drop",
       "path": "~/Machines/Recon Class"
+    },
+    {
+      "name": "WatcherOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "watcher_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Recon Class"
     }
   ],
   "variable_elements": [],

@@ -33,6 +33,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.horizonzeroblock.procedures.WatcherOnEntityTickUpdateProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 @Mod.EventBusSubscriber
@@ -92,13 +93,17 @@ public class WatcherEntity extends Monster {
 			return false;
 		if (source == DamageSource.DROWN)
 			return false;
-		if (source == DamageSource.LIGHTNING_BOLT)
-			return false;
 		if (source == DamageSource.WITHER)
 			return false;
 		if (source.getMsgId().equals("witherSkull"))
 			return false;
 		return super.hurt(source, amount);
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		WatcherOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
