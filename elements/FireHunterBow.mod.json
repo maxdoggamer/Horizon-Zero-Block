@@ -1,0 +1,42 @@
+{
+  "_fv": 33,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "firehunterbow",
+    "customModelName": "Normal",
+    "name": "Hunter Bow (fire)",
+    "specialInfo": [
+      "Shoots fire arrows that burns on contact"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:RangedItems"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:FireArrow"
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 3.9999999999999996,
+    "bulletKnockback": 1,
+    "bulletParticles": false,
+    "bulletIgnitesFire": true,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelcustom_model",
+    "customBulletModelTexture": "texture.png",
+    "onBulletHitsEntity": {
+      "name": "FireHunterBowProjectileHitsLivingEntity"
+    }
+  }
+}

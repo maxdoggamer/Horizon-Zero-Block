@@ -1,0 +1,40 @@
+{
+  "_fv": 33,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "frostwarbow",
+    "customModelName": "Normal",
+    "name": "Frost War Bow",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:RangedItems"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "CUSTOM:FreezeArrow"
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 1.0,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelcustom_model",
+    "customBulletModelTexture": "texture.png",
+    "onBulletHitsEntity": {
+      "name": "FrostWarBowProjectileHitsLivingEntity"
+    }
+  }
+}

@@ -1,0 +1,719 @@
+{
+  "mod_elements": [
+    {
+      "name": "MedicinalBerriesPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_berries_player_finishes_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MedicinalBerries",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_berries"
+    },
+    {
+      "name": "MedicinalBrightOmen",
+      "type": "plant",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_bright_omen"
+    },
+    {
+      "name": "MedicinalFreshSalvebrush",
+      "type": "plant",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_fresh_salvebrush"
+    },
+    {
+      "name": "MedicinalGreyOmen",
+      "type": "plant",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_grey_omen"
+    },
+    {
+      "name": "MedicinalHintergold",
+      "type": "plant",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_hintergold"
+    },
+    {
+      "name": "MedicinalOchrebloom",
+      "type": "plant",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_ochrebloom"
+    },
+    {
+      "name": "MedicinalSalvebrush",
+      "type": "plant",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_salvebrush"
+    },
+    {
+      "name": "MedicinalSkybrush",
+      "type": "plant",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_skybrush"
+    },
+    {
+      "name": "MedicinalThawOmen",
+      "type": "plant",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_thaw_omen"
+    },
+    {
+      "name": "MedicinalValeysBrush",
+      "type": "plant",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_valeys_brush"
+    },
+    {
+      "name": "MedicinalWaterweed",
+      "type": "plant",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_waterweed"
+    },
+    {
+      "name": "MedicinalWildEmber",
+      "type": "plant",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "medicinal_wild_ember"
+    },
+    {
+      "name": "HorizonPainting",
+      "type": "painting",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horizon_painting"
+    },
+    {
+      "name": "RangedItems",
+      "type": "tab",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ranged_items"
+    },
+    {
+      "name": "FireArrow",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow",
+      "path": "~/Fire Bow"
+    },
+    {
+      "name": "FireHunterBowProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_hunter_bow_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Fire Bow"
+    },
+    {
+      "name": "FireHunterBow",
+      "type": "rangeditem",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_hunter_bow",
+      "path": "~/Fire Bow"
+    },
+    {
+      "name": "RidgeWood",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ridge_wood"
+    },
+    {
+      "name": "RidgeWoodBrush",
+      "type": "plant",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ridge_wood_brush"
+    },
+    {
+      "name": "RidgeWoodRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ridge_wood_rightclicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MetalShards",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_shards"
+    },
+    {
+      "name": "Blaze",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blaze"
+    },
+    {
+      "name": "Wire",
+      "type": "item",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wire"
+    },
+    {
+      "name": "Chillwater",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chillwater"
+    },
+    {
+      "name": "Sparker",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sparker"
+    },
+    {
+      "name": "Metalburn",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metalburn"
+    },
+    {
+      "name": "EchoShell",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "echo_shell"
+    },
+    {
+      "name": "AmmoMakingBag",
+      "type": "gui",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ammo_making_bag"
+    },
+    {
+      "name": "AmmoCraftingOnKeyPressed",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ammo_crafting_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AmmoCrafting",
+      "type": "keybind",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ammo_crafting"
+    },
+    {
+      "name": "AmmoMakingBagOpenOnKeyPressed",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ammo_making_bag_open_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AmmoMakingBagOpen",
+      "type": "keybind",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ammo_making_bag_open"
+    },
+    {
+      "name": "PrecisionArrow",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "precision_arrow",
+      "path": "~/Precise Bow"
+    },
+    {
+      "name": "PrecisionBow",
+      "type": "rangeditem",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "precision_bow",
+      "path": "~/Precise Bow"
+    },
+    {
+      "name": "HardpointArrow",
+      "type": "item",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hardpoint_arrow",
+      "path": "~/Hardpoint Bow"
+    },
+    {
+      "name": "HardBow",
+      "type": "rangeditem",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hard_bow",
+      "path": "~/Hardpoint Bow"
+    },
+    {
+      "name": "Freeze",
+      "type": "potioneffect",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze"
+    },
+    {
+      "name": "FreezeDamage",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreezeActiveTickCondition",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze_active_tick_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreezeArrow",
+      "type": "item",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeze_arrow",
+      "path": "~/Frost Bow"
+    },
+    {
+      "name": "FrostWarBow",
+      "type": "rangeditem",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_war_bow",
+      "path": "~/Frost Bow"
+    },
+    {
+      "name": "FrostWarBowProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost_war_bow_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Frost Bow"
+    },
+    {
+      "name": "ShockArrow",
+      "type": "item",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shock_arrow",
+      "path": "~/Thundering Bow"
+    },
+    {
+      "name": "ThunderWarBowProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_war_bow_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Thundering Bow"
+    },
+    {
+      "name": "ThunderWarBow",
+      "type": "rangeditem",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_war_bow",
+      "path": "~/Thundering Bow"
+    },
+    {
+      "name": "HunterArrow",
+      "type": "item",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunter_arrow",
+      "path": "~/Hunter Bow"
+    },
+    {
+      "name": "HunterBow",
+      "type": "rangeditem",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunter_bow",
+      "path": "~/Hunter Bow"
+    },
+    {
+      "name": "TearblastArrow",
+      "type": "item",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tearblast_arrow",
+      "path": "~/Tearblast Bow"
+    },
+    {
+      "name": "TearBow",
+      "type": "rangeditem",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tear_bow",
+      "path": "~/Tearblast Bow"
+    },
+    {
+      "name": "TearBowProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tear_bow_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Tearblast Bow"
+    },
+    {
+      "name": "Machines",
+      "type": "tab",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machines",
+      "path": "~/Machines"
+    },
+    {
+      "name": "Watcher",
+      "type": "livingentity",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "watcher",
+      "path": "~/Machines/Recon Class"
+    },
+    {
+      "name": "WatcherDrop",
+      "type": "loottable",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "watcher_drop",
+      "path": "~/Machines/Recon Class"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
+      "item.horizon_zero_block.echo_shell": "Echo Shell",
+      "item.horizon_zero_block.precision_arrow": "Precision Arrow",
+      "entity.horizon_zero_block.watcher": "Watcher",
+      "item.horizon_zero_block.fire_hunter_bow": "Hunter Bow (fire)",
+      "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
+      "item.horizon_zero_block.metal_shards": "Metal Shards",
+      "itemGroup.tabmachines": "Machines",
+      "item.horizon_zero_block.chillwater": "Chillwater",
+      "key.horizon_zero_block.ammo_making_bag_open": "Ammo Making Bag Open",
+      "item.horizon_zero_block.medicinal_berries": "Medicinal Berries",
+      "item.horizon_zero_block.freeze_arrow": "Freeze Arrow",
+      "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
+      "item.horizon_zero_block.sparker": "Sparker",
+      "key.horizon_zero_block.ammo_crafting": "Ammo Crafting",
+      "item.horizon_zero_block.shock_arrow": "Shock Arrow",
+      "block.horizon_zero_block.medicinal_fresh_salvebrush": "Medicinal Fresh Salvebrush",
+      "item.horizon_zero_block.tear_bow": "Tear Bow",
+      "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
+      "block.horizon_zero_block.medicinal_hintergold": "Medicinal Hintergold",
+      "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
+      "item.horizon_zero_block.hunter_bow": "Hunter Bow",
+      "effect.horizon_zero_block.freeze": "Freeze",
+      "item.horizon_zero_block.ridge_wood": "Ridge Wood",
+      "item.horizon_zero_block.frost_war_bow": "Frost War Bow",
+      "block.horizon_zero_block.medicinal_thaw_omen": "Medicinal Thaw Omen",
+      "block.horizon_zero_block.medicinal_salvebrush": "Medicinal Salvebrush",
+      "item.horizon_zero_block.metalburn": "Metalburn",
+      "itemGroup.tabranged_items": "Ranged Items",
+      "item.horizon_zero_block.blaze": "Blaze",
+      "item.horizon_zero_block.watcher_spawn_egg": "Watcher Spawn Egg",
+      "block.horizon_zero_block.medicinal_skybrush": "Medicinal Skybrush",
+      "item.horizon_zero_block.wire": "Wire",
+      "item.horizon_zero_block.hunter_arrow": "Hunter Arrow",
+      "item.horizon_zero_block.tearblast_arrow": "Tearblast Arrow",
+      "block.horizon_zero_block.medicinal_waterweed": "Medicinal Waterweed",
+      "item.horizon_zero_block.precision_bow": "Precision Bow",
+      "item.horizon_zero_block.hardpoint_arrow": "Hardpoint Arrow",
+      "item.horizon_zero_block.fire_arrow": "Fire Arrow",
+      "block.horizon_zero_block.medicinal_ochrebloom": "Medicinal Ochrebloom",
+      "item.horizon_zero_block.hard_bow": "Hard Bow",
+      "item.horizon_zero_block.thunder_war_bow": "Thunder War Bow"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Fire Bow",
+        "children": []
+      },
+      {
+        "name": "Precise Bow",
+        "children": []
+      },
+      {
+        "name": "Hardpoint Bow",
+        "children": []
+      },
+      {
+        "name": "Frost Bow",
+        "children": []
+      },
+      {
+        "name": "Thundering Bow",
+        "children": []
+      },
+      {
+        "name": "Hunter Bow",
+        "children": []
+      },
+      {
+        "name": "Tearblast Bow",
+        "children": []
+      },
+      {
+        "name": "Machines",
+        "children": [
+          {
+            "name": "Corrupted Machines",
+            "children": []
+          },
+          {
+            "name": "Chariot",
+            "children": []
+          },
+          {
+            "name": "Acquisition Class",
+            "children": []
+          },
+          {
+            "name": "Recon Class",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "horizon_zero_block",
+    "modName": "Horizon Zero Block",
+    "version": "1.0.0",
+    "author": "MaxDogGamer, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "f8ihubteujyoansp5ylp",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.horizonzeroblock",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200233511
+}

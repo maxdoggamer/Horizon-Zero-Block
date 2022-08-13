@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "horizon_zero_block:blocks/medicinalbrightomen",
+    "particle": "horizon_zero_block:blocks/medicinalbrightomen"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "B",
+    "keyBindingName": "Ammo Making Bag Open",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "AmmoMakingBagOpenOnKeyPressed"
+    }
+  }
+}

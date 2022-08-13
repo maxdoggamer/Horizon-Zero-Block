@@ -1,0 +1,11 @@
+{
+  "_fv": 33,
+  "_type": "tab",
+  "definition": {
+    "name": "Machines",
+    "icon": {
+      "value": "CUSTOM:Sparker"
+    },
+    "showSearch": true
+  }
+}
