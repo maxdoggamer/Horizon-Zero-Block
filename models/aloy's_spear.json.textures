@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "aloys_spear",
+        "missing": "aloys_spear"
+      },
+      "name": "default"
+    }
+  }
+}

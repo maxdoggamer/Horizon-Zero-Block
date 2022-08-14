@@ -18,6 +18,7 @@ import net.mcreator.horizonzeroblock.item.WireItem;
 import net.mcreator.horizonzeroblock.item.ThunderWarBowItem;
 import net.mcreator.horizonzeroblock.item.TearblastArrowItem;
 import net.mcreator.horizonzeroblock.item.TearBowItem;
+import net.mcreator.horizonzeroblock.item.SpearItem;
 import net.mcreator.horizonzeroblock.item.SparkerItem;
 import net.mcreator.horizonzeroblock.item.ShockArrowItem;
 import net.mcreator.horizonzeroblock.item.RidgeWoodItem;
@@ -90,6 +91,7 @@ public class HorizonZeroBlockModItems {
 	public static final RegistryObject<Item> WATCHER = REGISTRY.register("watcher_spawn_egg",
 			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.WATCHER, -16763905, -10066330,
 					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> SPEAR = REGISTRY.register("spear", () -> new SpearItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
