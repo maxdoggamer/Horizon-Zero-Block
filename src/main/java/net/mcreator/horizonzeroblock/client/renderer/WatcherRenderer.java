@@ -6,11 +6,11 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 import net.mcreator.horizonzeroblock.entity.WatcherEntity;
-import net.mcreator.horizonzeroblock.client.model.Modelcustom_model;
+import net.mcreator.horizonzeroblock.client.model.ModelWatcher;
 
-public class WatcherRenderer extends MobRenderer<WatcherEntity, Modelcustom_model<WatcherEntity>> {
+public class WatcherRenderer extends MobRenderer<WatcherEntity, ModelWatcher<WatcherEntity>> {
 	public WatcherRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelcustom_model(context.bakeLayer(Modelcustom_model.LAYER_LOCATION)), 0.5f);
+		super(context, new ModelWatcher(context.bakeLayer(ModelWatcher.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override

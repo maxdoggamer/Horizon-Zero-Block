@@ -2,11 +2,11 @@
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
-public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
+public class ModelWatcher<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("modid", "custom_model"), "main");
+			new ResourceLocation("modid", "watcher"), "main");
 	private final ModelPart Head;
 	private final ModelPart Neck;
 	private final ModelPart Body;
@@ -14,7 +14,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 	private final ModelPart Right_Leg;
 	private final ModelPart Tail;
 
-	public Modelcustom_model(ModelPart root) {
+	public ModelWatcher(ModelPart root) {
 		this.Head = root.getChild("Head");
 		this.Neck = root.getChild("Neck");
 		this.Body = root.getChild("Body");
@@ -102,5 +102,9 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
 			float headPitch) {
+		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
+		this.Head.xRot = headPitch / (180F / (float) Math.PI);
+		this.Right_Leg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.Left_Leg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 	}
 }

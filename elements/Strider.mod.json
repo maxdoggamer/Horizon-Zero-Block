@@ -2,22 +2,22 @@
   "_fv": 33,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Watcher",
+    "mobName": "Strider",
     "mobLabel": "",
-    "mobModelName": "ModelWatcher",
-    "mobModelTexture": "watcher.png",
+    "mobModelName": "ModelStrider",
+    "mobModelTexture": "strider.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelHeight": 1.7,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16763905,
+      "value": -13369345,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -10066330,
+      "value": -13369600,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -46,14 +46,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
-    "attackKnockback": 0.0,
-    "knockbackResistance": 0.0,
-    "movementSpeed": 0.35,
-    "armorBaseValue": 1.5,
+    "attackStrength": 5,
+    "attackKnockback": 0.5,
+    "knockbackResistance": 0.4,
+    "movementSpeed": 0.5,
+    "armorBaseValue": 0.5,
     "trackingRange": 64,
-    "followRange": 10,
-    "health": 20,
+    "followRange": 11,
+    "health": 30,
     "xpAmount": 5,
     "waterMob": false,
     "flyingMob": false,
@@ -99,12 +99,12 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "onMobTickUpdate": {
-      "name": "WatcherOnEntityTickUpdate"
+    "onRightClickedOn": {
+      "name": "StriderRightClickedOnEntity"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"59\" y=\"39\"><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1.5</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"break_blocks\"><field name=\"speed\">1</field><field name=\"y_max\">3</field><field name=\"condition\">null,null</field><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">Blocks.TALLGRASS#1</field></block></value><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -117,7 +117,7 @@
     "doesDespawnWhenIdle": true,
     "spawningProbability": 150,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 3,
+    "minNumberOfMobsPerGroup": 2,
     "maxNumberOfMobsPerGroup": 6,
     "restrictionBiomes": [],
     "spawnInDungeons": false

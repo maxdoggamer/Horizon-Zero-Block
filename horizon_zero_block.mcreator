@@ -634,16 +634,113 @@
       "locked_code": false,
       "registry_name": "spear",
       "path": "~/Spear"
+    },
+    {
+      "name": "Strider",
+      "type": "livingentity",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strider",
+      "path": "~/Machines/Acquisition Class/Strider"
+    },
+    {
+      "name": "StriderTamed",
+      "type": "livingentity",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strider_tamed",
+      "path": "~/Machines/Acquisition Class/Strider"
+    },
+    {
+      "name": "StriderTamedOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strider_tamed_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Strider"
+    },
+    {
+      "name": "StriderRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strider_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Strider"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "PSI_overrides",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.horizon_zero_block.strider_spawn_egg": "Strider Spawn Egg",
       "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
       "item.horizon_zero_block.echo_shell": "Echo Shell",
       "item.horizon_zero_block.precision_arrow": "Precision Arrow",
       "entity.horizon_zero_block.watcher": "Watcher",
+      "entity.horizon_zero_block.strider_tamed": "Strider",
       "item.horizon_zero_block.fire_hunter_bow": "Hunter Bow (fire)",
       "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
       "item.horizon_zero_block.metal_shards": "Metal Shards",
@@ -658,6 +755,7 @@
       "item.horizon_zero_block.shock_arrow": "Shock Arrow",
       "block.horizon_zero_block.medicinal_fresh_salvebrush": "Medicinal Fresh Salvebrush",
       "item.horizon_zero_block.tear_bow": "Tear Bow",
+      "entity.horizon_zero_block.strider": "Strider",
       "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
       "block.horizon_zero_block.medicinal_hintergold": "Medicinal Hintergold",
       "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
@@ -670,6 +768,7 @@
       "item.horizon_zero_block.metalburn": "Metalburn",
       "itemGroup.tabranged_items": "Ranged Items",
       "item.horizon_zero_block.blaze": "Blaze",
+      "item.horizon_zero_block.strider_tamed_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.watcher_spawn_egg": "Watcher Spawn Egg",
       "block.horizon_zero_block.medicinal_skybrush": "Medicinal Skybrush",
       "item.horizon_zero_block.wire": "Wire",
@@ -729,7 +828,12 @@
           },
           {
             "name": "Acquisition Class",
-            "children": []
+            "children": [
+              {
+                "name": "Strider",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Recon Class",

@@ -19,6 +19,8 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.horizonzeroblock.entity.WatcherEntity;
 import net.mcreator.horizonzeroblock.entity.ThunderWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.TearBowEntity;
+import net.mcreator.horizonzeroblock.entity.StriderTamedEntity;
+import net.mcreator.horizonzeroblock.entity.StriderEntity;
 import net.mcreator.horizonzeroblock.entity.PrecisionBowEntity;
 import net.mcreator.horizonzeroblock.entity.HunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.HardBowEntity;
@@ -55,6 +57,16 @@ public class HorizonZeroBlockModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(WatcherEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StriderEntity>> STRIDER = register("strider",
+			EntityType.Builder.<StriderEntity>of(StriderEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(StriderEntity::new)
+
+					.sized(0.6f, 1.7f));
+	public static final RegistryObject<EntityType<StriderTamedEntity>> STRIDER_TAMED = register("strider_tamed",
+			EntityType.Builder.<StriderTamedEntity>of(StriderTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StriderTamedEntity::new)
+
+					.sized(0.6f, 1.7f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -64,11 +76,15 @@ public class HorizonZeroBlockModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			WatcherEntity.init();
+			StriderEntity.init();
+			StriderTamedEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(WATCHER.get(), WatcherEntity.createAttributes().build());
+		event.put(STRIDER.get(), StriderEntity.createAttributes().build());
+		event.put(STRIDER_TAMED.get(), StriderTamedEntity.createAttributes().build());
 	}
 }

@@ -92,6 +92,9 @@ public class HorizonZeroBlockModItems {
 			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.WATCHER, -16763905, -10066330,
 					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
 	public static final RegistryObject<Item> SPEAR = REGISTRY.register("spear", () -> new SpearItem());
+	public static final RegistryObject<Item> STRIDER = REGISTRY.register("strider_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.STRIDER, -13369345, -13369600,
+					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -9,15 +9,19 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RemoveBlockGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
+import net.minecraft.world.entity.ai.goal.PanicGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FollowMobGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -26,28 +30,32 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.horizonzeroblock.procedures.WatcherOnEntityTickUpdateProcedure;
+import net.mcreator.horizonzeroblock.procedures.StriderRightClickedOnEntityProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 @Mod.EventBusSubscriber
-public class WatcherEntity extends Monster {
+public class StriderEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.WATCHER.get(), 150, 3, 6));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.STRIDER.get(), 150, 2, 6));
 	}
 
-	public WatcherEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(HorizonZeroBlockModEntities.WATCHER.get(), world);
+	public StriderEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(HorizonZeroBlockModEntities.STRIDER.get(), world);
 	}
 
-	public WatcherEntity(EntityType<WatcherEntity> type, Level world) {
+	public StriderEntity(EntityType<StriderEntity> type, Level world) {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
@@ -61,13 +69,20 @@ public class WatcherEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.5));
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.goalSelector.addGoal(3, new FollowMobGoal(this, (float) 1, 10, 5));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, true) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+			}
+		});
+		this.goalSelector.addGoal(3, new PanicGoal(this, 1.2));
+		this.goalSelector.addGoal(4, new FollowMobGoal(this, (float) 1, 10, 5));
+		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1.5));
+		this.targetSelector.addGoal(6, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(7, new RemoveBlockGoal(Blocks.GRASS, this, 1, (int) 3));
+		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(9, new FloatGoal(this));
 	}
 
 	@Override
@@ -101,24 +116,35 @@ public class WatcherEntity extends Monster {
 	}
 
 	@Override
-	public void baseTick() {
-		super.baseTick();
-		WatcherOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
+		ItemStack itemstack = sourceentity.getItemInHand(hand);
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
+		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		StriderRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
+		return retval;
 	}
 
 	public static void init() {
-		SpawnPlacements.register(HorizonZeroBlockModEntities.WATCHER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(HorizonZeroBlockModEntities.STRIDER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.35);
-		builder = builder.add(Attributes.MAX_HEALTH, 20);
-		builder = builder.add(Attributes.ARMOR, 1.5);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 10);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
+		builder = builder.add(Attributes.MAX_HEALTH, 30);
+		builder = builder.add(Attributes.ARMOR, 0.5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 11);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.4);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.5);
 		return builder;
 	}
 }

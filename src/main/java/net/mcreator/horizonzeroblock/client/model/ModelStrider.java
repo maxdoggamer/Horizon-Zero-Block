@@ -19,10 +19,10 @@ import com.mojang.blaze3d.vertex.PoseStack;
 // Made with Blockbench 4.3.1
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
+public class ModelStrider<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("horizon_zero_block", "modelcustom_model"),
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("horizon_zero_block", "model_strider"),
 			"main");
 	public final ModelPart LeftLeg2;
 	public final ModelPart RightLeg2;
@@ -31,8 +31,9 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 	public final ModelPart Body;
 	public final ModelPart Neck;
 	public final ModelPart Head;
+	public final ModelPart bb_main;
 
-	public Modelcustom_model(ModelPart root) {
+	public ModelStrider(ModelPart root) {
 		this.LeftLeg2 = root.getChild("LeftLeg2");
 		this.RightLeg2 = root.getChild("RightLeg2");
 		this.LeftLeg = root.getChild("LeftLeg");
@@ -40,6 +41,7 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 		this.Body = root.getChild("Body");
 		this.Neck = root.getChild("Neck");
 		this.Head = root.getChild("Head");
+		this.bb_main = root.getChild("bb_main");
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -96,6 +98,9 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 						.addBox(-3.0F, -4.0F, -6.0F, 6.0F, 16.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 33).addBox(-3.0F, -4.0F, -4.0F, 6.0F,
 								12.0F, 7.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, -21.0F, -23.0F, -0.5236F, 0.0F, 0.0F));
+		PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main",
+				CubeListBuilder.create().texOffs(92, 0).addBox(-4.0F, -22.0F, -9.0F, 8.0F, 1.0F, 10.0F, new CubeDeformation(0.0F)),
+				PartPose.offset(0.0F, 24.0F, 0.0F));
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
 
@@ -109,13 +114,14 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 		Body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Neck.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		this.LeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.LeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.Head.xRot = headPitch / (180F / (float) Math.PI);
-		this.RightLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.RightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.RightLeg2.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.LeftLeg2.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 	}
