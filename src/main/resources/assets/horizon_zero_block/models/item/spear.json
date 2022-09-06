@@ -1,8 +1,7 @@
 {
   "parent": "horizon_zero_block:custom/aloy's_spear",
   "textures": {
-    "0": "horizon_zero_block:blocks/aloys_spear",
-    "missing": "horizon_zero_block:blocks/aloys_spear",
-    "particle": "horizon_zero_block:items/aloys_spear"
+    "0": "horizon_zero_block:blocks/aloy_spear",
+    "particle": "horizon_zero_block:items/aloy_spear"
   }
 }
