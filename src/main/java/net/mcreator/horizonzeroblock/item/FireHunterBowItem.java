@@ -68,7 +68,7 @@ public class FireHunterBowItem extends Item {
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					FireHunterBowEntity entityarrow = FireHunterBowEntity.shoot(world, entity, world.getRandom(), 1f, 3.9999999999999996, 1);
+					FireHunterBowEntity entityarrow = FireHunterBowEntity.shoot(world, entity, world.getRandom(), 1f, 5, 1);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;

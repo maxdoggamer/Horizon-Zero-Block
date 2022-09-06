@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class HunterBowRenderer extends EntityRenderer<HunterBowEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("horizon_zero_block:textures/entities/texture.png");
+	private static final ResourceLocation texture = new ResourceLocation("horizon_zero_block:textures/entities/arrow.png");
 	private final Modelcustom_model model;
 
 	public HunterBowRenderer(EntityRendererProvider.Context context) {

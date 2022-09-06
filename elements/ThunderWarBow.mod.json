@@ -5,8 +5,10 @@
     "renderType": 0,
     "texture": "thunderwarbow",
     "customModelName": "Normal",
-    "name": "Thunder War Bow",
-    "specialInfo": [],
+    "name": "War Bow (Shock)",
+    "specialInfo": [
+      "Has power cells atached to the arrow's head to paralise enemies"
+    ],
     "creativeTab": {
       "value": "CUSTOM:RangedItems"
     },
@@ -24,15 +26,15 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 1.0,
-    "bulletDamage": 1.0,
+    "bulletDamage": 4.0,
     "bulletKnockback": 0,
-    "bulletParticles": false,
+    "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "texture.png",
+    "customBulletModelTexture": "arrow.png",
     "onBulletHitsEntity": {
       "name": "ThunderWarBowProjectileHitsLivingEntity"
     }

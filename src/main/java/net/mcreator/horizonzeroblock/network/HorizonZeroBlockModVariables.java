@@ -15,6 +15,7 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -73,6 +74,22 @@ public class HorizonZeroBlockModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
 			clone.PSI_overrides = original.PSI_overrides;
+			clone.R1 = original.R1;
+			clone.R2 = original.R2;
+			clone.R3 = original.R3;
+			clone.R4 = original.R4;
+			clone.R5 = original.R5;
+			clone.R6 = original.R6;
+			clone.R7 = original.R7;
+			clone.R8 = original.R8;
+			clone.N1 = original.N1;
+			clone.N2 = original.N2;
+			clone.N3 = original.N3;
+			clone.N4 = original.N4;
+			clone.N5 = original.N5;
+			clone.N6 = original.N6;
+			clone.N7 = original.N7;
+			clone.N8 = original.N8;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -110,6 +127,22 @@ public class HorizonZeroBlockModVariables {
 
 	public static class PlayerVariables {
 		public boolean PSI_overrides = false;
+		public ItemStack R1 = ItemStack.EMPTY;
+		public ItemStack R2 = ItemStack.EMPTY;
+		public ItemStack R3 = ItemStack.EMPTY;
+		public ItemStack R4 = ItemStack.EMPTY;
+		public ItemStack R5 = ItemStack.EMPTY;
+		public ItemStack R6 = ItemStack.EMPTY;
+		public ItemStack R7 = ItemStack.EMPTY;
+		public ItemStack R8 = ItemStack.EMPTY;
+		public double N1 = 0;
+		public double N2 = 0;
+		public double N3 = 0;
+		public double N4 = 0;
+		public double N5 = 0;
+		public double N6 = 0;
+		public double N7 = 0;
+		public double N8 = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -119,12 +152,44 @@ public class HorizonZeroBlockModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("PSI_overrides", PSI_overrides);
+			nbt.put("R1", R1.save(new CompoundTag()));
+			nbt.put("R2", R2.save(new CompoundTag()));
+			nbt.put("R3", R3.save(new CompoundTag()));
+			nbt.put("R4", R4.save(new CompoundTag()));
+			nbt.put("R5", R5.save(new CompoundTag()));
+			nbt.put("R6", R6.save(new CompoundTag()));
+			nbt.put("R7", R7.save(new CompoundTag()));
+			nbt.put("R8", R8.save(new CompoundTag()));
+			nbt.putDouble("N1", N1);
+			nbt.putDouble("N2", N2);
+			nbt.putDouble("N3", N3);
+			nbt.putDouble("N4", N4);
+			nbt.putDouble("N5", N5);
+			nbt.putDouble("N6", N6);
+			nbt.putDouble("N7", N7);
+			nbt.putDouble("N8", N8);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			PSI_overrides = nbt.getBoolean("PSI_overrides");
+			R1 = ItemStack.of(nbt.getCompound("R1"));
+			R2 = ItemStack.of(nbt.getCompound("R2"));
+			R3 = ItemStack.of(nbt.getCompound("R3"));
+			R4 = ItemStack.of(nbt.getCompound("R4"));
+			R5 = ItemStack.of(nbt.getCompound("R5"));
+			R6 = ItemStack.of(nbt.getCompound("R6"));
+			R7 = ItemStack.of(nbt.getCompound("R7"));
+			R8 = ItemStack.of(nbt.getCompound("R8"));
+			N1 = nbt.getDouble("N1");
+			N2 = nbt.getDouble("N2");
+			N3 = nbt.getDouble("N3");
+			N4 = nbt.getDouble("N4");
+			N5 = nbt.getDouble("N5");
+			N6 = nbt.getDouble("N6");
+			N7 = nbt.getDouble("N7");
+			N8 = nbt.getDouble("N8");
 		}
 	}
 
@@ -151,6 +216,22 @@ public class HorizonZeroBlockModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.PSI_overrides = message.data.PSI_overrides;
+					variables.R1 = message.data.R1;
+					variables.R2 = message.data.R2;
+					variables.R3 = message.data.R3;
+					variables.R4 = message.data.R4;
+					variables.R5 = message.data.R5;
+					variables.R6 = message.data.R6;
+					variables.R7 = message.data.R7;
+					variables.R8 = message.data.R8;
+					variables.N1 = message.data.N1;
+					variables.N2 = message.data.N2;
+					variables.N3 = message.data.N3;
+					variables.N4 = message.data.N4;
+					variables.N5 = message.data.N5;
+					variables.N6 = message.data.N6;
+					variables.N7 = message.data.N7;
+					variables.N8 = message.data.N8;
 				}
 			});
 			context.setPacketHandled(true);

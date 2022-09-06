@@ -11,6 +11,6 @@ public class FrostWarBowProjectileHitsLivingEntityProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(HorizonZeroBlockModMobEffects.FREEZE.get(), 200, 1, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(HorizonZeroBlockModMobEffects.FREEZE.get(), 400, 1, (false), (false)));
 	}
 }

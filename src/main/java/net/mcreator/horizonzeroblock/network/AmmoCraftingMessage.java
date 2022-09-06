@@ -52,7 +52,7 @@ public class AmmoCraftingMessage {
 			return;
 		if (type == 0) {
 
-			AmmoCraftingOnKeyPressedProcedure.execute(world, x, y, z, entity);
+			AmmoCraftingOnKeyPressedProcedure.execute(entity);
 		}
 	}
 

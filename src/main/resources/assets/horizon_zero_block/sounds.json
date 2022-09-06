@@ -1,0 +1,12 @@
+{
+  "soundblast": {
+    "category": "master",
+    "subtitle": "subtitles.soundblast",
+    "sounds": [
+      {
+        "name": "horizon_zero_block:impact-fx-distortion-2_c_major",
+        "stream": false
+      }
+    ]
+  }
+}

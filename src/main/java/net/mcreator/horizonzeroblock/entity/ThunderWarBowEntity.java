@@ -81,7 +81,7 @@ public class ThunderWarBowEntity extends AbstractArrow implements ItemSupplier {
 		ThunderWarBowEntity entityarrow = new ThunderWarBowEntity(HorizonZeroBlockModEntities.THUNDER_WAR_BOW.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setCritArrow(false);
+		entityarrow.setCritArrow(true);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
@@ -98,9 +98,9 @@ public class ThunderWarBowEntity extends AbstractArrow implements ItemSupplier {
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(1);
+		entityarrow.setBaseDamage(4);
 		entityarrow.setKnockback(0);
-		entityarrow.setCritArrow(false);
+		entityarrow.setCritArrow(true);
 		entity.level.addFreshEntity(entityarrow);
 		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
 				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,

@@ -10,6 +10,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.horizonzeroblock.world.inventory.AmmoMakingBagMenu;
+import net.mcreator.horizonzeroblock.network.HorizonZeroBlockModVariables;
 
 import java.util.HashMap;
 
@@ -29,8 +30,13 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 250;
+		this.imageHeight = 250;
+	}
+
+	@Override
+	public boolean isPauseScreen() {
+		return true;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("horizon_zero_block:textures/screens/ammo_making_bag.png");
@@ -49,6 +55,10 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("horizon_zero_block:textures/screens/selectwheel.png"));
+		this.blit(ms, this.leftPos + 52, this.topPos + 31, 0, 0, 128, 128, 128, 128);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -68,14 +78,31 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Ridge-Wood", 24, 7, -10079488);
-		this.font.draw(poseStack, "Metal-Shards", 24, 25, -16777216);
-		this.font.draw(poseStack, "Blaze", 24, 43, -256);
-		this.font.draw(poseStack, "Wire", 24, 61, -13421773);
-		this.font.draw(poseStack, "Chillwater", 114, 7, -16711681);
-		this.font.draw(poseStack, "Sparker", 114, 25, -16777012);
-		this.font.draw(poseStack, "MetalBurn", 114, 43, -65536);
-		this.font.draw(poseStack, "Echo-Shell", 114, 61, -39424);
+		this.font.draw(poseStack, "Ridge-Wood", 43, 22, -10079488);
+		this.font.draw(poseStack, "Metal-Shards", 142, 22, -16777216);
+		this.font.draw(poseStack, "Blaze", 178, 58, -256);
+		this.font.draw(poseStack, "Wire", 187, 103, -13421773);
+		this.font.draw(poseStack, "Chillwater", 151, 148, -16711681);
+		this.font.draw(poseStack, "Sparker", 43, 148, -16777012);
+		this.font.draw(poseStack, "MetalBurn", 7, 112, -65536);
+		this.font.draw(poseStack, "Echo-Shell", 7, 49, -39424);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N1) + "", 43, 31, -10079488);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N2) + "", 142, 31, -12829636);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N3) + "", 178, 67, -256);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N4) + "", 187, 112, -12829636);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N5) + "", 151, 157, -16711681);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N6) + "", 43, 157, -16776961);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N7) + "", 7, 121, -65536);
+		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N8) + "", 16, 58, -26368);
+		this.font.draw(poseStack, "RESOURCE BAG", 86, 5, -12829636);
 	}
 
 	@Override

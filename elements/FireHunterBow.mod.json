@@ -26,15 +26,15 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 1.0,
-    "bulletDamage": 3.9999999999999996,
+    "bulletDamage": 5.0,
     "bulletKnockback": 1,
-    "bulletParticles": false,
+    "bulletParticles": true,
     "bulletIgnitesFire": true,
     "bulletItemTexture": {
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "texture.png",
+    "customBulletModelTexture": "arrow.png",
     "onBulletHitsEntity": {
       "name": "FireHunterBowProjectileHitsLivingEntity"
     }

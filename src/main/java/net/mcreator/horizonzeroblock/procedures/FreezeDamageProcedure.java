@@ -31,7 +31,7 @@ public class FreezeDamageProcedure {
 			return;
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(HorizonZeroBlockModMobEffects.FREEZE.get()) : false) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.hurt(new DamageSource("Freeze").bypassArmor(), 3);
+				_entity.hurt(new DamageSource("Freeze").bypassArmor(), 6);
 		}
 	}
 }

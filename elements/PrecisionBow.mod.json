@@ -5,8 +5,10 @@
     "renderType": 0,
     "texture": "precisebow",
     "customModelName": "Normal",
-    "name": "Precision Bow",
-    "specialInfo": [],
+    "name": "Sharpshot Bow (precision)",
+    "specialInfo": [
+      "high accuracy and damage on impact"
+    ],
     "creativeTab": {
       "value": "CUSTOM:RangedItems"
     },
@@ -24,14 +26,14 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 10.0,
-    "bulletDamage": 3.5,
+    "bulletDamage": 10.0,
     "bulletKnockback": 1,
-    "bulletParticles": false,
+    "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "texture.png"
+    "customBulletModelTexture": "arrow.png"
   }
 }

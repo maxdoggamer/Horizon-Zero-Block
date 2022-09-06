@@ -81,7 +81,7 @@ public class FireHunterBowEntity extends AbstractArrow implements ItemSupplier {
 		FireHunterBowEntity entityarrow = new FireHunterBowEntity(HorizonZeroBlockModEntities.FIRE_HUNTER_BOW.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
-		entityarrow.setCritArrow(false);
+		entityarrow.setCritArrow(true);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		entityarrow.setSecondsOnFire(100);
@@ -99,9 +99,9 @@ public class FireHunterBowEntity extends AbstractArrow implements ItemSupplier {
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(3.9999999999999996);
+		entityarrow.setBaseDamage(5);
 		entityarrow.setKnockback(1);
-		entityarrow.setCritArrow(false);
+		entityarrow.setCritArrow(true);
 		entityarrow.setSecondsOnFire(100);
 		entity.level.addFreshEntity(entityarrow);
 		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),

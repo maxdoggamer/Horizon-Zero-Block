@@ -10,10 +10,10 @@ public class ThunderWarBowProjectileHitsLivingEntityProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 99999, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 5, (false), (false)));
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 200, 99999, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 200, 5, (false), (false)));
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 99999, (false), (false)));
+			_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 5, (false), (false)));
 	}
 }

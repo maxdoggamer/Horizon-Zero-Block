@@ -3,6 +3,7 @@ package net.mcreator.horizonzeroblock.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -13,10 +14,14 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModTabs;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
 import net.mcreator.horizonzeroblock.entity.FrostWarBowEntity;
+
+import java.util.List;
 
 public class FrostWarBowItem extends Item {
 	public FrostWarBowItem() {
@@ -27,6 +32,12 @@ public class FrostWarBowItem extends Item {
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		entity.startUsingItem(hand);
 		return new InteractionResultHolder(InteractionResult.SUCCESS, entity.getItemInHand(hand));
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(new TextComponent("shoots arrows filled with chillwater capable of freezing enemies"));
 	}
 
 	@Override
@@ -57,7 +68,7 @@ public class FrostWarBowItem extends Item {
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					FrostWarBowEntity entityarrow = FrostWarBowEntity.shoot(world, entity, world.getRandom(), 1f, 1, 0);
+					FrostWarBowEntity entityarrow = FrostWarBowEntity.shoot(world, entity, world.getRandom(), 1f, 4, 0);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;

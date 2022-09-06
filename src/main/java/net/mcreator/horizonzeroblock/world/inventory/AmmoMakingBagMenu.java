@@ -18,6 +18,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.horizonzeroblock.procedures.AmmoMakingBagThisGUIIsopenProcedure;
+import net.mcreator.horizonzeroblock.procedures.AmmoMakingBagThisGUIIsOpenedProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModMenus;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
 
@@ -76,49 +78,49 @@ public class AmmoMakingBagMenu extends AbstractContainerMenu implements Supplier
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 8) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 89, 41) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.RIDGE_WOOD.get() == stack.getItem());
 			}
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 7, 26) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 125, 41) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.METAL_SHARDS.get() == stack.getItem());
 			}
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 7, 44) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 152, 68) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.BLAZE.get() == stack.getItem());
 			}
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 7, 62) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 152, 104) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.WIRE.get() == stack.getItem());
 			}
 		}));
-		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 97, 8) {
+		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 125, 131) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.CHILLWATER.get() == stack.getItem());
 			}
 		}));
-		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 26) {
+		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 89, 131) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.SPARKER.get() == stack.getItem());
 			}
 		}));
-		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 97, 44) {
+		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 62, 104) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.METALBURN.get() == stack.getItem());
 			}
 		}));
-		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 97, 62) {
+		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 62, 68) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return (HorizonZeroBlockModItems.ECHO_SHELL.get() == stack.getItem());
@@ -126,9 +128,11 @@ public class AmmoMakingBagMenu extends AbstractContainerMenu implements Supplier
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 37 + 8 + sj * 18, 86 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+			this.addSlot(new Slot(inv, si, 37 + 8 + si * 18, 86 + 142));
+
+		AmmoMakingBagThisGUIIsopenProcedure.execute(entity);
 	}
 
 	@Override
@@ -252,6 +256,8 @@ public class AmmoMakingBagMenu extends AbstractContainerMenu implements Supplier
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+
+		AmmoMakingBagThisGUIIsOpenedProcedure.execute(entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {

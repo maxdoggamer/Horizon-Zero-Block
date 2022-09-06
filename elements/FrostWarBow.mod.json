@@ -5,8 +5,10 @@
     "renderType": 0,
     "texture": "frostwarbow",
     "customModelName": "Normal",
-    "name": "Frost War Bow",
-    "specialInfo": [],
+    "name": "War Bow (Freeze)",
+    "specialInfo": [
+      "shoots arrows filled with chillwater capable of freezing enemies"
+    ],
     "creativeTab": {
       "value": "CUSTOM:RangedItems"
     },
@@ -24,15 +26,15 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 1.0,
-    "bulletDamage": 1.0,
+    "bulletDamage": 4.0,
     "bulletKnockback": 0,
-    "bulletParticles": false,
+    "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "texture.png",
+    "customBulletModelTexture": "arrow.png",
     "onBulletHitsEntity": {
       "name": "FrostWarBowProjectileHitsLivingEntity"
     }

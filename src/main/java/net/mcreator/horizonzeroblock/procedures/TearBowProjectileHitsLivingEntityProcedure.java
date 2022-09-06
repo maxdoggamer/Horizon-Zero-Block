@@ -23,11 +23,11 @@ public class TearBowProjectileHitsLivingEntityProcedure {
 			return;
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")),
-						SoundSource.NEUTRAL, 1, 1);
+				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.hit")),
+						SoundSource.MASTER, 1, 1);
 			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")),
-						SoundSource.NEUTRAL, 1, 1, false);
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.hit")), SoundSource.MASTER, 1,
+						1, false);
 			}
 		}
 		new Object() {
@@ -54,13 +54,14 @@ public class TearBowProjectileHitsLivingEntityProcedure {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, new BlockPos(x, y, z),
-								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.break")), SoundSource.NEUTRAL, 1, 1);
+								ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("horizon_zero_block:soundblast")), SoundSource.MASTER, 5,
+								1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.break")),
-								SoundSource.NEUTRAL, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("horizon_zero_block:soundblast")),
+								SoundSource.MASTER, 5, 1, false);
 					}
 				}
-				if (Mth.nextDouble(new Random(), 1, 10) == 1) {
+				if (Mth.nextDouble(new Random(), 1, 10) > 5) {
 					if (world instanceof Level _level && !_level.isClientSide())
 						_level.explode(null, x, y, z, 4, Explosion.BlockInteraction.NONE);
 					if (entity instanceof LivingEntity _entity)

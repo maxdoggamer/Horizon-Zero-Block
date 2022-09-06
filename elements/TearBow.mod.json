@@ -5,8 +5,11 @@
     "renderType": 0,
     "texture": "tearbow",
     "customModelName": "Normal",
-    "name": "Tear Bow",
-    "specialInfo": [],
+    "name": "Sharpshot Bow (Tearblast)",
+    "specialInfo": [
+      "With echo-shells atached to the arrow's head",
+      "this powerful bow is capable of generating a compressed air blast at the target. NOTE:sometimes may fail"
+    ],
     "creativeTab": {
       "value": "CUSTOM:RangedItems"
     },
@@ -32,7 +35,7 @@
       "value": ""
     },
     "bulletModel": "Modelcustom_model",
-    "customBulletModelTexture": "texture.png",
+    "customBulletModelTexture": "arrow.png",
     "onBulletHitsEntity": {
       "name": "TearBowProjectileHitsLivingEntity"
     }

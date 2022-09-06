@@ -57,7 +57,7 @@ public class HunterBowItem extends Item {
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					HunterBowEntity entityarrow = HunterBowEntity.shoot(world, entity, world.getRandom(), 1f, 2.5, 1);
+					HunterBowEntity entityarrow = HunterBowEntity.shoot(world, entity, world.getRandom(), 1f, 4, 1);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
