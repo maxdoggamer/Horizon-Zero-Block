@@ -2,22 +2,22 @@
   "_fv": 33,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Watcher",
+    "mobName": "Stalker",
     "mobLabel": "",
-    "mobModelName": "ModelWatcher",
-    "mobModelTexture": "watcher.png",
+    "mobModelName": "ModelStalker",
+    "mobModelTexture": "stalker_tame.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
-      "value": -16763905,
+      "value": -6710887,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -10066330,
+      "value": -3355444,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -46,15 +46,15 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 5,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.35,
-    "armorBaseValue": 1.5,
-    "trackingRange": 64,
-    "followRange": 10,
-    "health": 20,
-    "xpAmount": 5,
+    "movementSpeed": 0.7999999999999999,
+    "armorBaseValue": 0.5,
+    "trackingRange": 100,
+    "followRange": 32,
+    "health": 40,
+    "xpAmount": 10,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -99,27 +99,46 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "onMobTickUpdate": {
-      "name": "WatcherOnEntityTickUpdate"
+    "onRightClickedOn": {
+      "name": "StalkerTamedRightClickedOnEntity"
+    },
+    "onInitialSpawn": {
+      "name": "StalkerTamedOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"59\" y=\"39\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"follow_entity\"><field name=\"speed\">1</field><field name=\"maxrange\">10</field><field name=\"followarea\">5</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
-    "ranged": false,
+    "ranged": true,
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "Default item",
+    "rangedItemType": "ThunderWarBow",
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 150,
+    "spawningProbability": 20,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 3,
-    "maxNumberOfMobsPerGroup": 6,
-    "restrictionBiomes": [],
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
+    "restrictionBiomes": [
+      {
+        "value": "forest"
+      },
+      {
+        "value": "roofed_forest"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "bamboo_jungle"
+      },
+      {
+        "value": "jungle"
+      }
+    ],
     "spawnInDungeons": false
   }
 }

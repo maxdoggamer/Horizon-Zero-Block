@@ -734,6 +734,148 @@
           }
         ]
       }
+    },
+    {
+      "name": "Stalker",
+      "type": "livingentity",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker",
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "StalkerOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "StalkerRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "StalkerTamed",
+      "type": "livingentity",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker_tamed",
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "StalkerTamedRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker_tamed_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "StalkerTamedOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker_tamed_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Combat Class/Stalker"
     }
   ],
   "variable_elements": [
@@ -838,6 +980,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "XI_overrides",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -852,6 +1000,8 @@
   ],
   "language_map": {
     "en_us": {
+      "entity.horizon_zero_block.stalker_tamed": "Stalker",
+      "entity.horizon_zero_block.stalker": "Stalker",
       "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
       "item.horizon_zero_block.precision_arrow": "Precision Arrow",
       "entity.horizon_zero_block.watcher": "Watcher",
@@ -861,20 +1011,22 @@
       "key.horizon_zero_block.ammo_making_bag_open": "Ammo Making Bag Open",
       "item.horizon_zero_block.medicinal_berries": "Medicinal Berries",
       "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
+      "item.horizon_zero_block.stalker_tamed_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.tear_bow": "Sharpshot Bow (Tearblast)",
-      "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
       "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
+      "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
       "effect.horizon_zero_block.freeze": "Freeze",
       "item.horizon_zero_block.ridge_wood": "Ridge Wood",
       "block.horizon_zero_block.medicinal_salvebrush": "Medicinal Salvebrush",
       "item.horizon_zero_block.metalburn": "Metalburn",
-      "item.horizon_zero_block.strider_tamed_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.blaze": "Blaze",
+      "item.horizon_zero_block.strider_tamed_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.watcher_spawn_egg": "Watcher Spawn Egg",
-      "item.horizon_zero_block.tearblast_arrow": "Tearblast Arrow",
       "item.horizon_zero_block.wire": "Wire",
-      "subtitles.soundblast": "tearblast arrow explosion sound",
+      "item.horizon_zero_block.tearblast_arrow": "Tearblast Arrow",
       "item.horizon_zero_block.spear": "Spear",
+      "subtitles.soundblast": "tearblast arrow explosion sound",
+      "item.horizon_zero_block.stalker_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.fire_arrow": "Fire Arrow",
       "block.horizon_zero_block.medicinal_ochrebloom": "Medicinal Ochrebloom",
       "item.horizon_zero_block.thunder_war_bow": "War Bow (Shock)",
@@ -956,6 +1108,15 @@
           {
             "name": "Recon Class",
             "children": []
+          },
+          {
+            "name": "Combat Class",
+            "children": [
+              {
+                "name": "Stalker",
+                "children": []
+              }
+            ]
           }
         ]
       },

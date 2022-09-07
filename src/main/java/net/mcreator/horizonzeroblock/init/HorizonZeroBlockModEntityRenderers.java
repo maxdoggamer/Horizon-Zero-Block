@@ -14,6 +14,8 @@ import net.mcreator.horizonzeroblock.client.renderer.ThunderWarBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.TearBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.StalkerTamedRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.StalkerRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.PrecisionBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HunterBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HardBowRenderer;
@@ -34,5 +36,7 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.WATCHER.get(), WatcherRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.STRIDER.get(), StriderRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.STRIDER_TAMED.get(), StriderTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.STALKER.get(), StalkerRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.STALKER_TAMED.get(), StalkerTamedRenderer::new);
 	}
 }

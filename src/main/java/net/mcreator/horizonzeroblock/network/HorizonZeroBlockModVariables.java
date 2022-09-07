@@ -90,6 +90,7 @@ public class HorizonZeroBlockModVariables {
 			clone.N6 = original.N6;
 			clone.N7 = original.N7;
 			clone.N8 = original.N8;
+			clone.XI_overrides = original.XI_overrides;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -143,6 +144,7 @@ public class HorizonZeroBlockModVariables {
 		public double N6 = 0;
 		public double N7 = 0;
 		public double N8 = 0;
+		public boolean XI_overrides = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -168,6 +170,7 @@ public class HorizonZeroBlockModVariables {
 			nbt.putDouble("N6", N6);
 			nbt.putDouble("N7", N7);
 			nbt.putDouble("N8", N8);
+			nbt.putBoolean("XI_overrides", XI_overrides);
 			return nbt;
 		}
 
@@ -190,6 +193,7 @@ public class HorizonZeroBlockModVariables {
 			N6 = nbt.getDouble("N6");
 			N7 = nbt.getDouble("N7");
 			N8 = nbt.getDouble("N8");
+			XI_overrides = nbt.getBoolean("XI_overrides");
 		}
 	}
 
@@ -232,6 +236,7 @@ public class HorizonZeroBlockModVariables {
 					variables.N6 = message.data.N6;
 					variables.N7 = message.data.N7;
 					variables.N8 = message.data.N8;
+					variables.XI_overrides = message.data.XI_overrides;
 				}
 			});
 			context.setPacketHandled(true);

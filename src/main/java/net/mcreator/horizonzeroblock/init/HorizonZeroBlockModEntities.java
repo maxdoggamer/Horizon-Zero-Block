@@ -21,6 +21,8 @@ import net.mcreator.horizonzeroblock.entity.ThunderWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.TearBowEntity;
 import net.mcreator.horizonzeroblock.entity.StriderTamedEntity;
 import net.mcreator.horizonzeroblock.entity.StriderEntity;
+import net.mcreator.horizonzeroblock.entity.StalkerTamedEntity;
+import net.mcreator.horizonzeroblock.entity.StalkerEntity;
 import net.mcreator.horizonzeroblock.entity.PrecisionBowEntity;
 import net.mcreator.horizonzeroblock.entity.HunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.HardBowEntity;
@@ -67,6 +69,16 @@ public class HorizonZeroBlockModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StriderTamedEntity::new)
 
 					.sized(0.6f, 1.7f));
+	public static final RegistryObject<EntityType<StalkerEntity>> STALKER = register("stalker",
+			EntityType.Builder.<StalkerEntity>of(StalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100)
+					.setUpdateInterval(3).setCustomClientFactory(StalkerEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StalkerTamedEntity>> STALKER_TAMED = register("stalker_tamed",
+			EntityType.Builder.<StalkerTamedEntity>of(StalkerTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(StalkerTamedEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -78,6 +90,8 @@ public class HorizonZeroBlockModEntities {
 			WatcherEntity.init();
 			StriderEntity.init();
 			StriderTamedEntity.init();
+			StalkerEntity.init();
+			StalkerTamedEntity.init();
 		});
 	}
 
@@ -86,5 +100,7 @@ public class HorizonZeroBlockModEntities {
 		event.put(WATCHER.get(), WatcherEntity.createAttributes().build());
 		event.put(STRIDER.get(), StriderEntity.createAttributes().build());
 		event.put(STRIDER_TAMED.get(), StriderTamedEntity.createAttributes().build());
+		event.put(STALKER.get(), StalkerEntity.createAttributes().build());
+		event.put(STALKER_TAMED.get(), StalkerTamedEntity.createAttributes().build());
 	}
 }

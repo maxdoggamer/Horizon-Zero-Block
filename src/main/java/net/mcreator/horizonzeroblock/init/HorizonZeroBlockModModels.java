@@ -12,12 +12,14 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.horizonzeroblock.client.model.Modelcustom_model;
 import net.mcreator.horizonzeroblock.client.model.ModelWatcher;
 import net.mcreator.horizonzeroblock.client.model.ModelStrider;
+import net.mcreator.horizonzeroblock.client.model.ModelStalker;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class HorizonZeroBlockModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(ModelWatcher.LAYER_LOCATION, ModelWatcher::createBodyLayer);
+		event.registerLayerDefinition(ModelStalker.LAYER_LOCATION, ModelStalker::createBodyLayer);
 		event.registerLayerDefinition(Modelcustom_model.LAYER_LOCATION, Modelcustom_model::createBodyLayer);
 		event.registerLayerDefinition(ModelStrider.LAYER_LOCATION, ModelStrider::createBodyLayer);
 	}
