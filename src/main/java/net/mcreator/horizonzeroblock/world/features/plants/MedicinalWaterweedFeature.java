@@ -48,7 +48,8 @@ public class MedicinalWaterweedFeature extends RandomPatchFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("warm_ocean"), new ResourceLocation("cold_ocean"),
+			new ResourceLocation("river"));
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public MedicinalWaterweedFeature() {

@@ -83,7 +83,17 @@
     "spawnWorldTypes": [
       "Surface"
     ],
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "cold_ocean"
+      },
+      {
+        "value": "river"
+      },
+      {
+        "value": "warm_ocean"
+      }
+    ],
     "patchSize": 64,
     "generateAtAnyHeight": false
   }

@@ -23,9 +23,9 @@ public class HorizonZeroBlockModTabs {
 
 			@OnlyIn(Dist.CLIENT)
 			public boolean hasSearchBar() {
-				return false;
+				return true;
 			}
-		};
+		}.setBackgroundSuffix("item_search.png");
 		TAB_MACHINES = new CreativeModeTab("tabmachines") {
 			@Override
 			public ItemStack makeIcon() {
