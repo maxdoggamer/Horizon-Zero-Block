@@ -876,6 +876,185 @@
         ]
       },
       "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "StalkerLoot",
+      "type": "loottable",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker_loot",
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "Snapmaw",
+      "type": "livingentity",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snapmaw",
+      "path": "~/Machines/Acquisition Class/Snapmaw"
+    },
+    {
+      "name": "SnapmawTamed",
+      "type": "livingentity",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snapmaw_tamed",
+      "path": "~/Machines/Acquisition Class/Snapmaw"
+    },
+    {
+      "name": "SnapmawRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snapmaw_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Snapmaw"
+    },
+    {
+      "name": "SnapmawTamedOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snapmaw_tamed_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Snapmaw"
+    },
+    {
+      "name": "SnapmawLoot",
+      "type": "loottable",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snapmaw_loot",
+      "path": "~/Machines/Acquisition Class/Snapmaw"
+    },
+    {
+      "name": "Tallneck",
+      "type": "livingentity",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tallneck",
+      "path": "~/Machines/Communication Class"
+    },
+    {
+      "name": "TallneckOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tallneck_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Communication Class"
+    },
+    {
+      "name": "TallneckEntityDies",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tallneck_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Communication Class"
+    },
+    {
+      "name": "TallneckNaturalEntitySpawningCondition",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tallneck_natural_entity_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Communication Class"
     }
   ],
   "variable_elements": [
@@ -986,6 +1165,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "RHO_overrides",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Tallneck",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -1002,6 +1193,7 @@
     "en_us": {
       "entity.horizon_zero_block.stalker_tamed": "Stalker",
       "entity.horizon_zero_block.stalker": "Stalker",
+      "item.horizon_zero_block.snapmaw_spawn_egg": "Snapmaw Spawn Egg",
       "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
       "item.horizon_zero_block.precision_arrow": "Precision Arrow",
       "entity.horizon_zero_block.watcher": "Watcher",
@@ -1009,21 +1201,23 @@
       "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
       "itemGroup.tabmachines": "Machines",
       "key.horizon_zero_block.ammo_making_bag_open": "Ammo Making Bag Open",
+      "entity.horizon_zero_block.snapmaw_tamed": "Snapmaw",
       "item.horizon_zero_block.medicinal_berries": "Medicinal Berries",
+      "entity.horizon_zero_block.snapmaw": "Snapmaw",
       "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
       "item.horizon_zero_block.stalker_tamed_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.tear_bow": "Sharpshot Bow (Tearblast)",
-      "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
       "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
+      "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
       "effect.horizon_zero_block.freeze": "Freeze",
       "item.horizon_zero_block.ridge_wood": "Ridge Wood",
       "block.horizon_zero_block.medicinal_salvebrush": "Medicinal Salvebrush",
       "item.horizon_zero_block.metalburn": "Metalburn",
-      "item.horizon_zero_block.blaze": "Blaze",
       "item.horizon_zero_block.strider_tamed_spawn_egg": "Strider Spawn Egg",
+      "item.horizon_zero_block.blaze": "Blaze",
       "item.horizon_zero_block.watcher_spawn_egg": "Watcher Spawn Egg",
-      "item.horizon_zero_block.wire": "Wire",
       "item.horizon_zero_block.tearblast_arrow": "Tearblast Arrow",
+      "item.horizon_zero_block.wire": "Wire",
       "item.horizon_zero_block.spear": "Spear",
       "subtitles.soundblast": "tearblast arrow explosion sound",
       "item.horizon_zero_block.stalker_spawn_egg": "Stalker Spawn Egg",
@@ -1038,6 +1232,7 @@
       "item.horizon_zero_block.freeze_arrow": "Freeze Arrow",
       "item.horizon_zero_block.sparker": "Sparker",
       "key.horizon_zero_block.ammo_crafting": "Ammo Crafting",
+      "entity.horizon_zero_block.tallneck": "Tallneck",
       "item.horizon_zero_block.shock_arrow": "Shock Arrow",
       "block.horizon_zero_block.medicinal_fresh_salvebrush": "Medicinal Fresh Salvebrush",
       "entity.horizon_zero_block.strider": "Strider",
@@ -1046,11 +1241,13 @@
       "item.horizon_zero_block.frost_war_bow": "War Bow (Freeze)",
       "block.horizon_zero_block.medicinal_thaw_omen": "Medicinal Thaw Omen",
       "itemGroup.tabranged_items": "Ranged Items",
+      "item.horizon_zero_block.snapmaw_tamed_spawn_egg": "Snapmaw Spawn Egg",
       "item.horizon_zero_block.hunter_arrow": "Hunter Arrow",
       "block.horizon_zero_block.medicinal_skybrush": "Medicinal Skybrush",
       "block.horizon_zero_block.medicinal_waterweed": "Medicinal Waterweed",
       "item.horizon_zero_block.precision_bow": "Sharpshot Bow (precision)",
       "item.horizon_zero_block.hardpoint_arrow": "Hardpoint Arrow",
+      "item.horizon_zero_block.tallneck_spawn_egg": "Tallneck Spawn Egg",
       "item.horizon_zero_block.hard_bow": "Shadow Hunter Bow (Hard)"
     }
   },
@@ -1102,6 +1299,10 @@
               {
                 "name": "Strider",
                 "children": []
+              },
+              {
+                "name": "Snapmaw",
+                "children": []
               }
             ]
           },
@@ -1117,11 +1318,19 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Communication Class",
+            "children": []
           }
         ]
       },
       {
         "name": "Spear",
+        "children": []
+      },
+      {
+        "name": "Armor",
         "children": []
       }
     ]

@@ -53,7 +53,7 @@ public class StalkerEntity extends Monster implements RangedAttackMob {
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.STALKER.get(), 20, 1, 1));
+					.add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.STALKER.get(), 50, 1, 1));
 	}
 
 	public StalkerEntity(PlayMessages.SpawnEntity packet, Level world) {

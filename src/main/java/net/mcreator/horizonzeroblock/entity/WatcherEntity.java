@@ -40,7 +40,7 @@ import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 public class WatcherEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.WATCHER.get(), 150, 3, 6));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.WATCHER.get(), 200, 3, 6));
 	}
 
 	public WatcherEntity(PlayMessages.SpawnEntity packet, Level world) {

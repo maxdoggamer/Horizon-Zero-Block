@@ -19,10 +19,13 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.horizonzeroblock.entity.WatcherEntity;
 import net.mcreator.horizonzeroblock.entity.ThunderWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.TearBowEntity;
+import net.mcreator.horizonzeroblock.entity.TallneckEntity;
 import net.mcreator.horizonzeroblock.entity.StriderTamedEntity;
 import net.mcreator.horizonzeroblock.entity.StriderEntity;
 import net.mcreator.horizonzeroblock.entity.StalkerTamedEntity;
 import net.mcreator.horizonzeroblock.entity.StalkerEntity;
+import net.mcreator.horizonzeroblock.entity.SnapmawTamedEntity;
+import net.mcreator.horizonzeroblock.entity.SnapmawEntity;
 import net.mcreator.horizonzeroblock.entity.PrecisionBowEntity;
 import net.mcreator.horizonzeroblock.entity.HunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.HardBowEntity;
@@ -79,6 +82,19 @@ public class HorizonZeroBlockModEntities {
 					.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(StalkerTamedEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SnapmawEntity>> SNAPMAW = register("snapmaw",
+			EntityType.Builder.<SnapmawEntity>of(SnapmawEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(SnapmawEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SnapmawTamedEntity>> SNAPMAW_TAMED = register("snapmaw_tamed",
+			EntityType.Builder.<SnapmawTamedEntity>of(SnapmawTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnapmawTamedEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TallneckEntity>> TALLNECK = register("tallneck",
+			EntityType.Builder.<TallneckEntity>of(TallneckEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -92,6 +108,9 @@ public class HorizonZeroBlockModEntities {
 			StriderTamedEntity.init();
 			StalkerEntity.init();
 			StalkerTamedEntity.init();
+			SnapmawEntity.init();
+			SnapmawTamedEntity.init();
+			TallneckEntity.init();
 		});
 	}
 
@@ -102,5 +121,8 @@ public class HorizonZeroBlockModEntities {
 		event.put(STRIDER_TAMED.get(), StriderTamedEntity.createAttributes().build());
 		event.put(STALKER.get(), StalkerEntity.createAttributes().build());
 		event.put(STALKER_TAMED.get(), StalkerTamedEntity.createAttributes().build());
+		event.put(SNAPMAW.get(), SnapmawEntity.createAttributes().build());
+		event.put(SNAPMAW_TAMED.get(), SnapmawTamedEntity.createAttributes().build());
+		event.put(TALLNECK.get(), TallneckEntity.createAttributes().build());
 	}
 }

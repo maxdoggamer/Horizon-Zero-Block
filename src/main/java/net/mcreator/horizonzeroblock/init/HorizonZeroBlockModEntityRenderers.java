@@ -12,10 +12,13 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.horizonzeroblock.client.renderer.WatcherRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.ThunderWarBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.TearBowRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.TallneckRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StalkerTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StalkerRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.SnapmawTamedRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.SnapmawRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.PrecisionBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HunterBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HardBowRenderer;
@@ -38,5 +41,8 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.STRIDER_TAMED.get(), StriderTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.STALKER.get(), StalkerRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.STALKER_TAMED.get(), StalkerTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW.get(), SnapmawRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW_TAMED.get(), SnapmawTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK.get(), TallneckRenderer::new);
 	}
 }

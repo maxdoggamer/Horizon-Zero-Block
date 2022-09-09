@@ -15,10 +15,15 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.level.saveddata.SavedData;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
@@ -34,6 +39,8 @@ import java.util.function.Supplier;
 public class HorizonZeroBlockModVariables {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
+		HorizonZeroBlockMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new,
+				SavedDataSyncMessage::handler);
 		HorizonZeroBlockMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new,
 				PlayerVariablesSyncMessage::handler);
 	}
@@ -91,8 +98,142 @@ public class HorizonZeroBlockModVariables {
 			clone.N7 = original.N7;
 			clone.N8 = original.N8;
 			clone.XI_overrides = original.XI_overrides;
+			clone.RHO_overrides = original.RHO_overrides;
 			if (!event.isWasDeath()) {
 			}
+		}
+
+		@SubscribeEvent
+		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+			if (!event.getPlayer().level.isClientSide()) {
+				SavedData mapdata = MapVariables.get(event.getPlayer().level);
+				SavedData worlddata = WorldVariables.get(event.getPlayer().level);
+				if (mapdata != null)
+					HorizonZeroBlockMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()),
+							new SavedDataSyncMessage(0, mapdata));
+				if (worlddata != null)
+					HorizonZeroBlockMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()),
+							new SavedDataSyncMessage(1, worlddata));
+			}
+		}
+
+		@SubscribeEvent
+		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
+			if (!event.getPlayer().level.isClientSide()) {
+				SavedData worlddata = WorldVariables.get(event.getPlayer().level);
+				if (worlddata != null)
+					HorizonZeroBlockMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()),
+							new SavedDataSyncMessage(1, worlddata));
+			}
+		}
+	}
+
+	public static class WorldVariables extends SavedData {
+		public static final String DATA_NAME = "horizon_zero_block_worldvars";
+		public boolean Tallneck = false;
+
+		public static WorldVariables load(CompoundTag tag) {
+			WorldVariables data = new WorldVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+			Tallneck = nbt.getBoolean("Tallneck");
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			nbt.putBoolean("Tallneck", Tallneck);
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level level && !level.isClientSide())
+				HorizonZeroBlockMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
+		}
+
+		static WorldVariables clientSide = new WorldVariables();
+
+		public static WorldVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevel level) {
+				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class MapVariables extends SavedData {
+		public static final String DATA_NAME = "horizon_zero_block_mapvars";
+
+		public static MapVariables load(CompoundTag tag) {
+			MapVariables data = new MapVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level && !world.isClientSide())
+				HorizonZeroBlockMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
+		}
+
+		static MapVariables clientSide = new MapVariables();
+
+		public static MapVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevelAccessor serverLevelAcc) {
+				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e),
+						MapVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class SavedDataSyncMessage {
+		public int type;
+		public SavedData data;
+
+		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
+			this.type = buffer.readInt();
+			this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
+			if (this.data instanceof MapVariables _mapvars)
+				_mapvars.read(buffer.readNbt());
+			else if (this.data instanceof WorldVariables _worldvars)
+				_worldvars.read(buffer.readNbt());
+		}
+
+		public SavedDataSyncMessage(int type, SavedData data) {
+			this.type = type;
+			this.data = data;
+		}
+
+		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
+			buffer.writeInt(message.type);
+			buffer.writeNbt(message.data.save(new CompoundTag()));
+		}
+
+		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+			NetworkEvent.Context context = contextSupplier.get();
+			context.enqueueWork(() -> {
+				if (!context.getDirection().getReceptionSide().isServer()) {
+					if (message.type == 0)
+						MapVariables.clientSide = (MapVariables) message.data;
+					else
+						WorldVariables.clientSide = (WorldVariables) message.data;
+				}
+			});
+			context.setPacketHandled(true);
 		}
 	}
 
@@ -145,6 +286,7 @@ public class HorizonZeroBlockModVariables {
 		public double N7 = 0;
 		public double N8 = 0;
 		public boolean XI_overrides = false;
+		public boolean RHO_overrides = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -171,6 +313,7 @@ public class HorizonZeroBlockModVariables {
 			nbt.putDouble("N7", N7);
 			nbt.putDouble("N8", N8);
 			nbt.putBoolean("XI_overrides", XI_overrides);
+			nbt.putBoolean("RHO_overrides", RHO_overrides);
 			return nbt;
 		}
 
@@ -194,6 +337,7 @@ public class HorizonZeroBlockModVariables {
 			N7 = nbt.getDouble("N7");
 			N8 = nbt.getDouble("N8");
 			XI_overrides = nbt.getBoolean("XI_overrides");
+			RHO_overrides = nbt.getBoolean("RHO_overrides");
 		}
 	}
 
@@ -237,6 +381,7 @@ public class HorizonZeroBlockModVariables {
 					variables.N7 = message.data.N7;
 					variables.N8 = message.data.N8;
 					variables.XI_overrides = message.data.XI_overrides;
+					variables.RHO_overrides = message.data.RHO_overrides;
 				}
 			});
 			context.setPacketHandled(true);

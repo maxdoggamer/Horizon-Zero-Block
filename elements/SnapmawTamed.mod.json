@@ -2,22 +2,22 @@
   "_fv": 33,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Stalker",
+    "mobName": "Snapmaw",
     "mobLabel": "",
-    "mobModelName": "ModelStalker",
-    "mobModelTexture": "stalker.png",
+    "mobModelName": "ModelSnapmaw",
+    "mobModelTexture": "snapmaw_tame.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
-      "value": -6710887,
+      "value": -39424,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -3355444,
+      "value": -16777012,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -46,16 +46,16 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 5,
+    "attackStrength": 4,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.7999999999999999,
-    "armorBaseValue": 0.5,
-    "trackingRange": 100,
-    "followRange": 32,
-    "health": 40,
-    "xpAmount": 10,
-    "waterMob": false,
+    "movementSpeed": 0.7,
+    "armorBaseValue": 0.2,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 30,
+    "xpAmount": 5,
+    "waterMob": true,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -99,44 +99,35 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "onRightClickedOn": {
-      "name": "StalkerRightClickedOnEntity"
-    },
-    "onMobTickUpdate": {
-      "name": "StalkerOnEntityTickUpdate"
+    "onInitialSpawn": {
+      "name": "SnapmawTamedOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1</field><field name=\"min_distance\">10</field><field name=\"max_distance\">2</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
-    "ranged": true,
+    "ranged": false,
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "ThunderWarBow",
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
-    "spawningProbability": 50,
+    "rangedItemType": "Default item",
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 200,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [
       {
-        "value": "forest"
+        "value": "river"
       },
       {
-        "value": "roofed_forest"
+        "value": "frozen_river"
       },
       {
-        "value": "birch_forest"
-      },
-      {
-        "value": "bamboo_jungle"
-      },
-      {
-        "value": "jungle"
+        "value": "beaches"
       }
     ],
     "spawnInDungeons": false
