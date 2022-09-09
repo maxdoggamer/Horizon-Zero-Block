@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.horizonzeroblock.entity.WatcherEntity;
 import net.mcreator.horizonzeroblock.entity.ThunderWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.TearBowEntity;
+import net.mcreator.horizonzeroblock.entity.TallneckTamedEntity;
 import net.mcreator.horizonzeroblock.entity.TallneckEntity;
 import net.mcreator.horizonzeroblock.entity.StriderTamedEntity;
 import net.mcreator.horizonzeroblock.entity.StriderEntity;
@@ -95,6 +96,9 @@ public class HorizonZeroBlockModEntities {
 	public static final RegistryObject<EntityType<TallneckEntity>> TALLNECK = register("tallneck",
 			EntityType.Builder.<TallneckEntity>of(TallneckEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TallneckTamedEntity>> TALLNECK_TAMED = register("tallneck_tamed",
+			EntityType.Builder.<TallneckTamedEntity>of(TallneckTamedEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckTamedEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -111,6 +115,7 @@ public class HorizonZeroBlockModEntities {
 			SnapmawEntity.init();
 			SnapmawTamedEntity.init();
 			TallneckEntity.init();
+			TallneckTamedEntity.init();
 		});
 	}
 
@@ -124,5 +129,6 @@ public class HorizonZeroBlockModEntities {
 		event.put(SNAPMAW.get(), SnapmawEntity.createAttributes().build());
 		event.put(SNAPMAW_TAMED.get(), SnapmawTamedEntity.createAttributes().build());
 		event.put(TALLNECK.get(), TallneckEntity.createAttributes().build());
+		event.put(TALLNECK_TAMED.get(), TallneckTamedEntity.createAttributes().build());
 	}
 }

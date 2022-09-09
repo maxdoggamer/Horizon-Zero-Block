@@ -1,0 +1,29 @@
+{
+  "_fv": 33,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Snapmaw"
+      },
+      {
+        "value": "CUSTOM:Stalker"
+      },
+      {
+        "value": "CUSTOM:Strider"
+      },
+      {
+        "value": "CUSTOM:Tallneck"
+      },
+      {
+        "value": "CUSTOM:Watcher"
+      }
+    ],
+    "name": "machines_group",
+    "namespace": "forge"
+  }
+}

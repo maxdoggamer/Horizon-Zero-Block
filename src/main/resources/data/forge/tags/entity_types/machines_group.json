@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "horizon_zero_block:strider",
+    "horizon_zero_block:watcher",
+    "horizon_zero_block:tallneck",
+    "horizon_zero_block:stalker",
+    "horizon_zero_block:snapmaw"
+  ]
+}

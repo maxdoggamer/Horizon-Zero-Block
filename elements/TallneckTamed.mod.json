@@ -5,13 +5,13 @@
     "mobName": "Tallneck",
     "mobLabel": "",
     "mobModelName": "ModelTallneck",
-    "mobModelTexture": "tallneck.png",
+    "mobModelTexture": "tallneck_tame.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -6710887,
       "falpha": 0.0
@@ -50,7 +50,7 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.1,
-    "armorBaseValue": 100.0,
+    "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
     "health": 10,
@@ -71,7 +71,7 @@
     "immuneToDrowning": true,
     "immuneToLightning": true,
     "immuneToPotions": true,
-    "immuneToPlayer": true,
+    "immuneToPlayer": false,
     "immuneToExplosion": true,
     "immuneToTrident": true,
     "immuneToAnvil": true,
@@ -99,11 +99,8 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "whenMobDies": {
-      "name": "TallneckEntityDies"
-    },
-    "onInitialSpawn": {
-      "name": "TallneckOnInitialEntitySpawn"
+    "onMobTickUpdate": {
+      "name": "TallneckTamedOnEntityTickUpdate"
     },
     "hasAI": true,
     "aiBase": "(none)",
@@ -116,11 +113,8 @@
       "value": ""
     },
     "rangedItemType": "Default item",
-    "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
-    "spawningCondition": {
-      "name": "TallneckNaturalEntitySpawningCondition"
-    },
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 5,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,

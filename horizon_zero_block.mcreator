@@ -1055,6 +1055,99 @@
         ]
       },
       "path": "~/Machines/Communication Class"
+    },
+    {
+      "name": "TallneckTamed",
+      "type": "livingentity",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tallneck_tamed",
+      "path": "~/Machines/Communication Class"
+    },
+    {
+      "name": "MachinesGroup",
+      "type": "tag",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machines_group",
+      "path": "~/Machines"
+    },
+    {
+      "name": "MachinesTamed",
+      "type": "tag",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "machines_tamed",
+      "path": "~/Machines"
+    },
+    {
+      "name": "TallneckTamedOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tallneck_tamed_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines"
+    },
+    {
+      "name": "TallneckRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tallneck_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Communication Class"
     }
   ],
   "variable_elements": [
@@ -1221,6 +1314,7 @@
       "item.horizon_zero_block.spear": "Spear",
       "subtitles.soundblast": "tearblast arrow explosion sound",
       "item.horizon_zero_block.stalker_spawn_egg": "Stalker Spawn Egg",
+      "item.horizon_zero_block.tallneck_tamed_spawn_egg": "Tallneck Spawn Egg",
       "item.horizon_zero_block.fire_arrow": "Fire Arrow",
       "block.horizon_zero_block.medicinal_ochrebloom": "Medicinal Ochrebloom",
       "item.horizon_zero_block.thunder_war_bow": "War Bow (Shock)",
@@ -1229,6 +1323,7 @@
       "item.horizon_zero_block.fire_hunter_bow": "Hunter Bow (fire)",
       "item.horizon_zero_block.metal_shards": "Metal Shards",
       "item.horizon_zero_block.chillwater": "Chillwater",
+      "entity.horizon_zero_block.tallneck_tamed": "Tallneck",
       "item.horizon_zero_block.freeze_arrow": "Freeze Arrow",
       "item.horizon_zero_block.sparker": "Sparker",
       "key.horizon_zero_block.ammo_crafting": "Ammo Crafting",

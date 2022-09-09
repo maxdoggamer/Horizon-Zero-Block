@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "horizon_zero_block:stalker_tamed",
+    "horizon_zero_block:snapmaw_tamed",
+    "horizon_zero_block:tallneck_tamed",
+    "horizon_zero_block:strider_tamed"
+  ]
+}

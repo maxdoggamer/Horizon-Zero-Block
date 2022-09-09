@@ -1,0 +1,26 @@
+{
+  "_fv": 33,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:SnapmawTamed"
+      },
+      {
+        "value": "CUSTOM:StalkerTamed"
+      },
+      {
+        "value": "CUSTOM:StriderTamed"
+      },
+      {
+        "value": "CUSTOM:TallneckTamed"
+      }
+    ],
+    "name": "machines_tamed",
+    "namespace": "forge"
+  }
+}

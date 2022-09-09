@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.horizonzeroblock.client.renderer.WatcherRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.ThunderWarBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.TearBowRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.TallneckTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.TallneckRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderRenderer;
@@ -44,5 +45,6 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW.get(), SnapmawRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW_TAMED.get(), SnapmawTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK.get(), TallneckRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK_TAMED.get(), TallneckTamedRenderer::new);
 	}
 }
