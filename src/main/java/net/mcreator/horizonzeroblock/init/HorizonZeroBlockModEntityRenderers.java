@@ -23,6 +23,8 @@ import net.mcreator.horizonzeroblock.client.renderer.SnapmawRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.PrecisionBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HunterBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HardBowRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.GlinthawkTamedRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.GlinthawkRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.FrostWarBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.FireHunterBowRenderer;
 
@@ -46,5 +48,7 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW_TAMED.get(), SnapmawTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK.get(), TallneckRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK_TAMED.get(), TallneckTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.GLINTHAWK.get(), GlinthawkRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.GLINTHAWK_TAMED.get(), GlinthawkTamedRenderer::new);
 	}
 }

@@ -30,6 +30,8 @@ import net.mcreator.horizonzeroblock.entity.SnapmawEntity;
 import net.mcreator.horizonzeroblock.entity.PrecisionBowEntity;
 import net.mcreator.horizonzeroblock.entity.HunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.HardBowEntity;
+import net.mcreator.horizonzeroblock.entity.GlinthawkTamedEntity;
+import net.mcreator.horizonzeroblock.entity.GlinthawkEntity;
 import net.mcreator.horizonzeroblock.entity.FrostWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.FireHunterBowEntity;
 import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
@@ -99,6 +101,16 @@ public class HorizonZeroBlockModEntities {
 	public static final RegistryObject<EntityType<TallneckTamedEntity>> TALLNECK_TAMED = register("tallneck_tamed",
 			EntityType.Builder.<TallneckTamedEntity>of(TallneckTamedEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckTamedEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GlinthawkEntity>> GLINTHAWK = register("glinthawk",
+			EntityType.Builder.<GlinthawkEntity>of(GlinthawkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GlinthawkTamedEntity>> GLINTHAWK_TAMED = register("glinthawk_tamed",
+			EntityType.Builder.<GlinthawkTamedEntity>of(GlinthawkTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkTamedEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -116,6 +128,8 @@ public class HorizonZeroBlockModEntities {
 			SnapmawTamedEntity.init();
 			TallneckEntity.init();
 			TallneckTamedEntity.init();
+			GlinthawkEntity.init();
+			GlinthawkTamedEntity.init();
 		});
 	}
 
@@ -130,5 +144,7 @@ public class HorizonZeroBlockModEntities {
 		event.put(SNAPMAW_TAMED.get(), SnapmawTamedEntity.createAttributes().build());
 		event.put(TALLNECK.get(), TallneckEntity.createAttributes().build());
 		event.put(TALLNECK_TAMED.get(), TallneckTamedEntity.createAttributes().build());
+		event.put(GLINTHAWK.get(), GlinthawkEntity.createAttributes().build());
+		event.put(GLINTHAWK_TAMED.get(), GlinthawkTamedEntity.createAttributes().build());
 	}
 }

@@ -1148,6 +1148,94 @@
         ]
       },
       "path": "~/Machines/Communication Class"
+    },
+    {
+      "name": "Glinthawk",
+      "type": "livingentity",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glinthawk",
+      "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "GlinthawkTamed",
+      "type": "livingentity",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glinthawk_tamed",
+      "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "GlinthawkRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glinthawk_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "GlinthawkTamedOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glinthawk_tamed_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Glinthawk"
     }
   ],
   "variable_elements": [
@@ -1318,6 +1406,8 @@
       "item.horizon_zero_block.fire_arrow": "Fire Arrow",
       "block.horizon_zero_block.medicinal_ochrebloom": "Medicinal Ochrebloom",
       "item.horizon_zero_block.thunder_war_bow": "War Bow (Shock)",
+      "item.horizon_zero_block.glinthawk_spawn_egg": "Glinthawk Spawn Egg",
+      "item.horizon_zero_block.glinthawk_tamed_spawn_egg": "Glinthawk Spawn Egg",
       "item.horizon_zero_block.strider_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.echo_shell": "Echo Shell",
       "item.horizon_zero_block.fire_hunter_bow": "Hunter Bow (fire)",
@@ -1333,6 +1423,7 @@
       "entity.horizon_zero_block.strider": "Strider",
       "block.horizon_zero_block.medicinal_hintergold": "Medicinal Hintergold",
       "item.horizon_zero_block.hunter_bow": "Hunter Bow",
+      "entity.horizon_zero_block.glinthawk_tamed": "Glinthawk",
       "item.horizon_zero_block.frost_war_bow": "War Bow (Freeze)",
       "block.horizon_zero_block.medicinal_thaw_omen": "Medicinal Thaw Omen",
       "itemGroup.tabranged_items": "Ranged Items",
@@ -1340,6 +1431,7 @@
       "item.horizon_zero_block.hunter_arrow": "Hunter Arrow",
       "block.horizon_zero_block.medicinal_skybrush": "Medicinal Skybrush",
       "block.horizon_zero_block.medicinal_waterweed": "Medicinal Waterweed",
+      "entity.horizon_zero_block.glinthawk": "Glinthawk",
       "item.horizon_zero_block.precision_bow": "Sharpshot Bow (precision)",
       "item.horizon_zero_block.hardpoint_arrow": "Hardpoint Arrow",
       "item.horizon_zero_block.tallneck_spawn_egg": "Tallneck Spawn Egg",
@@ -1397,6 +1489,10 @@
               },
               {
                 "name": "Snapmaw",
+                "children": []
+              },
+              {
+                "name": "Glinthawk",
                 "children": []
               }
             ]

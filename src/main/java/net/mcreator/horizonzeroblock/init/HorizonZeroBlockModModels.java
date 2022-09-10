@@ -15,6 +15,7 @@ import net.mcreator.horizonzeroblock.client.model.ModelTallneck;
 import net.mcreator.horizonzeroblock.client.model.ModelStrider;
 import net.mcreator.horizonzeroblock.client.model.ModelStalker;
 import net.mcreator.horizonzeroblock.client.model.ModelSnapmaw;
+import net.mcreator.horizonzeroblock.client.model.ModelGlinthawk;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class HorizonZeroBlockModModels {
@@ -23,6 +24,7 @@ public class HorizonZeroBlockModModels {
 		event.registerLayerDefinition(ModelWatcher.LAYER_LOCATION, ModelWatcher::createBodyLayer);
 		event.registerLayerDefinition(ModelStalker.LAYER_LOCATION, ModelStalker::createBodyLayer);
 		event.registerLayerDefinition(Modelcustom_model.LAYER_LOCATION, Modelcustom_model::createBodyLayer);
+		event.registerLayerDefinition(ModelGlinthawk.LAYER_LOCATION, ModelGlinthawk::createBodyLayer);
 		event.registerLayerDefinition(ModelTallneck.LAYER_LOCATION, ModelTallneck::createBodyLayer);
 		event.registerLayerDefinition(ModelSnapmaw.LAYER_LOCATION, ModelSnapmaw::createBodyLayer);
 		event.registerLayerDefinition(ModelStrider.LAYER_LOCATION, ModelStrider::createBodyLayer);

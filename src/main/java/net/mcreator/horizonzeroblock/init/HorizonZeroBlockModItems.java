@@ -104,6 +104,9 @@ public class HorizonZeroBlockModItems {
 	public static final RegistryObject<Item> TALLNECK = REGISTRY.register("tallneck_spawn_egg",
 			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.TALLNECK, -6710887, -39424,
 					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> GLINTHAWK = REGISTRY.register("glinthawk_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.GLINTHAWK, -16777012, -16777216,
+					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
