@@ -11,12 +11,11 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FollowMobGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -26,6 +25,7 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
@@ -61,7 +61,12 @@ public class WatcherEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, true) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+			}
+		});
 		this.goalSelector.addGoal(2, new LeapAtTargetGoal(this, (float) 0.5));
 		this.goalSelector.addGoal(3, new FollowMobGoal(this, (float) 1, 10, 5));
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));

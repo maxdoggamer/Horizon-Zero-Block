@@ -9,11 +9,9 @@ import net.minecraftforge.common.ForgeMod;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -93,18 +91,17 @@ public class SnapmawCorruptedEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 2, 40));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
+		this.goalSelector.addGoal(2, new RandomSwimmingGoal(this, 2, 40));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setAlertOthers());
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override

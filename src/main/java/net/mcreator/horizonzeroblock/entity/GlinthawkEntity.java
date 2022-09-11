@@ -84,7 +84,8 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new Goal() {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, false));
+		this.goalSelector.addGoal(2, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
 			}
@@ -107,7 +108,7 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 			public void start() {
 				LivingEntity livingentity = GlinthawkEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				GlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				GlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 			}
 
 			@Override
@@ -119,19 +120,18 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 					double d0 = GlinthawkEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						GlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						GlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 					}
 				}
 			}
 		});
-		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, Player.class, true, true));
 		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1.5, 20) {
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 2, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				Random random = GlinthawkEntity.this.getRandom();
@@ -230,12 +230,12 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.7);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 26);
 		builder = builder.add(Attributes.ARMOR, 1.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.FLYING_SPEED, 0.7);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 }
