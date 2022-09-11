@@ -11,7 +11,7 @@ public class MetalburnerItem extends PickaxeItem {
 	public MetalburnerItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 100;
+				return 50;
 			}
 
 			public float getSpeed() {
