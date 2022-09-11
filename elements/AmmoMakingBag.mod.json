@@ -386,9 +386,6 @@
         }
       }
     ],
-    "onOpen": {
-      "name": "AmmoMakingBagThisGUIIsopen"
-    },
     "onClosed": {
       "name": "AmmoMakingBagThisGUIIsOpened"
     },

@@ -720,22 +720,6 @@
       }
     },
     {
-      "name": "AmmoMakingBagThisGUIIsopen",
-      "type": "procedure",
-      "sortid": 61,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ammo_making_bag_this_gui_isopen",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Stalker",
       "type": "livingentity",
       "sortid": 62,
@@ -1601,10 +1585,10 @@
       "entity.horizon_zero_block.stalker_tamed": "Stalker",
       "entity.horizon_zero_block.stalker": "Stalker",
       "item.horizon_zero_block.snapmaw_spawn_egg": "Snapmaw Spawn Egg",
-      "entity.horizon_zero_block.strider_tamed": "Strider",
-      "entity.horizon_zero_block.watcher": "Watcher",
-      "item.horizon_zero_block.precision_arrow": "Precision Arrow",
       "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
+      "item.horizon_zero_block.precision_arrow": "Precision Arrow",
+      "entity.horizon_zero_block.watcher": "Watcher",
+      "entity.horizon_zero_block.strider_tamed": "Strider",
       "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
       "itemGroup.tabmachines": "Machines",
       "entity.horizon_zero_block.corrupted_snapmaw": "Corrupted Snapmaw",

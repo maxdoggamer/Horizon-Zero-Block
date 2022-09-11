@@ -18,7 +18,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.horizonzeroblock.procedures.AmmoMakingBagThisGUIIsopenProcedure;
 import net.mcreator.horizonzeroblock.procedures.AmmoMakingBagThisGUIIsOpenedProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModMenus;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
@@ -131,8 +130,6 @@ public class AmmoMakingBagMenu extends AbstractContainerMenu implements Supplier
 				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 37 + 8 + sj * 18, 86 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
 			this.addSlot(new Slot(inv, si, 37 + 8 + si * 18, 86 + 142));
-
-		AmmoMakingBagThisGUIIsopenProcedure.execute(entity);
 	}
 
 	@Override
