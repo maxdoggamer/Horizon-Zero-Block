@@ -25,7 +25,6 @@ public class ModelSnapmaw<T extends Entity> extends EntityModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("horizon_zero_block", "model_snapmaw"),
 			"main");
 	public final ModelPart Head;
-	public final ModelPart Neck;
 	public final ModelPart Body;
 	public final ModelPart Tail;
 	public final ModelPart RightLeg;
@@ -35,7 +34,6 @@ public class ModelSnapmaw<T extends Entity> extends EntityModel<T> {
 
 	public ModelSnapmaw(ModelPart root) {
 		this.Head = root.getChild("Head");
-		this.Neck = root.getChild("Neck");
 		this.Body = root.getChild("Body");
 		this.Tail = root.getChild("Tail");
 		this.RightLeg = root.getChild("RightLeg");
@@ -47,19 +45,22 @@ public class ModelSnapmaw<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(), PartPose.offset(0.0F, 21.0F, -26.0F));
+		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(), PartPose.offset(0.0F, 15.0F, -16.0F));
 		PartDefinition cube_r1 = Head.addOrReplaceChild("cube_r1",
+				CubeListBuilder.create().texOffs(32, 37).addBox(-3.0F, -18.0F, -30.0F, 6.0F, 6.0F, 16.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 15.0F, 17.0F, 0.0873F, 0.0F, 0.0F));
+		PartDefinition cube_r2 = Head.addOrReplaceChild("cube_r2",
 				CubeListBuilder.create().texOffs(42, 44).addBox(-2.5F, 31.0F, -18.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(11, 22)
 						.addBox(-2.5F, 25.0F, -18.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(9, 37)
 						.addBox(-2.5F, 35.0F, -18.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(41, 37)
 						.addBox(-2.5F, 33.0F, -18.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(42, 47).addBox(-2.5F, 29.0F, -18.0F, 1.0F,
 								1.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 14.0F, 19.0F, -1.6144F, 0.0F, 0.0F));
-		PartDefinition cube_r2 = Head.addOrReplaceChild("cube_r2",
+				PartPose.offsetAndRotation(2.0F, 20.0F, 9.0F, -1.6144F, 0.0F, 0.0F));
+		PartDefinition cube_r3 = Head.addOrReplaceChild("cube_r3",
 				CubeListBuilder.create().texOffs(22, 7).addBox(-2.5F, 29.0F, -30.0F, 1.0F, 1.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(22, 11)
 						.addBox(-2.5F, 31.0F, -30.0F, 1.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 14.0F, 19.0F, -1.2654F, 0.0F, 0.0F));
-		PartDefinition cube_r3 = Head.addOrReplaceChild("cube_r3",
+				PartPose.offsetAndRotation(2.0F, 20.0F, 9.0F, -1.2654F, 0.0F, 0.0F));
+		PartDefinition cube_r4 = Head.addOrReplaceChild("cube_r4",
 				CubeListBuilder.create().texOffs(9, 48).addBox(-2.5F, 15.0F, -25.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
 						.addBox(-2.5F, 15.0F, -23.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(0, 2)
 						.addBox(-2.5F, 17.0F, -23.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(17, 2)
@@ -68,26 +69,22 @@ public class ModelSnapmaw<T extends Entity> extends EntityModel<T> {
 						.addBox(-2.5F, 21.0F, -25.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(44, 40)
 						.addBox(-2.5F, 19.0F, -25.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(42, 50).addBox(-2.5F, 17.0F, -25.0F, 1.0F,
 								1.0F, 1.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 14.0F, 19.0F, -1.1345F, 0.0F, 0.0F));
-		PartDefinition cube_r4 = Head.addOrReplaceChild("cube_r4",
-				CubeListBuilder.create().texOffs(0, 23).addBox(-2.5F, -32.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 14.0F, 19.0F, 1.2217F, 0.0F, 0.0F));
+				PartPose.offsetAndRotation(2.0F, 20.0F, 9.0F, -1.1345F, 0.0F, 0.0F));
 		PartDefinition cube_r5 = Head.addOrReplaceChild("cube_r5",
-				CubeListBuilder.create().texOffs(4, 23).addBox(-2.5F, -28.0F, -17.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 14.0F, 19.0F, 0.6545F, 0.0F, 0.0F));
+				CubeListBuilder.create().texOffs(0, 23).addBox(-2.5F, -32.0F, 0.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(2.0F, 20.0F, 9.0F, 1.2217F, 0.0F, 0.0F));
 		PartDefinition cube_r6 = Head.addOrReplaceChild("cube_r6",
-				CubeListBuilder.create().texOffs(26, 11).addBox(-2.5F, -3.0F, -33.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 14.0F, 19.0F, -0.3054F, 0.0F, 0.0F));
+				CubeListBuilder.create().texOffs(4, 23).addBox(-2.5F, -28.0F, -17.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(2.0F, 20.0F, 9.0F, 0.6545F, 0.0F, 0.0F));
 		PartDefinition cube_r7 = Head.addOrReplaceChild("cube_r7",
-				CubeListBuilder.create().texOffs(0, 16).addBox(-2.5F, -23.0F, -25.0F, 1.0F, 2.0F, 9.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(2.0F, 13.0F, 20.0F, 0.3927F, 0.0F, 0.0F));
+				CubeListBuilder.create().texOffs(26, 11).addBox(-2.5F, -3.0F, -33.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(2.0F, 20.0F, 9.0F, -0.3054F, 0.0F, 0.0F));
 		PartDefinition cube_r8 = Head.addOrReplaceChild("cube_r8",
+				CubeListBuilder.create().texOffs(0, 16).addBox(-2.5F, -23.0F, -25.0F, 1.0F, 2.0F, 9.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(2.0F, 19.0F, 10.0F, 0.3927F, 0.0F, 0.0F));
+		PartDefinition cube_r9 = Head.addOrReplaceChild("cube_r9",
 				CubeListBuilder.create().texOffs(50, 0).addBox(-1.0F, -14.0F, -43.0F, 2.0F, 2.0F, 18.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 9.0F, 22.0F, -0.0436F, 0.0F, 0.0F));
-		PartDefinition Neck = partdefinition.addOrReplaceChild("Neck", CubeListBuilder.create(), PartPose.offset(0.0F, 16.0F, -15.0F));
-		PartDefinition cube_r9 = Neck.addOrReplaceChild("cube_r9",
-				CubeListBuilder.create().texOffs(32, 37).addBox(-3.0F, -18.0F, -30.0F, 6.0F, 6.0F, 16.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 14.0F, 16.0F, 0.0873F, 0.0F, 0.0F));
+				PartPose.offsetAndRotation(0.0F, 15.0F, 12.0F, -0.0436F, 0.0F, 0.0F));
 		PartDefinition Body = partdefinition.addOrReplaceChild("Body",
 				CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -3.0F, -17.0F, 10.0F, 7.0F, 30.0F, new CubeDeformation(0.0F)).texOffs(0, 52)
 						.addBox(0.0F, -7.0F, 6.0F, 0.0F, 4.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(50, 8)
@@ -168,7 +165,6 @@ public class ModelSnapmaw<T extends Entity> extends EntityModel<T> {
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
 			float blue, float alpha) {
 		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		Neck.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		Tail.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		RightLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);

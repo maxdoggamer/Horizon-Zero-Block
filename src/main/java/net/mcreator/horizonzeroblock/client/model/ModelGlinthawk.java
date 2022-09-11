@@ -165,7 +165,7 @@ public class ModelGlinthawk<T extends Entity> extends EntityModel<T> {
 		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.Head.xRot = headPitch / (180F / (float) Math.PI);
 		this.RightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.LeftWing.yRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
-		this.RightWing.yRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.LeftWing.zRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
+		this.RightWing.zRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
 	}
 }

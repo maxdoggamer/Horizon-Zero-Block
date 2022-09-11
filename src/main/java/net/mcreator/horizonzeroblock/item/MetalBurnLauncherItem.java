@@ -44,7 +44,7 @@ public class MetalBurnLauncherItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				MetalBurnLauncherEntity entityarrow = MetalBurnLauncherEntity.shoot(world, entity, world.getRandom(), 1f, 2.5, 5);
+				MetalBurnLauncherEntity entityarrow = MetalBurnLauncherEntity.shoot(world, entity, world.getRandom(), 1f, 1, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 			}

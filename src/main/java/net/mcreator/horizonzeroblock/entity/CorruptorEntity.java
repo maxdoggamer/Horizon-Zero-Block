@@ -37,6 +37,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.horizonzeroblock.procedures.CorruptorEntityDiesProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 import java.util.Set;
@@ -113,6 +114,12 @@ public class CorruptorEntity extends Monster implements RangedAttackMob {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		CorruptorEntityDiesProcedure.execute(source.getEntity());
 	}
 
 	@Override
