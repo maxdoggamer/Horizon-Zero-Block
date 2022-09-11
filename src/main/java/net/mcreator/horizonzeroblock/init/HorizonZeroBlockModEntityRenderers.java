@@ -46,18 +46,18 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.TEAR_BOW.get(), TearBowRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.WATCHER.get(), WatcherRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.STRIDER.get(), StriderRenderer::new);
-		event.registerEntityRenderer(HorizonZeroBlockModEntities.STRIDER_TAMED.get(), StriderTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.STALKER.get(), StalkerRenderer::new);
-		event.registerEntityRenderer(HorizonZeroBlockModEntities.STALKER_TAMED.get(), StalkerTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW.get(), SnapmawRenderer::new);
-		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW_TAMED.get(), SnapmawTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK.get(), TallneckRenderer::new);
-		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK_TAMED.get(), TallneckTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.GLINTHAWK.get(), GlinthawkRenderer::new);
-		event.registerEntityRenderer(HorizonZeroBlockModEntities.GLINTHAWK_TAMED.get(), GlinthawkTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTOR.get(), CorruptorRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.STRIDER_TAMED.get(), StriderTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.STALKER_TAMED.get(), StalkerTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.SNAPMAW_TAMED.get(), SnapmawTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK_TAMED.get(), TallneckTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.GLINTHAWK_TAMED.get(), GlinthawkTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_STRIDER.get(), StriderCorruptedRenderer::new);
-		event.registerEntityRenderer(HorizonZeroBlockModEntities.METAL_BURN_LAUNCHER.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_SNAPMAW.get(), SnapmawCorruptedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.METAL_BURN_LAUNCHER.get(), ThrownItemRenderer::new);
 	}
 }

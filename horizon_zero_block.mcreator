@@ -3,7 +3,7 @@
     {
       "name": "MedicinalBerriesPlayerFinishesUsingItem",
       "type": "procedure",
-      "sortid": 28,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "medicinal_berries_player_finishes_using_item",
@@ -115,7 +115,7 @@
     {
       "name": "HorizonPainting",
       "type": "painting",
-      "sortid": 29,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "horizon_painting"
@@ -123,7 +123,7 @@
     {
       "name": "RangedItems",
       "type": "tab",
-      "sortid": 30,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ranged_items"
@@ -131,7 +131,7 @@
     {
       "name": "FireArrow",
       "type": "item",
-      "sortid": 14,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow",
@@ -140,7 +140,7 @@
     {
       "name": "FireHunterBowProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 31,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_hunter_bow_projectile_hits_living_entity",
@@ -157,7 +157,7 @@
     {
       "name": "FireHunterBow",
       "type": "rangeditem",
-      "sortid": 17,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_hunter_bow",
@@ -166,7 +166,7 @@
     {
       "name": "RidgeWood",
       "type": "item",
-      "sortid": 20,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ridge_wood"
@@ -182,7 +182,7 @@
     {
       "name": "RidgeWoodRightclickedOnBlock",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ridge_wood_rightclicked_on_block",
@@ -206,7 +206,7 @@
     {
       "name": "MetalShards",
       "type": "item",
-      "sortid": 21,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_shards"
@@ -214,7 +214,7 @@
     {
       "name": "Blaze",
       "type": "item",
-      "sortid": 22,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blaze"
@@ -222,7 +222,7 @@
     {
       "name": "Wire",
       "type": "item",
-      "sortid": 23,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wire"
@@ -230,7 +230,7 @@
     {
       "name": "Chillwater",
       "type": "item",
-      "sortid": 24,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "chillwater"
@@ -238,7 +238,7 @@
     {
       "name": "Sparker",
       "type": "item",
-      "sortid": 25,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sparker"
@@ -246,7 +246,7 @@
     {
       "name": "Metalburn",
       "type": "item",
-      "sortid": 26,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metalburn"
@@ -254,7 +254,7 @@
     {
       "name": "EchoShell",
       "type": "item",
-      "sortid": 27,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "echo_shell"
@@ -262,7 +262,7 @@
     {
       "name": "AmmoMakingBag",
       "type": "gui",
-      "sortid": 33,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_making_bag"
@@ -270,7 +270,7 @@
     {
       "name": "AmmoCraftingOnKeyPressed",
       "type": "procedure",
-      "sortid": 34,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_crafting_on_key_pressed",
@@ -286,7 +286,7 @@
     {
       "name": "AmmoCrafting",
       "type": "keybind",
-      "sortid": 35,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_crafting"
@@ -294,7 +294,7 @@
     {
       "name": "AmmoMakingBagOpenOnKeyPressed",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_making_bag_open_on_key_pressed",
@@ -326,7 +326,7 @@
     {
       "name": "AmmoMakingBagOpen",
       "type": "keybind",
-      "sortid": 37,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_making_bag_open"
@@ -334,7 +334,7 @@
     {
       "name": "PrecisionArrow",
       "type": "item",
-      "sortid": 15,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "precision_arrow",
@@ -343,7 +343,7 @@
     {
       "name": "PrecisionBow",
       "type": "rangeditem",
-      "sortid": 18,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "precision_bow",
@@ -352,7 +352,7 @@
     {
       "name": "HardpointArrow",
       "type": "item",
-      "sortid": 16,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hardpoint_arrow",
@@ -361,7 +361,7 @@
     {
       "name": "HardBow",
       "type": "rangeditem",
-      "sortid": 19,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hard_bow",
@@ -370,7 +370,7 @@
     {
       "name": "Freeze",
       "type": "potioneffect",
-      "sortid": 38,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "freeze"
@@ -378,7 +378,7 @@
     {
       "name": "FreezeDamage",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "freeze_damage",
@@ -394,7 +394,7 @@
     {
       "name": "FreezeActiveTickCondition",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "freeze_active_tick_condition",
@@ -410,7 +410,7 @@
     {
       "name": "FreezeArrow",
       "type": "item",
-      "sortid": 41,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "freeze_arrow",
@@ -419,7 +419,7 @@
     {
       "name": "FrostWarBow",
       "type": "rangeditem",
-      "sortid": 42,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frost_war_bow",
@@ -428,7 +428,7 @@
     {
       "name": "FrostWarBowProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frost_war_bow_projectile_hits_living_entity",
@@ -445,7 +445,7 @@
     {
       "name": "ShockArrow",
       "type": "item",
-      "sortid": 44,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shock_arrow",
@@ -454,7 +454,7 @@
     {
       "name": "ThunderWarBowProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "thunder_war_bow_projectile_hits_living_entity",
@@ -471,7 +471,7 @@
     {
       "name": "ThunderWarBow",
       "type": "rangeditem",
-      "sortid": 45,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "thunder_war_bow",
@@ -480,7 +480,7 @@
     {
       "name": "HunterArrow",
       "type": "item",
-      "sortid": 46,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hunter_arrow",
@@ -489,7 +489,7 @@
     {
       "name": "HunterBow",
       "type": "rangeditem",
-      "sortid": 47,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hunter_bow",
@@ -498,7 +498,7 @@
     {
       "name": "TearblastArrow",
       "type": "item",
-      "sortid": 48,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tearblast_arrow",
@@ -507,7 +507,7 @@
     {
       "name": "TearBow",
       "type": "rangeditem",
-      "sortid": 49,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tear_bow",
@@ -516,7 +516,7 @@
     {
       "name": "TearBowProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tear_bow_projectile_hits_living_entity",
@@ -549,7 +549,7 @@
     {
       "name": "Machines",
       "type": "tab",
-      "sortid": 51,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "machines",
@@ -558,7 +558,7 @@
     {
       "name": "Watcher",
       "type": "livingentity",
-      "sortid": 52,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "watcher",
@@ -567,7 +567,7 @@
     {
       "name": "WatcherDrop",
       "type": "loottable",
-      "sortid": 53,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "watcher_drop",
@@ -576,7 +576,7 @@
     {
       "name": "WatcherOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "watcher_on_entity_tick_update",
@@ -609,7 +609,7 @@
     {
       "name": "Spear",
       "type": "tool",
-      "sortid": 55,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spear",
@@ -618,7 +618,7 @@
     {
       "name": "Strider",
       "type": "livingentity",
-      "sortid": 56,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider",
@@ -627,7 +627,7 @@
     {
       "name": "StriderTamed",
       "type": "livingentity",
-      "sortid": 57,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider_tamed",
@@ -636,7 +636,7 @@
     {
       "name": "StriderTamedOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 58,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider_tamed_on_initial_entity_spawn",
@@ -669,7 +669,7 @@
     {
       "name": "StriderRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider_right_clicked_on_entity",
@@ -706,7 +706,7 @@
     {
       "name": "AmmoMakingBagThisGUIIsOpened",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ammo_making_bag_this_gui_is_opened",
@@ -722,7 +722,7 @@
     {
       "name": "Stalker",
       "type": "livingentity",
-      "sortid": 62,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker",
@@ -731,7 +731,7 @@
     {
       "name": "StalkerOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 63,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_on_entity_tick_update",
@@ -764,7 +764,7 @@
     {
       "name": "StalkerRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 64,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_right_clicked_on_entity",
@@ -801,7 +801,7 @@
     {
       "name": "StalkerTamed",
       "type": "livingentity",
-      "sortid": 65,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_tamed",
@@ -810,7 +810,7 @@
     {
       "name": "StalkerTamedRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_tamed_right_clicked_on_entity",
@@ -831,7 +831,7 @@
     {
       "name": "StalkerTamedOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 67,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_tamed_on_initial_entity_spawn",
@@ -864,7 +864,7 @@
     {
       "name": "StalkerLoot",
       "type": "loottable",
-      "sortid": 68,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_loot",
@@ -873,7 +873,7 @@
     {
       "name": "Snapmaw",
       "type": "livingentity",
-      "sortid": 69,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw",
@@ -882,7 +882,7 @@
     {
       "name": "SnapmawTamed",
       "type": "livingentity",
-      "sortid": 70,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw_tamed",
@@ -891,7 +891,7 @@
     {
       "name": "SnapmawRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 71,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw_right_clicked_on_entity",
@@ -928,7 +928,7 @@
     {
       "name": "SnapmawTamedOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 72,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw_tamed_on_initial_entity_spawn",
@@ -961,7 +961,7 @@
     {
       "name": "SnapmawLoot",
       "type": "loottable",
-      "sortid": 73,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw_loot",
@@ -970,7 +970,7 @@
     {
       "name": "Tallneck",
       "type": "livingentity",
-      "sortid": 74,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck",
@@ -979,7 +979,7 @@
     {
       "name": "TallneckOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 76,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck_on_initial_entity_spawn",
@@ -1008,7 +1008,7 @@
     {
       "name": "TallneckEntityDies",
       "type": "procedure",
-      "sortid": 77,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck_entity_dies",
@@ -1025,7 +1025,7 @@
     {
       "name": "TallneckNaturalEntitySpawningCondition",
       "type": "procedure",
-      "sortid": 78,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck_natural_entity_spawning_condition",
@@ -1043,7 +1043,7 @@
     {
       "name": "TallneckTamed",
       "type": "livingentity",
-      "sortid": 79,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck_tamed",
@@ -1052,7 +1052,7 @@
     {
       "name": "MachinesGroup",
       "type": "tag",
-      "sortid": 80,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "machines_group",
@@ -1061,7 +1061,7 @@
     {
       "name": "MachinesTamed",
       "type": "tag",
-      "sortid": 81,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "machines_tamed",
@@ -1070,7 +1070,7 @@
     {
       "name": "TallneckTamedOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 80,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck_tamed_on_entity_tick_update",
@@ -1099,7 +1099,7 @@
     {
       "name": "TallneckRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 82,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck_right_clicked_on_entity",
@@ -1136,7 +1136,7 @@
     {
       "name": "Glinthawk",
       "type": "livingentity",
-      "sortid": 83,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk",
@@ -1145,7 +1145,7 @@
     {
       "name": "GlinthawkTamed",
       "type": "livingentity",
-      "sortid": 84,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk_tamed",
@@ -1154,7 +1154,7 @@
     {
       "name": "GlinthawkRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 85,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk_right_clicked_on_entity",
@@ -1191,7 +1191,7 @@
     {
       "name": "GlinthawkTamedOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 86,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk_tamed_on_initial_entity_spawn",
@@ -1224,7 +1224,7 @@
     {
       "name": "CustomBows",
       "type": "villagertrade",
-      "sortid": 87,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "custom_bows"
@@ -1232,7 +1232,7 @@
     {
       "name": "Blazefuel",
       "type": "itemextension",
-      "sortid": 88,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blazefuel"
@@ -1240,7 +1240,7 @@
     {
       "name": "Ridgewoodcomposter",
       "type": "itemextension",
-      "sortid": 89,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ridgewoodcomposter"
@@ -1248,7 +1248,7 @@
     {
       "name": "Metalburner",
       "type": "tool",
-      "sortid": 90,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metalburner",
@@ -1257,7 +1257,7 @@
     {
       "name": "Metalburnerrecipe",
       "type": "recipe",
-      "sortid": 91,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metalburnerrecipe",
@@ -1266,7 +1266,7 @@
     {
       "name": "ChariotLine",
       "type": "tag",
-      "sortid": 92,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "chariot_line",
@@ -1275,7 +1275,7 @@
     {
       "name": "GlinthawkDrop",
       "type": "loottable",
-      "sortid": 93,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk_drop",
@@ -1284,7 +1284,7 @@
     {
       "name": "StriderCorrupted",
       "type": "livingentity",
-      "sortid": 94,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_strider",
@@ -1293,7 +1293,7 @@
     {
       "name": "MetalBurnLauncher",
       "type": "rangeditem",
-      "sortid": 95,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_burn_launcher",
@@ -1302,7 +1302,7 @@
     {
       "name": "Corruptor",
       "type": "livingentity",
-      "sortid": 93,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corruptor",
@@ -1311,7 +1311,7 @@
     {
       "name": "StriderEntityIsHurt",
       "type": "procedure",
-      "sortid": 96,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider_entity_is_hurt",
@@ -1348,7 +1348,7 @@
     {
       "name": "SnapmawCorrupted",
       "type": "livingentity",
-      "sortid": 97,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_snapmaw",
@@ -1357,7 +1357,7 @@
     {
       "name": "SnapmawEntityIsHurt",
       "type": "procedure",
-      "sortid": 98,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw_entity_is_hurt",
@@ -1394,7 +1394,7 @@
     {
       "name": "StriderLoot",
       "type": "loottable",
-      "sortid": 99,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider_loot",
@@ -1403,7 +1403,7 @@
     {
       "name": "CorruptedStriderLoot",
       "type": "loottable",
-      "sortid": 100,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_strider_loot",
@@ -1412,7 +1412,7 @@
     {
       "name": "CorruptedSnapmawLoot",
       "type": "loottable",
-      "sortid": 101,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_snapmaw_loot",
@@ -1421,7 +1421,7 @@
     {
       "name": "CorruptorEntityDies",
       "type": "procedure",
-      "sortid": 102,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corruptor_entity_dies",
@@ -1434,6 +1434,30 @@
         ]
       },
       "path": "~/Machines/Chariot"
+    },
+    {
+      "name": "MasterOverride",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_override",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MasterOverrides",
+      "type": "command",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_overrides"
     }
   ],
   "variable_elements": [
