@@ -1,0 +1,17 @@
+{
+  "_fv": 33,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:Corruptor"
+      }
+    ],
+    "name": "chariot_line",
+    "namespace": "forge"
+  }
+}

@@ -23,17 +23,21 @@ import net.mcreator.horizonzeroblock.entity.TallneckTamedEntity;
 import net.mcreator.horizonzeroblock.entity.TallneckEntity;
 import net.mcreator.horizonzeroblock.entity.StriderTamedEntity;
 import net.mcreator.horizonzeroblock.entity.StriderEntity;
+import net.mcreator.horizonzeroblock.entity.StriderCorruptedEntity;
 import net.mcreator.horizonzeroblock.entity.StalkerTamedEntity;
 import net.mcreator.horizonzeroblock.entity.StalkerEntity;
 import net.mcreator.horizonzeroblock.entity.SnapmawTamedEntity;
 import net.mcreator.horizonzeroblock.entity.SnapmawEntity;
+import net.mcreator.horizonzeroblock.entity.SnapmawCorruptedEntity;
 import net.mcreator.horizonzeroblock.entity.PrecisionBowEntity;
+import net.mcreator.horizonzeroblock.entity.MetalBurnLauncherEntity;
 import net.mcreator.horizonzeroblock.entity.HunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.HardBowEntity;
 import net.mcreator.horizonzeroblock.entity.GlinthawkTamedEntity;
 import net.mcreator.horizonzeroblock.entity.GlinthawkEntity;
 import net.mcreator.horizonzeroblock.entity.FrostWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.FireHunterBowEntity;
+import net.mcreator.horizonzeroblock.entity.CorruptorEntity;
 import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -97,7 +101,7 @@ public class HorizonZeroBlockModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TallneckEntity>> TALLNECK = register("tallneck",
 			EntityType.Builder.<TallneckEntity>of(TallneckEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.8f));
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.95f));
 	public static final RegistryObject<EntityType<TallneckTamedEntity>> TALLNECK_TAMED = register("tallneck_tamed",
 			EntityType.Builder.<TallneckTamedEntity>of(TallneckTamedEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckTamedEntity::new).fireImmune().sized(0.6f, 1.8f));
@@ -109,6 +113,25 @@ public class HorizonZeroBlockModEntities {
 	public static final RegistryObject<EntityType<GlinthawkTamedEntity>> GLINTHAWK_TAMED = register("glinthawk_tamed",
 			EntityType.Builder.<GlinthawkTamedEntity>of(GlinthawkTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkTamedEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CorruptorEntity>> CORRUPTOR = register("corruptor",
+			EntityType.Builder.<CorruptorEntity>of(CorruptorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptorEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<StriderCorruptedEntity>> CORRUPTED_STRIDER = register("corrupted_strider",
+			EntityType.Builder.<StriderCorruptedEntity>of(StriderCorruptedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StriderCorruptedEntity::new)
+
+					.sized(0.6f, 1.7f));
+	public static final RegistryObject<EntityType<MetalBurnLauncherEntity>> METAL_BURN_LAUNCHER = register("projectile_metal_burn_launcher",
+			EntityType.Builder.<MetalBurnLauncherEntity>of(MetalBurnLauncherEntity::new, MobCategory.MISC)
+					.setCustomClientFactory(MetalBurnLauncherEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SnapmawCorruptedEntity>> CORRUPTED_SNAPMAW = register("corrupted_snapmaw",
+			EntityType.Builder.<SnapmawCorruptedEntity>of(SnapmawCorruptedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(SnapmawCorruptedEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -130,6 +153,9 @@ public class HorizonZeroBlockModEntities {
 			TallneckTamedEntity.init();
 			GlinthawkEntity.init();
 			GlinthawkTamedEntity.init();
+			CorruptorEntity.init();
+			StriderCorruptedEntity.init();
+			SnapmawCorruptedEntity.init();
 		});
 	}
 
@@ -146,5 +172,8 @@ public class HorizonZeroBlockModEntities {
 		event.put(TALLNECK_TAMED.get(), TallneckTamedEntity.createAttributes().build());
 		event.put(GLINTHAWK.get(), GlinthawkEntity.createAttributes().build());
 		event.put(GLINTHAWK_TAMED.get(), GlinthawkTamedEntity.createAttributes().build());
+		event.put(CORRUPTOR.get(), CorruptorEntity.createAttributes().build());
+		event.put(CORRUPTED_STRIDER.get(), StriderCorruptedEntity.createAttributes().build());
+		event.put(CORRUPTED_SNAPMAW.get(), SnapmawCorruptedEntity.createAttributes().build());
 	}
 }

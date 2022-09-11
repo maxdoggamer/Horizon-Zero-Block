@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 import net.mcreator.horizonzeroblock.client.renderer.WatcherRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.ThunderWarBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.TearBowRenderer;
@@ -16,10 +18,12 @@ import net.mcreator.horizonzeroblock.client.renderer.TallneckTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.TallneckRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StriderRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.StriderCorruptedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StalkerTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.StalkerRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.SnapmawTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.SnapmawRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.SnapmawCorruptedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.PrecisionBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HunterBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HardBowRenderer;
@@ -27,6 +31,7 @@ import net.mcreator.horizonzeroblock.client.renderer.GlinthawkTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.GlinthawkRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.FrostWarBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.FireHunterBowRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.CorruptorRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class HorizonZeroBlockModEntityRenderers {
@@ -50,5 +55,9 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.TALLNECK_TAMED.get(), TallneckTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.GLINTHAWK.get(), GlinthawkRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.GLINTHAWK_TAMED.get(), GlinthawkTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTOR.get(), CorruptorRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_STRIDER.get(), StriderCorruptedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.METAL_BURN_LAUNCHER.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_SNAPMAW.get(), SnapmawCorruptedRenderer::new);
 	}
 }

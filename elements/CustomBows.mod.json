@@ -1,0 +1,288 @@
+{
+  "_fv": 33,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "TOOLSMITH"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 20,
+            "price2": {
+              "value": "CUSTOM:Wire"
+            },
+            "countPrice2": 3,
+            "offer": {
+              "value": "CUSTOM:HunterBow"
+            },
+            "countOffer": 1,
+            "level": 1,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 35,
+            "price2": {
+              "value": "CUSTOM:Blaze"
+            },
+            "countPrice2": 5,
+            "offer": {
+              "value": "CUSTOM:FireHunterBow"
+            },
+            "countOffer": 1,
+            "level": 2,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 50,
+            "price2": {
+              "value": "CUSTOM:Wire"
+            },
+            "countPrice2": 4,
+            "offer": {
+              "value": "CUSTOM:HardBow"
+            },
+            "countOffer": 1,
+            "level": 2,
+            "maxTrades": 1,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          }
+        ]
+      },
+      {
+        "villagerProfession": {
+          "value": "TOOLSMITH"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 35,
+            "price2": {
+              "value": "CUSTOM:Sparker"
+            },
+            "countPrice2": 5,
+            "offer": {
+              "value": "CUSTOM:ThunderWarBow"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 1,
+            "xp": 10,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 35,
+            "price2": {
+              "value": "CUSTOM:Chillwater"
+            },
+            "countPrice2": 5,
+            "offer": {
+              "value": "CUSTOM:FrostWarBow"
+            },
+            "countOffer": 1,
+            "level": 3,
+            "maxTrades": 1,
+            "xp": 10,
+            "priceMultiplier": 0.05
+          }
+        ]
+      },
+      {
+        "villagerProfession": {
+          "value": "TOOLSMITH"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 50,
+            "price2": {
+              "value": "CUSTOM:Wire"
+            },
+            "countPrice2": 15,
+            "offer": {
+              "value": "CUSTOM:PrecisionBow"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 50,
+            "price2": {
+              "value": "CUSTOM:EchoShell"
+            },
+            "countPrice2": 10,
+            "offer": {
+              "value": "CUSTOM:TearBow"
+            },
+            "countOffer": 1,
+            "level": 4,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          }
+        ]
+      },
+      {
+        "villagerProfession": {
+          "value": "FLETCHER"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 25,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:FireArrow"
+            },
+            "countOffer": 10,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 5,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:HunterArrow"
+            },
+            "countOffer": 10,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 20,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:PrecisionArrow"
+            },
+            "countOffer": 5,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 15,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:HardpointArrow"
+            },
+            "countOffer": 10,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 30,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:FreezeArrow"
+            },
+            "countOffer": 5,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 64,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:TearblastArrow"
+            },
+            "countOffer": 3,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          },
+          {
+            "price1": {
+              "value": "CUSTOM:MetalShards"
+            },
+            "countPrice1": 15,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "CUSTOM:ShockArrow"
+            },
+            "countOffer": 5,
+            "level": 1,
+            "maxTrades": 10,
+            "xp": 5,
+            "priceMultiplier": 0.05
+          }
+        ]
+      }
+    ]
+  }
+}

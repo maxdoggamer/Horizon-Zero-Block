@@ -99,6 +99,8 @@ public class HorizonZeroBlockModVariables {
 			clone.N8 = original.N8;
 			clone.XI_overrides = original.XI_overrides;
 			clone.RHO_overrides = original.RHO_overrides;
+			clone.ZETA_overrides = original.ZETA_overrides;
+			clone.SIGMA_overrides = original.SIGMA_overrides;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -287,6 +289,8 @@ public class HorizonZeroBlockModVariables {
 		public double N8 = 0;
 		public boolean XI_overrides = false;
 		public boolean RHO_overrides = false;
+		public boolean ZETA_overrides = false;
+		public boolean SIGMA_overrides = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -314,6 +318,8 @@ public class HorizonZeroBlockModVariables {
 			nbt.putDouble("N8", N8);
 			nbt.putBoolean("XI_overrides", XI_overrides);
 			nbt.putBoolean("RHO_overrides", RHO_overrides);
+			nbt.putBoolean("ZETA_overrides", ZETA_overrides);
+			nbt.putBoolean("SIGMA_overrides", SIGMA_overrides);
 			return nbt;
 		}
 
@@ -338,6 +344,8 @@ public class HorizonZeroBlockModVariables {
 			N8 = nbt.getDouble("N8");
 			XI_overrides = nbt.getBoolean("XI_overrides");
 			RHO_overrides = nbt.getBoolean("RHO_overrides");
+			ZETA_overrides = nbt.getBoolean("ZETA_overrides");
+			SIGMA_overrides = nbt.getBoolean("SIGMA_overrides");
 		}
 	}
 
@@ -382,6 +390,8 @@ public class HorizonZeroBlockModVariables {
 					variables.N8 = message.data.N8;
 					variables.XI_overrides = message.data.XI_overrides;
 					variables.RHO_overrides = message.data.RHO_overrides;
+					variables.ZETA_overrides = message.data.ZETA_overrides;
+					variables.SIGMA_overrides = message.data.SIGMA_overrides;
 				}
 			});
 			context.setPacketHandled(true);

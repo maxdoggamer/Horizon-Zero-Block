@@ -1236,6 +1236,203 @@
         ]
       },
       "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "CustomBows",
+      "type": "villagertrade",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_bows"
+    },
+    {
+      "name": "Blazefuel",
+      "type": "itemextension",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blazefuel"
+    },
+    {
+      "name": "Ridgewoodcomposter",
+      "type": "itemextension",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ridgewoodcomposter"
+    },
+    {
+      "name": "Metalburner",
+      "type": "tool",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metalburner",
+      "path": "~/Non Oficial"
+    },
+    {
+      "name": "Metalburnerrecipe",
+      "type": "recipe",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metalburnerrecipe",
+      "path": "~/Non Oficial"
+    },
+    {
+      "name": "ChariotLine",
+      "type": "tag",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chariot_line",
+      "path": "~/Machines/Chariot"
+    },
+    {
+      "name": "GlinthawkDrop",
+      "type": "loottable",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glinthawk_drop",
+      "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "StriderCorrupted",
+      "type": "livingentity",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_strider",
+      "path": "~/Machines/Acquisition Class/Strider"
+    },
+    {
+      "name": "MetalBurnLauncher",
+      "type": "rangeditem",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_burn_launcher",
+      "path": "~/Machines/Chariot"
+    },
+    {
+      "name": "Corruptor",
+      "type": "livingentity",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruptor",
+      "path": "~/Machines/Chariot"
+    },
+    {
+      "name": "StriderEntityIsHurt",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strider_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Strider"
+    },
+    {
+      "name": "SnapmawCorrupted",
+      "type": "livingentity",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_snapmaw",
+      "path": "~/Machines/Acquisition Class/Snapmaw"
+    },
+    {
+      "name": "SnapmawEntityIsHurt",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snapmaw_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Snapmaw"
+    },
+    {
+      "name": "StriderLoot",
+      "type": "loottable",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strider_loot",
+      "path": "~/Machines/Acquisition Class/Strider"
+    },
+    {
+      "name": "CorruptedStriderLoot",
+      "type": "loottable",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_strider_loot",
+      "path": "~/Machines/Acquisition Class/Strider"
+    },
+    {
+      "name": "CorruptedSnapmawLoot",
+      "type": "loottable",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_snapmaw_loot",
+      "path": "~/Machines/Acquisition Class/Snapmaw"
     }
   ],
   "variable_elements": [
@@ -1358,6 +1555,18 @@
       "type": "logic",
       "scope": "world",
       "value": "false"
+    },
+    {
+      "name": "ZETA_overrides",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "SIGMA_overrides",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -1381,6 +1590,7 @@
       "entity.horizon_zero_block.strider_tamed": "Strider",
       "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
       "itemGroup.tabmachines": "Machines",
+      "entity.horizon_zero_block.corrupted_snapmaw": "Corrupted Snapmaw",
       "key.horizon_zero_block.ammo_making_bag_open": "Ammo Making Bag Open",
       "entity.horizon_zero_block.snapmaw_tamed": "Snapmaw",
       "item.horizon_zero_block.medicinal_berries": "Medicinal Berries",
@@ -1397,6 +1607,8 @@
       "item.horizon_zero_block.strider_tamed_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.blaze": "Blaze",
       "item.horizon_zero_block.watcher_spawn_egg": "Watcher Spawn Egg",
+      "item.horizon_zero_block.corrupted_strider_spawn_egg": "Corrupted Strider Spawn Egg",
+      "item.horizon_zero_block.corrupted_snapmaw_spawn_egg": "Corrupted Snapmaw Spawn Egg",
       "item.horizon_zero_block.tearblast_arrow": "Tearblast Arrow",
       "item.horizon_zero_block.wire": "Wire",
       "item.horizon_zero_block.spear": "Spear",
@@ -1407,18 +1619,21 @@
       "block.horizon_zero_block.medicinal_ochrebloom": "Medicinal Ochrebloom",
       "item.horizon_zero_block.thunder_war_bow": "War Bow (Shock)",
       "item.horizon_zero_block.glinthawk_spawn_egg": "Glinthawk Spawn Egg",
+      "entity.horizon_zero_block.corrupted_strider": "Corrupted Strider",
       "item.horizon_zero_block.glinthawk_tamed_spawn_egg": "Glinthawk Spawn Egg",
       "item.horizon_zero_block.strider_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.echo_shell": "Echo Shell",
       "item.horizon_zero_block.fire_hunter_bow": "Hunter Bow (fire)",
       "item.horizon_zero_block.metal_shards": "Metal Shards",
       "item.horizon_zero_block.chillwater": "Chillwater",
+      "entity.horizon_zero_block.corruptor": "Corruptor",
       "entity.horizon_zero_block.tallneck_tamed": "Tallneck",
       "item.horizon_zero_block.freeze_arrow": "Freeze Arrow",
       "item.horizon_zero_block.sparker": "Sparker",
       "key.horizon_zero_block.ammo_crafting": "Ammo Crafting",
       "entity.horizon_zero_block.tallneck": "Tallneck",
       "item.horizon_zero_block.shock_arrow": "Shock Arrow",
+      "item.horizon_zero_block.metalburner": "Metalburner",
       "block.horizon_zero_block.medicinal_fresh_salvebrush": "Medicinal Fresh Salvebrush",
       "entity.horizon_zero_block.strider": "Strider",
       "block.horizon_zero_block.medicinal_hintergold": "Medicinal Hintergold",
@@ -1432,9 +1647,11 @@
       "block.horizon_zero_block.medicinal_skybrush": "Medicinal Skybrush",
       "block.horizon_zero_block.medicinal_waterweed": "Medicinal Waterweed",
       "entity.horizon_zero_block.glinthawk": "Glinthawk",
+      "item.horizon_zero_block.metal_burn_launcher": "Metalburn Launcher",
       "item.horizon_zero_block.precision_bow": "Sharpshot Bow (precision)",
       "item.horizon_zero_block.hardpoint_arrow": "Hardpoint Arrow",
       "item.horizon_zero_block.tallneck_spawn_egg": "Tallneck Spawn Egg",
+      "item.horizon_zero_block.corruptor_spawn_egg": "Corruptor Spawn Egg",
       "item.horizon_zero_block.hard_bow": "Shadow Hunter Bow (Hard)"
     }
   },
@@ -1522,6 +1739,10 @@
       },
       {
         "name": "Armor",
+        "children": []
+      },
+      {
+        "name": "Non Oficial",
         "children": []
       }
     ]

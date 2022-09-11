@@ -24,8 +24,10 @@ import net.mcreator.horizonzeroblock.item.ShockArrowItem;
 import net.mcreator.horizonzeroblock.item.RidgeWoodItem;
 import net.mcreator.horizonzeroblock.item.PrecisionBowItem;
 import net.mcreator.horizonzeroblock.item.PrecisionArrowItem;
+import net.mcreator.horizonzeroblock.item.MetalburnerItem;
 import net.mcreator.horizonzeroblock.item.MetalburnItem;
 import net.mcreator.horizonzeroblock.item.MetalShardsItem;
+import net.mcreator.horizonzeroblock.item.MetalBurnLauncherItem;
 import net.mcreator.horizonzeroblock.item.MedicinalBerriesItem;
 import net.mcreator.horizonzeroblock.item.HunterBowItem;
 import net.mcreator.horizonzeroblock.item.HunterArrowItem;
@@ -107,6 +109,11 @@ public class HorizonZeroBlockModItems {
 	public static final RegistryObject<Item> GLINTHAWK = REGISTRY.register("glinthawk_spawn_egg",
 			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.GLINTHAWK, -16777012, -16777216,
 					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> METALBURNER = REGISTRY.register("metalburner", () -> new MetalburnerItem());
+	public static final RegistryObject<Item> CORRUPTOR = REGISTRY.register("corruptor_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.CORRUPTOR, -65536, -3407872,
+					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> METAL_BURN_LAUNCHER = REGISTRY.register("metal_burn_launcher", () -> new MetalBurnLauncherItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

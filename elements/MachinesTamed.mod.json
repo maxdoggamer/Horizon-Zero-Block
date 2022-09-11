@@ -8,6 +8,9 @@
     "functions": [],
     "entities": [
       {
+        "value": "CUSTOM:GlinthawkTamed"
+      },
+      {
         "value": "CUSTOM:SnapmawTamed"
       },
       {
