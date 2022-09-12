@@ -38,6 +38,7 @@ import net.mcreator.horizonzeroblock.entity.GlinthawkEntity;
 import net.mcreator.horizonzeroblock.entity.FrostWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.FireHunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptorEntity;
+import net.mcreator.horizonzeroblock.entity.CorruptedGlinthawkEntity;
 import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -134,6 +135,11 @@ public class HorizonZeroBlockModEntities {
 			EntityType.Builder.<MetalBurnLauncherEntity>of(MetalBurnLauncherEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(MetalBurnLauncherEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CorruptedGlinthawkEntity>> CORRUPTED_GLINTHAWK = register("corrupted_glinthawk",
+			EntityType.Builder.<CorruptedGlinthawkEntity>of(CorruptedGlinthawkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedGlinthawkEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -156,6 +162,7 @@ public class HorizonZeroBlockModEntities {
 			GlinthawkTamedEntity.init();
 			StriderCorruptedEntity.init();
 			SnapmawCorruptedEntity.init();
+			CorruptedGlinthawkEntity.init();
 		});
 	}
 
@@ -175,5 +182,6 @@ public class HorizonZeroBlockModEntities {
 		event.put(GLINTHAWK_TAMED.get(), GlinthawkTamedEntity.createAttributes().build());
 		event.put(CORRUPTED_STRIDER.get(), StriderCorruptedEntity.createAttributes().build());
 		event.put(CORRUPTED_SNAPMAW.get(), SnapmawCorruptedEntity.createAttributes().build());
+		event.put(CORRUPTED_GLINTHAWK.get(), CorruptedGlinthawkEntity.createAttributes().build());
 	}
 }

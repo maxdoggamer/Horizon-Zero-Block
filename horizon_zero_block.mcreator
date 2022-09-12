@@ -1458,6 +1458,61 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "master_overrides"
+    },
+    {
+      "name": "CorruptedGlinthawk",
+      "type": "livingentity",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_glinthawk",
+      "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "GlinthawkEntityIsHurt",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glinthawk_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "CorruptedGlinthawkLoot",
+      "type": "loottable",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_glinthawk_loot",
+      "path": "~/Machines/Acquisition Class/Glinthawk"
     }
   ],
   "variable_elements": [
@@ -1618,11 +1673,13 @@
       "entity.horizon_zero_block.corrupted_snapmaw": "Corrupted Snapmaw",
       "key.horizon_zero_block.ammo_making_bag_open": "Ammo Making Bag Open",
       "entity.horizon_zero_block.snapmaw_tamed": "Snapmaw",
+      "entity.horizon_zero_block.corrupted_glinthawk": "Corrupted Glinthawk",
       "item.horizon_zero_block.medicinal_berries": "Medicinal Berries",
       "entity.horizon_zero_block.snapmaw": "Snapmaw",
       "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
       "item.horizon_zero_block.stalker_tamed_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.tear_bow": "Sharpshot Bow (Tearblast)",
+      "item.horizon_zero_block.corrupted_glinthawk_spawn_egg": "Corrupted Glinthawk Spawn Egg",
       "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
       "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
       "effect.horizon_zero_block.freeze": "Freeze",

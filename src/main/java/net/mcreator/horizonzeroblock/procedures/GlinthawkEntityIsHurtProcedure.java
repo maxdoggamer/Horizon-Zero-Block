@@ -7,10 +7,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
-import net.mcreator.horizonzeroblock.entity.SnapmawCorruptedEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptorEntity;
+import net.mcreator.horizonzeroblock.entity.CorruptedGlinthawkEntity;
 
-public class SnapmawEntityIsHurtProcedure {
+public class GlinthawkEntityIsHurtProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
@@ -18,7 +18,7 @@ public class SnapmawEntityIsHurtProcedure {
 			if (!entity.level.isClientSide())
 				entity.discard();
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new SnapmawCorruptedEntity(HorizonZeroBlockModEntities.CORRUPTED_SNAPMAW.get(), _level);
+				Entity entityToSpawn = new CorruptedGlinthawkEntity(HorizonZeroBlockModEntities.CORRUPTED_GLINTHAWK.get(), _level);
 				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
 					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null,

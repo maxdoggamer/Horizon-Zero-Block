@@ -47,25 +47,24 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.horizonzeroblock.procedures.GlinthawkRightClickedOnEntityProcedure;
-import net.mcreator.horizonzeroblock.procedures.GlinthawkEntityIsHurtProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 import java.util.Random;
 import java.util.EnumSet;
 
 @Mod.EventBusSubscriber
-public class GlinthawkEntity extends Monster implements RangedAttackMob {
+public class CorruptedGlinthawkEntity extends Monster implements RangedAttackMob {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.MONSTER)
-				.add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.GLINTHAWK.get(), 200, 1, 3));
+				.add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.CORRUPTED_GLINTHAWK.get(), 200, 1, 3));
 	}
 
-	public GlinthawkEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(HorizonZeroBlockModEntities.GLINTHAWK.get(), world);
+	public CorruptedGlinthawkEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(HorizonZeroBlockModEntities.CORRUPTED_GLINTHAWK.get(), world);
 	}
 
-	public GlinthawkEntity(EntityType<GlinthawkEntity> type, Level world) {
+	public CorruptedGlinthawkEntity(EntityType<CorruptedGlinthawkEntity> type, Level world) {
 		super(type, world);
 		xpReward = 6;
 		setNoAi(false);
@@ -92,7 +91,7 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 			}
 
 			public boolean canUse() {
-				if (GlinthawkEntity.this.getTarget() != null && !GlinthawkEntity.this.getMoveControl().hasWanted()) {
+				if (CorruptedGlinthawkEntity.this.getTarget() != null && !CorruptedGlinthawkEntity.this.getMoveControl().hasWanted()) {
 					return true;
 				} else {
 					return false;
@@ -101,27 +100,27 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 
 			@Override
 			public boolean canContinueToUse() {
-				return GlinthawkEntity.this.getMoveControl().hasWanted() && GlinthawkEntity.this.getTarget() != null
-						&& GlinthawkEntity.this.getTarget().isAlive();
+				return CorruptedGlinthawkEntity.this.getMoveControl().hasWanted() && CorruptedGlinthawkEntity.this.getTarget() != null
+						&& CorruptedGlinthawkEntity.this.getTarget().isAlive();
 			}
 
 			@Override
 			public void start() {
-				LivingEntity livingentity = GlinthawkEntity.this.getTarget();
+				LivingEntity livingentity = CorruptedGlinthawkEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				GlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
+				CorruptedGlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 			}
 
 			@Override
 			public void tick() {
-				LivingEntity livingentity = GlinthawkEntity.this.getTarget();
-				if (GlinthawkEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-					GlinthawkEntity.this.doHurtTarget(livingentity);
+				LivingEntity livingentity = CorruptedGlinthawkEntity.this.getTarget();
+				if (CorruptedGlinthawkEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
+					CorruptedGlinthawkEntity.this.doHurtTarget(livingentity);
 				} else {
-					double d0 = GlinthawkEntity.this.distanceToSqr(livingentity);
+					double d0 = CorruptedGlinthawkEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						GlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
+						CorruptedGlinthawkEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 2);
 					}
 				}
 			}
@@ -135,10 +134,10 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 2, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = GlinthawkEntity.this.getRandom();
-				double dir_x = GlinthawkEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = GlinthawkEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = GlinthawkEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				Random random = CorruptedGlinthawkEntity.this.getRandom();
+				double dir_x = CorruptedGlinthawkEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = CorruptedGlinthawkEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = CorruptedGlinthawkEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
@@ -176,7 +175,6 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		GlinthawkEntityIsHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.CACTUS)
@@ -225,7 +223,7 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(HorizonZeroBlockModEntities.GLINTHAWK.get(), SpawnPlacements.Type.ON_GROUND,
+		SpawnPlacements.register(HorizonZeroBlockModEntities.CORRUPTED_GLINTHAWK.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
 						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
@@ -233,7 +231,7 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 26);
+		builder = builder.add(Attributes.MAX_HEALTH, 35);
 		builder = builder.add(Attributes.ARMOR, 1.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
