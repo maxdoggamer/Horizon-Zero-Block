@@ -38,6 +38,8 @@ import net.mcreator.horizonzeroblock.entity.GlinthawkEntity;
 import net.mcreator.horizonzeroblock.entity.FrostWarBowEntity;
 import net.mcreator.horizonzeroblock.entity.FireHunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptorEntity;
+import net.mcreator.horizonzeroblock.entity.CorruptedWatcherEntity;
+import net.mcreator.horizonzeroblock.entity.CorruptedStalkerEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptedGlinthawkEntity;
 import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
@@ -140,6 +142,16 @@ public class HorizonZeroBlockModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedGlinthawkEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CorruptedStalkerEntity>> CORRUPTED_STALKER = register("corrupted_stalker",
+			EntityType.Builder.<CorruptedStalkerEntity>of(CorruptedStalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(CorruptedStalkerEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CorruptedWatcherEntity>> CORRUPTED_WATCHER = register("corrupted_watcher",
+			EntityType.Builder.<CorruptedWatcherEntity>of(CorruptedWatcherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedWatcherEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -163,6 +175,8 @@ public class HorizonZeroBlockModEntities {
 			StriderCorruptedEntity.init();
 			SnapmawCorruptedEntity.init();
 			CorruptedGlinthawkEntity.init();
+			CorruptedStalkerEntity.init();
+			CorruptedWatcherEntity.init();
 		});
 	}
 
@@ -183,5 +197,7 @@ public class HorizonZeroBlockModEntities {
 		event.put(CORRUPTED_STRIDER.get(), StriderCorruptedEntity.createAttributes().build());
 		event.put(CORRUPTED_SNAPMAW.get(), SnapmawCorruptedEntity.createAttributes().build());
 		event.put(CORRUPTED_GLINTHAWK.get(), CorruptedGlinthawkEntity.createAttributes().build());
+		event.put(CORRUPTED_STALKER.get(), CorruptedStalkerEntity.createAttributes().build());
+		event.put(CORRUPTED_WATCHER.get(), CorruptedWatcherEntity.createAttributes().build());
 	}
 }

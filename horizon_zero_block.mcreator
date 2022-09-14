@@ -1513,6 +1513,116 @@
       "locked_code": false,
       "registry_name": "corrupted_glinthawk_loot",
       "path": "~/Machines/Acquisition Class/Glinthawk"
+    },
+    {
+      "name": "CorruptedStalker",
+      "type": "livingentity",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_stalker",
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "StalkerEntityIsHurt",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stalker_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "CorruptedStalkerLoot",
+      "type": "loottable",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_stalker_loot",
+      "path": "~/Machines/Combat Class/Stalker"
+    },
+    {
+      "name": "CorruptorLoot",
+      "type": "loottable",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corruptor_loot",
+      "path": "~/Machines/Chariot"
+    },
+    {
+      "name": "CorruptedWatcher",
+      "type": "livingentity",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_watcher",
+      "path": "~/Machines/Recon Class"
+    },
+    {
+      "name": "WatcherEntityIsHurt",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "watcher_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Recon Class"
     }
   ],
   "variable_elements": [
@@ -1661,13 +1771,15 @@
   ],
   "language_map": {
     "en_us": {
+      "entity.horizon_zero_block.corrupted_stalker": "Stalker",
       "entity.horizon_zero_block.stalker_tamed": "Stalker",
       "entity.horizon_zero_block.stalker": "Stalker",
       "item.horizon_zero_block.snapmaw_spawn_egg": "Snapmaw Spawn Egg",
-      "entity.horizon_zero_block.strider_tamed": "Strider",
-      "entity.horizon_zero_block.watcher": "Watcher",
-      "item.horizon_zero_block.precision_arrow": "Precision Arrow",
+      "entity.horizon_zero_block.corrupted_watcher": "Watcher",
       "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
+      "item.horizon_zero_block.precision_arrow": "Precision Arrow",
+      "entity.horizon_zero_block.watcher": "Watcher",
+      "entity.horizon_zero_block.strider_tamed": "Strider",
       "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
       "itemGroup.tabmachines": "Machines",
       "entity.horizon_zero_block.corrupted_snapmaw": "Corrupted Snapmaw",
@@ -1678,6 +1790,7 @@
       "entity.horizon_zero_block.snapmaw": "Snapmaw",
       "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
       "item.horizon_zero_block.stalker_tamed_spawn_egg": "Stalker Spawn Egg",
+      "item.horizon_zero_block.corrupted_stalker_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.tear_bow": "Sharpshot Bow (Tearblast)",
       "item.horizon_zero_block.corrupted_glinthawk_spawn_egg": "Corrupted Glinthawk Spawn Egg",
       "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
@@ -1716,6 +1829,7 @@
       "entity.horizon_zero_block.tallneck": "Tallneck",
       "item.horizon_zero_block.shock_arrow": "Shock Arrow",
       "item.horizon_zero_block.metalburner": "Metalburner",
+      "item.horizon_zero_block.corrupted_watcher_spawn_egg": "Watcher Spawn Egg",
       "block.horizon_zero_block.medicinal_fresh_salvebrush": "Medicinal Fresh Salvebrush",
       "entity.horizon_zero_block.strider": "Strider",
       "block.horizon_zero_block.medicinal_hintergold": "Medicinal Hintergold",

@@ -40,6 +40,7 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.horizonzeroblock.procedures.StalkerRightClickedOnEntityProcedure;
 import net.mcreator.horizonzeroblock.procedures.StalkerOnEntityTickUpdateProcedure;
+import net.mcreator.horizonzeroblock.procedures.StalkerEntityIsHurtProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 import java.util.Set;
@@ -109,6 +110,7 @@ public class StalkerEntity extends Monster implements RangedAttackMob {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
+		StalkerEntityIsHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.CACTUS)
@@ -156,7 +158,7 @@ public class StalkerEntity extends Monster implements RangedAttackMob {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.7999999999999999);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 40);
 		builder = builder.add(Attributes.ARMOR, 0.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);

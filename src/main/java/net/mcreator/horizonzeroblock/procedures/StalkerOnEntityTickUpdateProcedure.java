@@ -24,7 +24,7 @@ public class StalkerOnEntityTickUpdateProcedure {
 						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 					}
 				}.compareDistOf(x, y, z)).findFirst().orElse(null))) {
-			if (Mth.nextDouble(new Random(), 1, 100) > 1) {
+			if (Mth.nextDouble(new Random(), 1, 100) > 25) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 1, (false), (false)));
 			}

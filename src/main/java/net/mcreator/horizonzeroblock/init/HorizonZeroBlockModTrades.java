@@ -37,11 +37,11 @@ public class HorizonZeroBlockModTrades {
 							1, 10, 0.05f));
 		}
 		if (event.getType() == VillagerProfession.TOOLSMITH) {
-			event.getTrades().get(4)
+			event.getTrades().get(5)
 					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50),
 							new ItemStack(HorizonZeroBlockModItems.WIRE.get(), 15), new ItemStack(HorizonZeroBlockModItems.PRECISION_BOW.get()), 10,
 							5, 0.05f));
-			event.getTrades().get(4)
+			event.getTrades().get(5)
 					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50),
 							new ItemStack(HorizonZeroBlockModItems.ECHO_SHELL.get(), 10), new ItemStack(HorizonZeroBlockModItems.TEAR_BOW.get()), 10,
 							5, 0.05f));
