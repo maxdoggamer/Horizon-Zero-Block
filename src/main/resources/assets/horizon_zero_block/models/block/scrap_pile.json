@@ -1,0 +1,8 @@
+{
+  "parent": "horizon_zero_block:custom/scrappile",
+  "textures": {
+    "all": "horizon_zero_block:blocks/scrappile",
+    "particle": "horizon_zero_block:blocks/scrappile",
+    "0": "horizon_zero_block:blocks/scrappile"
+  }
+}

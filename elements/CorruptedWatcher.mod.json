@@ -2,7 +2,7 @@
   "_fv": 33,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Watcher",
+    "mobName": "Corrupted Watcher",
     "mobLabel": "",
     "mobModelName": "ModelWatcher",
     "mobModelTexture": "watchercorrupted.png",

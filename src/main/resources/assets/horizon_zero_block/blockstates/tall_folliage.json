@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "horizon_zero_block:block/tall_folliage"
+    },
+    "half=lower": {
+      "model": "horizon_zero_block:block/tall_folliage_bottom"
+    }
+  }
+}

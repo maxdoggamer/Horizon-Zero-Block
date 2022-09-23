@@ -24,6 +24,8 @@ import net.mcreator.horizonzeroblock.client.renderer.StalkerRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.SnapmawTamedRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.SnapmawRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.SnapmawCorruptedRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.ScrapperTamedRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.ScrapperRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.PrecisionBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HunterBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.HardBowRenderer;
@@ -34,6 +36,7 @@ import net.mcreator.horizonzeroblock.client.renderer.FireHunterBowRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.CorruptorRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.CorruptedWatcherRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.CorruptedStalkerRenderer;
+import net.mcreator.horizonzeroblock.client.renderer.CorruptedScrapperRenderer;
 import net.mcreator.horizonzeroblock.client.renderer.CorruptedGlinthawkRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -65,5 +68,8 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_GLINTHAWK.get(), CorruptedGlinthawkRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_STALKER.get(), CorruptedStalkerRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_WATCHER.get(), CorruptedWatcherRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.SCRAPPER.get(), ScrapperRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.SCRAPPER_TAMED.get(), ScrapperTamedRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_SCRAPPER.get(), CorruptedScrapperRenderer::new);
 	}
 }

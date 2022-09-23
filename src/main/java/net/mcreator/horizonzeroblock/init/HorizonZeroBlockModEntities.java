@@ -29,6 +29,8 @@ import net.mcreator.horizonzeroblock.entity.StalkerEntity;
 import net.mcreator.horizonzeroblock.entity.SnapmawTamedEntity;
 import net.mcreator.horizonzeroblock.entity.SnapmawEntity;
 import net.mcreator.horizonzeroblock.entity.SnapmawCorruptedEntity;
+import net.mcreator.horizonzeroblock.entity.ScrapperTamedEntity;
+import net.mcreator.horizonzeroblock.entity.ScrapperEntity;
 import net.mcreator.horizonzeroblock.entity.PrecisionBowEntity;
 import net.mcreator.horizonzeroblock.entity.MetalBurnLauncherEntity;
 import net.mcreator.horizonzeroblock.entity.HunterBowEntity;
@@ -40,6 +42,7 @@ import net.mcreator.horizonzeroblock.entity.FireHunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptorEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptedWatcherEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptedStalkerEntity;
+import net.mcreator.horizonzeroblock.entity.CorruptedScrapperEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptedGlinthawkEntity;
 import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
@@ -152,6 +155,21 @@ public class HorizonZeroBlockModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedWatcherEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ScrapperEntity>> SCRAPPER = register("scrapper",
+			EntityType.Builder.<ScrapperEntity>of(ScrapperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(ScrapperEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ScrapperTamedEntity>> SCRAPPER_TAMED = register("scrapper_tamed",
+			EntityType.Builder.<ScrapperTamedEntity>of(ScrapperTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ScrapperTamedEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CorruptedScrapperEntity>> CORRUPTED_SCRAPPER = register("corrupted_scrapper",
+			EntityType.Builder.<CorruptedScrapperEntity>of(CorruptedScrapperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedScrapperEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -177,6 +195,9 @@ public class HorizonZeroBlockModEntities {
 			CorruptedGlinthawkEntity.init();
 			CorruptedStalkerEntity.init();
 			CorruptedWatcherEntity.init();
+			ScrapperEntity.init();
+			ScrapperTamedEntity.init();
+			CorruptedScrapperEntity.init();
 		});
 	}
 
@@ -199,5 +220,8 @@ public class HorizonZeroBlockModEntities {
 		event.put(CORRUPTED_GLINTHAWK.get(), CorruptedGlinthawkEntity.createAttributes().build());
 		event.put(CORRUPTED_STALKER.get(), CorruptedStalkerEntity.createAttributes().build());
 		event.put(CORRUPTED_WATCHER.get(), CorruptedWatcherEntity.createAttributes().build());
+		event.put(SCRAPPER.get(), ScrapperEntity.createAttributes().build());
+		event.put(SCRAPPER_TAMED.get(), ScrapperTamedEntity.createAttributes().build());
+		event.put(CORRUPTED_SCRAPPER.get(), CorruptedScrapperEntity.createAttributes().build());
 	}
 }

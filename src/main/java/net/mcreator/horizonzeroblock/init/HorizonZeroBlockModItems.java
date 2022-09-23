@@ -11,6 +11,7 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
@@ -114,8 +115,17 @@ public class HorizonZeroBlockModItems {
 	public static final RegistryObject<Item> SPEAR = REGISTRY.register("spear", () -> new SpearItem());
 	public static final RegistryObject<Item> METAL_BURN_LAUNCHER = REGISTRY.register("metal_burn_launcher", () -> new MetalBurnLauncherItem());
 	public static final RegistryObject<Item> METALBURNER = REGISTRY.register("metalburner", () -> new MetalburnerItem());
+	public static final RegistryObject<Item> SCRAP_PILE = block(HorizonZeroBlockModBlocks.SCRAP_PILE, CreativeModeTab.TAB_MISC);
+	public static final RegistryObject<Item> SCRAPPER = REGISTRY.register("scrapper_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.SCRAPPER, -6710887, -3381760,
+					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> TALL_FOLLIAGE = doubleBlock(HorizonZeroBlockModBlocks.TALL_FOLLIAGE, CreativeModeTab.TAB_DECORATIONS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+	}
+
+	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block, CreativeModeTab tab) {
+		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties().tab(tab)));
 	}
 }

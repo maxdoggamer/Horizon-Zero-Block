@@ -27,6 +27,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModTabs;
+import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModParticleTypes;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModMobEffects;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModFeatures;
@@ -57,6 +58,7 @@ public class HorizonZeroBlockMod {
 
 		HorizonZeroBlockModMobEffects.REGISTRY.register(bus);
 
+		HorizonZeroBlockModParticleTypes.REGISTRY.register(bus);
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

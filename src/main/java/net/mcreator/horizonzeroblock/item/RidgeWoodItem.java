@@ -24,7 +24,8 @@ public class RidgeWoodItem extends Item {
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		InteractionResult retval = super.useOn(context);
-		RidgeWoodRightclickedOnBlockProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getZ());
+		RidgeWoodRightclickedOnBlockProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
+				context.getClickedPos().getZ());
 		return retval;
 	}
 }

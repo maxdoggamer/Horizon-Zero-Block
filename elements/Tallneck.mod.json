@@ -120,7 +120,7 @@
     },
     "rangedItemType": "Default item",
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "doesDespawnWhenIdle": false,
     "spawningCondition": {
       "name": "TallneckNaturalEntitySpawningCondition"
     },

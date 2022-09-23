@@ -17,6 +17,7 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Holder;
 
+import net.mcreator.horizonzeroblock.world.features.plants.TallFolliageFeature;
 import net.mcreator.horizonzeroblock.world.features.plants.RidgeWoodBrushFeature;
 import net.mcreator.horizonzeroblock.world.features.plants.MedicinalWildEmberFeature;
 import net.mcreator.horizonzeroblock.world.features.plants.MedicinalWaterweedFeature;
@@ -76,6 +77,8 @@ public class HorizonZeroBlockModFeatures {
 	public static final RegistryObject<Feature<?>> RIDGE_WOOD_BRUSH = register("ridge_wood_brush", RidgeWoodBrushFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.VEGETAL_DECORATION, RidgeWoodBrushFeature.GENERATE_BIOMES,
 					RidgeWoodBrushFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> TALL_FOLLIAGE = register("tall_folliage", TallFolliageFeature::feature, new FeatureRegistration(
+			GenerationStep.Decoration.VEGETAL_DECORATION, TallFolliageFeature.GENERATE_BIOMES, TallFolliageFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

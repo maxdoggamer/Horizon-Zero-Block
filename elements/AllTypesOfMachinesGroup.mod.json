@@ -1,0 +1,65 @@
+{
+  "_fv": 33,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:CorruptedGlinthawk"
+      },
+      {
+        "value": "CUSTOM:CorruptedStalker"
+      },
+      {
+        "value": "CUSTOM:CorruptedWatcher"
+      },
+      {
+        "value": "CUSTOM:Corruptor"
+      },
+      {
+        "value": "CUSTOM:Glinthawk"
+      },
+      {
+        "value": "CUSTOM:GlinthawkTamed"
+      },
+      {
+        "value": "CUSTOM:Snapmaw"
+      },
+      {
+        "value": "CUSTOM:SnapmawCorrupted"
+      },
+      {
+        "value": "CUSTOM:SnapmawTamed"
+      },
+      {
+        "value": "CUSTOM:Stalker"
+      },
+      {
+        "value": "CUSTOM:StalkerTamed"
+      },
+      {
+        "value": "CUSTOM:Strider"
+      },
+      {
+        "value": "CUSTOM:StriderCorrupted"
+      },
+      {
+        "value": "CUSTOM:StriderTamed"
+      },
+      {
+        "value": "CUSTOM:Tallneck"
+      },
+      {
+        "value": "CUSTOM:TallneckTamed"
+      },
+      {
+        "value": "CUSTOM:Watcher"
+      }
+    ],
+    "name": "all_types_of_machines_group",
+    "namespace": "forge"
+  }
+}

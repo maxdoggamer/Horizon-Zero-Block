@@ -193,6 +193,10 @@
             "type": "number"
           },
           {
+            "name": "y",
+            "type": "number"
+          },
+          {
             "name": "z",
             "type": "number"
           },
@@ -1623,6 +1627,335 @@
         ]
       },
       "path": "~/Machines/Recon Class"
+    },
+    {
+      "name": "CorruptedWatcherDrop",
+      "type": "loottable",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_watcher_drop",
+      "path": "~/Machines/Recon Class"
+    },
+    {
+      "name": "ScrapperParticleSpawningCondition",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper_particle_spawning_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "Spark",
+      "type": "particle",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spark",
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "AllTypesOfMachinesGroup",
+      "type": "tag",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "all_types_of_machines_group",
+      "path": "~/Machines"
+    },
+    {
+      "name": "ScrapPile",
+      "type": "block",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_pile",
+      "path": "~/Machines"
+    },
+    {
+      "name": "CreateScrapPile",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_scrap_pile",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines"
+    },
+    {
+      "name": "ScrapperOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "Scrapper",
+      "type": "livingentity",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper",
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "TallFolliageUpdateTick",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tall_folliage_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TallFolliage",
+      "type": "plant",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tall_folliage"
+    },
+    {
+      "name": "ScrapperTamed",
+      "type": "livingentity",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper_tamed",
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "ScrapperTamedOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper_tamed_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "ScrapperRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "CorruptedScrapper",
+      "type": "livingentity",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_scrapper",
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "ScrapperEntityIsHurt",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "ScrapperLoot",
+      "type": "loottable",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapper_loot",
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "CorruptedScrapperLoot",
+      "type": "loottable",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_scrapper_loot",
+      "path": "~/Machines/Acquisition Class/Scrapper"
+    },
+    {
+      "name": "ScrapPileLoot",
+      "type": "loottable",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrap_pile_loot",
+      "path": "~/Machines"
     }
   ],
   "variable_elements": [
@@ -1775,27 +2108,32 @@
       "entity.horizon_zero_block.stalker_tamed": "Stalker",
       "entity.horizon_zero_block.stalker": "Stalker",
       "item.horizon_zero_block.snapmaw_spawn_egg": "Snapmaw Spawn Egg",
-      "entity.horizon_zero_block.corrupted_watcher": "Watcher",
-      "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
-      "item.horizon_zero_block.precision_arrow": "Precision Arrow",
-      "entity.horizon_zero_block.watcher": "Watcher",
+      "entity.horizon_zero_block.corrupted_watcher": "Corrupted Watcher",
       "entity.horizon_zero_block.strider_tamed": "Strider",
+      "entity.horizon_zero_block.watcher": "Watcher",
+      "item.horizon_zero_block.precision_arrow": "Precision Arrow",
+      "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
       "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
       "itemGroup.tabmachines": "Machines",
+      "item.horizon_zero_block.corrupted_scrapper_spawn_egg": "Scrapper Spawn Egg",
       "entity.horizon_zero_block.corrupted_snapmaw": "Corrupted Snapmaw",
       "key.horizon_zero_block.ammo_making_bag_open": "Ammo Making Bag Open",
+      "block.horizon_zero_block.scrap_pile": "Scrap Pile",
       "entity.horizon_zero_block.snapmaw_tamed": "Snapmaw",
       "entity.horizon_zero_block.corrupted_glinthawk": "Corrupted Glinthawk",
       "item.horizon_zero_block.medicinal_berries": "Medicinal Berries",
       "entity.horizon_zero_block.snapmaw": "Snapmaw",
+      "entity.horizon_zero_block.corrupted_scrapper": "Scrapper",
       "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
       "item.horizon_zero_block.stalker_tamed_spawn_egg": "Stalker Spawn Egg",
+      "item.horizon_zero_block.scrapper_spawn_egg": "Scrapper Spawn Egg",
       "item.horizon_zero_block.corrupted_stalker_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.tear_bow": "Sharpshot Bow (Tearblast)",
       "item.horizon_zero_block.corrupted_glinthawk_spawn_egg": "Corrupted Glinthawk Spawn Egg",
       "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
       "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
       "effect.horizon_zero_block.freeze": "Freeze",
+      "item.horizon_zero_block.scrapper_tamed_spawn_egg": "Scrapper Spawn Egg",
       "item.horizon_zero_block.ridge_wood": "Ridge Wood",
       "block.horizon_zero_block.medicinal_salvebrush": "Medicinal Salvebrush",
       "item.horizon_zero_block.metalburn": "Metalburn",
@@ -1829,12 +2167,15 @@
       "entity.horizon_zero_block.tallneck": "Tallneck",
       "item.horizon_zero_block.shock_arrow": "Shock Arrow",
       "item.horizon_zero_block.metalburner": "Metalburner",
-      "item.horizon_zero_block.corrupted_watcher_spawn_egg": "Watcher Spawn Egg",
+      "item.horizon_zero_block.corrupted_watcher_spawn_egg": "Corrupted Watcher Spawn Egg",
       "block.horizon_zero_block.medicinal_fresh_salvebrush": "Medicinal Fresh Salvebrush",
       "entity.horizon_zero_block.strider": "Strider",
+      "block.horizon_zero_block.tall_folliage": "FolliageSeeds",
       "block.horizon_zero_block.medicinal_hintergold": "Medicinal Hintergold",
+      "entity.horizon_zero_block.scrapper_tamed": "Scrapper",
       "item.horizon_zero_block.hunter_bow": "Hunter Bow",
       "entity.horizon_zero_block.glinthawk_tamed": "Glinthawk",
+      "entity.horizon_zero_block.scrapper": "Scrapper",
       "item.horizon_zero_block.frost_war_bow": "War Bow (Freeze)",
       "block.horizon_zero_block.medicinal_thaw_omen": "Medicinal Thaw Omen",
       "itemGroup.tabranged_items": "Ranged Items",
@@ -1906,6 +2247,10 @@
               },
               {
                 "name": "Glinthawk",
+                "children": []
+              },
+              {
+                "name": "Scrapper",
                 "children": []
               }
             ]

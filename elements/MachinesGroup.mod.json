@@ -21,6 +21,9 @@
       },
       {
         "value": "CUSTOM:Watcher"
+      },
+      {
+        "value": "CUSTOM:Glinthawk"
       }
     ],
     "name": "machines_group",

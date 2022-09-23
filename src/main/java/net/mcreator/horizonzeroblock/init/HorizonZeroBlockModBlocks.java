@@ -14,6 +14,8 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.horizonzeroblock.block.TallFolliageBlock;
+import net.mcreator.horizonzeroblock.block.ScrapPileBlock;
 import net.mcreator.horizonzeroblock.block.RidgeWoodBrushBlock;
 import net.mcreator.horizonzeroblock.block.MedicinalWildEmberBlock;
 import net.mcreator.horizonzeroblock.block.MedicinalWaterweedBlock;
@@ -45,6 +47,8 @@ public class HorizonZeroBlockModBlocks {
 	public static final RegistryObject<Block> MEDICINAL_WATERWEED = REGISTRY.register("medicinal_waterweed", () -> new MedicinalWaterweedBlock());
 	public static final RegistryObject<Block> MEDICINAL_WILD_EMBER = REGISTRY.register("medicinal_wild_ember", () -> new MedicinalWildEmberBlock());
 	public static final RegistryObject<Block> RIDGE_WOOD_BRUSH = REGISTRY.register("ridge_wood_brush", () -> new RidgeWoodBrushBlock());
+	public static final RegistryObject<Block> SCRAP_PILE = REGISTRY.register("scrap_pile", () -> new ScrapPileBlock());
+	public static final RegistryObject<Block> TALL_FOLLIAGE = REGISTRY.register("tall_folliage", () -> new TallFolliageBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
@@ -62,6 +66,8 @@ public class HorizonZeroBlockModBlocks {
 			MedicinalWaterweedBlock.registerRenderLayer();
 			MedicinalWildEmberBlock.registerRenderLayer();
 			RidgeWoodBrushBlock.registerRenderLayer();
+			ScrapPileBlock.registerRenderLayer();
+			TallFolliageBlock.registerRenderLayer();
 		}
 	}
 }

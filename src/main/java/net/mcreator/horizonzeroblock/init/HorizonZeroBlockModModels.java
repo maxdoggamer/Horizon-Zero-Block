@@ -15,6 +15,7 @@ import net.mcreator.horizonzeroblock.client.model.ModelTallneck;
 import net.mcreator.horizonzeroblock.client.model.ModelStrider;
 import net.mcreator.horizonzeroblock.client.model.ModelStalker;
 import net.mcreator.horizonzeroblock.client.model.ModelSnapmaw;
+import net.mcreator.horizonzeroblock.client.model.ModelScrapper;
 import net.mcreator.horizonzeroblock.client.model.ModelGlinthawk;
 import net.mcreator.horizonzeroblock.client.model.ModelCorruptor;
 
@@ -24,6 +25,7 @@ public class HorizonZeroBlockModModels {
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(ModelWatcher.LAYER_LOCATION, ModelWatcher::createBodyLayer);
 		event.registerLayerDefinition(ModelStalker.LAYER_LOCATION, ModelStalker::createBodyLayer);
+		event.registerLayerDefinition(ModelScrapper.LAYER_LOCATION, ModelScrapper::createBodyLayer);
 		event.registerLayerDefinition(Modelcustom_model.LAYER_LOCATION, Modelcustom_model::createBodyLayer);
 		event.registerLayerDefinition(ModelGlinthawk.LAYER_LOCATION, ModelGlinthawk::createBodyLayer);
 		event.registerLayerDefinition(ModelTallneck.LAYER_LOCATION, ModelTallneck::createBodyLayer);
