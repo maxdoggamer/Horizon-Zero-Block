@@ -68,7 +68,7 @@ public class PrecisionBowItem extends Item {
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					PrecisionBowEntity entityarrow = PrecisionBowEntity.shoot(world, entity, world.getRandom(), 10f, 10, 1);
+					PrecisionBowEntity entityarrow = PrecisionBowEntity.shoot(world, entity, world.getRandom(), 5f, 2.5, 1);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
