@@ -24,7 +24,7 @@ public class TallFolliageUpdateTickProcedure {
 				if (entityiterator.isShiftKeyDown()) {
 					while (entityiterator.isShiftKeyDown()) {
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 60, 1, (false), (false)));
+							_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 1, (false), (false)));
 					}
 				}
 			}
