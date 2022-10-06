@@ -14,16 +14,13 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.mcreator.horizonzeroblock.procedures.TallFolliageUpdateTickProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModBlocks;
 
-import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
@@ -55,12 +52,6 @@ public class TallFolliageBlock extends DoublePlantBlock {
 	@Override
 	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
 		return PlantType.PLAINS;
-	}
-
-	@Override
-	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
-		super.tick(blockstate, world, pos, random);
-		TallFolliageUpdateTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@OnlyIn(Dist.CLIENT)

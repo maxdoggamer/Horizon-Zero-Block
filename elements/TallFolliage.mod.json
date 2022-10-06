@@ -85,9 +85,6 @@
     ],
     "restrictionBiomes": [],
     "patchSize": 64,
-    "generateAtAnyHeight": false,
-    "onTickUpdate": {
-      "name": "TallFolliageUpdateTick"
-    }
+    "generateAtAnyHeight": false
   }
 }

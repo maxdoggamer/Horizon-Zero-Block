@@ -1779,6 +1779,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1956,6 +1960,94 @@
       "locked_code": false,
       "registry_name": "scrap_pile_loot",
       "path": "~/Machines"
+    },
+    {
+      "name": "RepulsionArmor",
+      "type": "armor",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsion_armor",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": false,
+        "ec": true
+      },
+      "path": "~/Non Oficial"
+    },
+    {
+      "name": "RepulsionArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsion_armor_helmet_recipe",
+      "path": "~/Non Oficial"
+    },
+    {
+      "name": "RepulsionArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsion_armor_body_recipe",
+      "path": "~/Non Oficial"
+    },
+    {
+      "name": "RepulsionArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsion_armor_leggings_recipe",
+      "path": "~/Non Oficial"
+    },
+    {
+      "name": "RepulsionArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsion_armor_boots_recipe",
+      "path": "~/Non Oficial"
+    },
+    {
+      "name": "Repulsion",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repulsion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Non Oficial"
     }
   ],
   "variable_elements": [
@@ -2133,6 +2225,7 @@
       "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
       "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
       "effect.horizon_zero_block.freeze": "Freeze",
+      "item.horizon_zero_block.repulsion_armor_chestplate": "Repulsion Chestplate",
       "item.horizon_zero_block.scrapper_tamed_spawn_egg": "Scrapper Spawn Egg",
       "item.horizon_zero_block.ridge_wood": "Ridge Wood",
       "block.horizon_zero_block.medicinal_salvebrush": "Medicinal Salvebrush",
@@ -2146,6 +2239,7 @@
       "item.horizon_zero_block.wire": "Wire",
       "item.horizon_zero_block.spear": "Spear",
       "subtitles.soundblast": "tearblast arrow explosion sound",
+      "item.horizon_zero_block.repulsion_armor_leggings": "Repulsion Leggings",
       "item.horizon_zero_block.stalker_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.tallneck_tamed_spawn_egg": "Tallneck Spawn Egg",
       "item.horizon_zero_block.fire_arrow": "Fire Arrow",
@@ -2158,9 +2252,11 @@
       "item.horizon_zero_block.echo_shell": "Echo Shell",
       "item.horizon_zero_block.fire_hunter_bow": "Hunter Bow (fire)",
       "item.horizon_zero_block.metal_shards": "Metal Shards",
+      "item.horizon_zero_block.repulsion_armor_boots": "Repulsion Boots",
       "item.horizon_zero_block.chillwater": "Chillwater",
       "entity.horizon_zero_block.corruptor": "Corruptor",
       "entity.horizon_zero_block.tallneck_tamed": "Tallneck",
+      "item.horizon_zero_block.repulsion_armor_helmet": "Repulsion Helmet",
       "item.horizon_zero_block.freeze_arrow": "Freeze Arrow",
       "item.horizon_zero_block.sparker": "Sparker",
       "key.horizon_zero_block.ammo_crafting": "Ammo Crafting",
@@ -2264,6 +2360,10 @@
             "children": [
               {
                 "name": "Stalker",
+                "children": []
+              },
+              {
+                "name": "Thunderjaw",
                 "children": []
               }
             ]

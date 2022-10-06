@@ -1,4 +1,4 @@
-// Made with Blockbench 4.3.1
+// Made with Blockbench 4.4.1
 // Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
@@ -28,7 +28,7 @@ public class ModelScrapper<T extends Entity> extends EntityModel<T> {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
 		PartDefinition Head = partdefinition.addOrReplaceChild("Head", CubeListBuilder.create(),
-				PartPose.offset(0.0F, 24.0F, 0.0F));
+				PartPose.offset(0.5F, 8.0F, -13.0F));
 
 		PartDefinition cube_r1 = Head.addOrReplaceChild("cube_r1",
 				CubeListBuilder.create().texOffs(78, 22)
@@ -42,24 +42,24 @@ public class ModelScrapper<T extends Entity> extends EntityModel<T> {
 						.addBox(-5.0F, -19.0F, -37.0F, 1.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(58, 22)
 						.addBox(-5.0F, -18.0F, -35.0F, 2.0F, 3.0F, 16.0F, new CubeDeformation(0.0F)).texOffs(0, 62)
 						.addBox(-3.0F, -23.0F, -30.0F, 7.0F, 8.0F, 11.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.3491F, 0.0F, 0.0F));
+				PartPose.offsetAndRotation(-0.5F, 16.0F, 13.0F, 0.3491F, 0.0F, 0.0F));
 
 		PartDefinition cube_r2 = Head.addOrReplaceChild("cube_r2",
 				CubeListBuilder.create().texOffs(38, 94).addBox(7.0F, -25.0F, -26.0F, 1.0F, 5.0F, 5.0F,
 						new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.3518F, 0.123F, 0.045F));
+				PartPose.offsetAndRotation(-0.5F, 16.0F, 13.0F, 0.3518F, 0.123F, 0.045F));
 
 		PartDefinition cube_r3 = Head.addOrReplaceChild("cube_r3",
 				CubeListBuilder.create().texOffs(50, 94).addBox(-7.0F, -25.0F, -26.0F, 1.0F, 5.0F, 5.0F,
 						new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.3518F, -0.123F, -0.045F));
+				PartPose.offsetAndRotation(-0.5F, 16.0F, 13.0F, 0.3518F, -0.123F, -0.045F));
 
 		PartDefinition cube_r4 = Head.addOrReplaceChild("cube_r4",
 				CubeListBuilder.create().texOffs(48, 0)
 						.addBox(-3.0F, -23.0F, -22.0F, 7.0F, 9.0F, 13.0F, new CubeDeformation(0.0F)).texOffs(12, 93)
 						.addBox(0.0F, -28.0F, -20.0F, 1.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(26, 94)
 						.addBox(0.0F, -28.0F, -13.0F, 1.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, 0.0F));
+				PartPose.offsetAndRotation(-0.5F, 16.0F, 13.0F, 0.2618F, 0.0F, 0.0F));
 
 		PartDefinition Body = partdefinition.addOrReplaceChild("Body", CubeListBuilder.create(),
 				PartPose.offset(0.0F, 5.0F, 0.0F));

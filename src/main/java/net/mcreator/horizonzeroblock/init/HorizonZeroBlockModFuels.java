@@ -17,5 +17,7 @@ public class HorizonZeroBlockModFuels {
 		ItemStack itemstack = event.getItemStack();
 		if (itemstack.getItem() == HorizonZeroBlockModItems.BLAZE.get())
 			event.setBurnTime(3200);
+		else if (itemstack.getItem() == HorizonZeroBlockModItems.RIDGE_WOOD.get())
+			event.setBurnTime(400);
 	}
 }

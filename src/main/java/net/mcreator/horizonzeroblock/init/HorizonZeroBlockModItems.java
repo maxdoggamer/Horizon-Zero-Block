@@ -23,6 +23,7 @@ import net.mcreator.horizonzeroblock.item.SpearItem;
 import net.mcreator.horizonzeroblock.item.SparkerItem;
 import net.mcreator.horizonzeroblock.item.ShockArrowItem;
 import net.mcreator.horizonzeroblock.item.RidgeWoodItem;
+import net.mcreator.horizonzeroblock.item.RepulsionArmorItem;
 import net.mcreator.horizonzeroblock.item.PrecisionBowItem;
 import net.mcreator.horizonzeroblock.item.PrecisionArrowItem;
 import net.mcreator.horizonzeroblock.item.MetalburnerItem;
@@ -120,6 +121,8 @@ public class HorizonZeroBlockModItems {
 			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.SCRAPPER, -6710887, -3381760,
 					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
 	public static final RegistryObject<Item> TALL_FOLLIAGE = doubleBlock(HorizonZeroBlockModBlocks.TALL_FOLLIAGE, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> REPULSION_ARMOR_CHESTPLATE = REGISTRY.register("repulsion_armor_chestplate",
+			() -> new RepulsionArmorItem.Chestplate());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

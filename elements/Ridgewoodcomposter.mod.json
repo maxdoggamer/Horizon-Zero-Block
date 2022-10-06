@@ -5,9 +5,9 @@
     "item": {
       "value": "CUSTOM:RidgeWood"
     },
-    "enableFuel": false,
+    "enableFuel": true,
     "fuelPower": {
-      "fixedValue": 1600.0
+      "fixedValue": 400.0
     },
     "hasDispenseBehavior": false,
     "compostLayerChance": 0.3

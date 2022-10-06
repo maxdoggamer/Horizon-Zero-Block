@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "horizon_zero_block:echo_shell"
+    },
+    "2": {
+      "item": "horizon_zero_block:echo_shell"
+    },
+    "3": {
+      "item": "horizon_zero_block:echo_shell"
+    },
+    "4": {
+      "item": "horizon_zero_block:echo_shell"
+    },
+    "5": {
+      "item": "horizon_zero_block:echo_shell"
+    },
+    "6": {
+      "item": "horizon_zero_block:echo_shell"
+    },
+    "7": {
+      "item": "horizon_zero_block:echo_shell"
+    },
+    "8": {
+      "item": "horizon_zero_block:echo_shell"
+    }
+  },
+  "result": {
+    "item": "horizon_zero_block:repulsion_armor_chestplate",
+    "count": 1
+  }
+}
