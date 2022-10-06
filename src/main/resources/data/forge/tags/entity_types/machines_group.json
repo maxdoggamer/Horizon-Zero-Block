@@ -5,6 +5,7 @@
     "horizon_zero_block:watcher",
     "horizon_zero_block:tallneck",
     "horizon_zero_block:glinthawk",
+    "horizon_zero_block:scrapper",
     "horizon_zero_block:stalker",
     "horizon_zero_block:snapmaw"
   ]

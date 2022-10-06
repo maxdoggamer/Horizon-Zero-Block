@@ -13,10 +13,8 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -46,7 +44,7 @@ import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 import java.util.Set;
 
 @Mod.EventBusSubscriber
-public class StalkerEntity extends Monster implements RangedAttackMob {
+public class StalkerEntity extends Monster {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("forest"), new ResourceLocation("bamboo_jungle"),
 			new ResourceLocation("dark_forest"), new ResourceLocation("birch_forest"), new ResourceLocation("jungle"));
 
@@ -85,12 +83,6 @@ public class StalkerEntity extends Monster implements RangedAttackMob {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
-			@Override
-			public boolean canContinueToUse() {
-				return this.canUse();
-			}
-		});
 	}
 
 	@Override
@@ -145,11 +137,6 @@ public class StalkerEntity extends Monster implements RangedAttackMob {
 		StalkerOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
-	@Override
-	public void performRangedAttack(LivingEntity target, float flval) {
-		ThunderWarBowEntity.shoot(this, target);
-	}
-
 	public static void init() {
 		SpawnPlacements.register(HorizonZeroBlockModEntities.STALKER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
@@ -159,9 +146,9 @@ public class StalkerEntity extends Monster implements RangedAttackMob {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 40);
+		builder = builder.add(Attributes.MAX_HEALTH, 90);
 		builder = builder.add(Attributes.ARMOR, 0.5);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
 		return builder;
 	}

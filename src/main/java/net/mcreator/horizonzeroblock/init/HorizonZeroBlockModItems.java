@@ -36,6 +36,7 @@ import net.mcreator.horizonzeroblock.item.HunterArrowItem;
 import net.mcreator.horizonzeroblock.item.HardpointArrowItem;
 import net.mcreator.horizonzeroblock.item.HardBowItem;
 import net.mcreator.horizonzeroblock.item.FrostWarBowItem;
+import net.mcreator.horizonzeroblock.item.FrostItem;
 import net.mcreator.horizonzeroblock.item.FreezeArrowItem;
 import net.mcreator.horizonzeroblock.item.FireHunterBowItem;
 import net.mcreator.horizonzeroblock.item.FireArrowItem;
@@ -123,6 +124,7 @@ public class HorizonZeroBlockModItems {
 	public static final RegistryObject<Item> TALL_FOLLIAGE = doubleBlock(HorizonZeroBlockModBlocks.TALL_FOLLIAGE, CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Item> REPULSION_ARMOR_CHESTPLATE = REGISTRY.register("repulsion_armor_chestplate",
 			() -> new RepulsionArmorItem.Chestplate());
+	public static final RegistryObject<Item> FROST = REGISTRY.register("frost", () -> new FrostItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

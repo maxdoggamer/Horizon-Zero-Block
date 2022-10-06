@@ -9,10 +9,8 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -22,7 +20,6 @@ import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
@@ -40,7 +37,7 @@ import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 import javax.annotation.Nullable;
 
-public class StalkerTamedEntity extends Monster implements RangedAttackMob {
+public class StalkerTamedEntity extends Monster {
 	public StalkerTamedEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(HorizonZeroBlockModEntities.STALKER_TAMED.get(), world);
 	}
@@ -64,12 +61,6 @@ public class StalkerTamedEntity extends Monster implements RangedAttackMob {
 		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
-			@Override
-			public boolean canContinueToUse() {
-				return this.canUse();
-			}
-		});
 	}
 
 	@Override
@@ -130,20 +121,15 @@ public class StalkerTamedEntity extends Monster implements RangedAttackMob {
 		return retval;
 	}
 
-	@Override
-	public void performRangedAttack(LivingEntity target, float flval) {
-		ThunderWarBowEntity.shoot(this, target);
-	}
-
 	public static void init() {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 40);
+		builder = builder.add(Attributes.MAX_HEALTH, 90);
 		builder = builder.add(Attributes.ARMOR, 0.5);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
 		return builder;
 	}

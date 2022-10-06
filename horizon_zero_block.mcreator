@@ -2048,6 +2048,15 @@
         ]
       },
       "path": "~/Non Oficial"
+    },
+    {
+      "name": "Frost",
+      "type": "rangeditem",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frost",
+      "path": "~/Machines/Acquisition Class/Glinthawk"
     }
   ],
   "variable_elements": [
@@ -2216,6 +2225,7 @@
       "item.horizon_zero_block.medicinal_berries": "Medicinal Berries",
       "entity.horizon_zero_block.snapmaw": "Snapmaw",
       "entity.horizon_zero_block.corrupted_scrapper": "Scrapper",
+      "item.horizon_zero_block.frost": "Frost",
       "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
       "item.horizon_zero_block.stalker_tamed_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.scrapper_spawn_egg": "Scrapper Spawn Egg",

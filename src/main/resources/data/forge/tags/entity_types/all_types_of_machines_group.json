@@ -1,7 +1,9 @@
 {
   "replace": false,
   "values": [
+    "horizon_zero_block:corrupted_scrapper",
     "horizon_zero_block:glinthawk_tamed",
+    "horizon_zero_block:scrapper",
     "horizon_zero_block:corrupted_stalker",
     "horizon_zero_block:corrupted_strider",
     "horizon_zero_block:corrupted_watcher",

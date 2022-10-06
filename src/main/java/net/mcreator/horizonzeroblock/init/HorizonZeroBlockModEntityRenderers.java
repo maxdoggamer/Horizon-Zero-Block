@@ -71,5 +71,6 @@ public class HorizonZeroBlockModEntityRenderers {
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.SCRAPPER.get(), ScrapperRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.SCRAPPER_TAMED.get(), ScrapperTamedRenderer::new);
 		event.registerEntityRenderer(HorizonZeroBlockModEntities.CORRUPTED_SCRAPPER.get(), CorruptedScrapperRenderer::new);
+		event.registerEntityRenderer(HorizonZeroBlockModEntities.FROST.get(), ThrownItemRenderer::new);
 	}
 }

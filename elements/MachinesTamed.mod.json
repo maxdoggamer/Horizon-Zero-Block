@@ -21,6 +21,9 @@
       },
       {
         "value": "CUSTOM:TallneckTamed"
+      },
+      {
+        "value": "CUSTOM:ScrapperTamed"
       }
     ],
     "name": "machines_tamed",

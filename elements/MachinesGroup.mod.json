@@ -24,6 +24,9 @@
       },
       {
         "value": "CUSTOM:Glinthawk"
+      },
+      {
+        "value": "CUSTOM:Scrapper"
       }
     ],
     "name": "machines_group",

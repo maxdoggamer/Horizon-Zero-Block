@@ -8,10 +8,8 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -34,7 +32,7 @@ import net.mcreator.horizonzeroblock.procedures.StalkerRightClickedOnEntityProce
 import net.mcreator.horizonzeroblock.procedures.StalkerOnEntityTickUpdateProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
-public class CorruptedStalkerEntity extends Monster implements RangedAttackMob {
+public class CorruptedStalkerEntity extends Monster {
 	public CorruptedStalkerEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(HorizonZeroBlockModEntities.CORRUPTED_STALKER.get(), world);
 	}
@@ -63,12 +61,6 @@ public class CorruptedStalkerEntity extends Monster implements RangedAttackMob {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 10) {
-			@Override
-			public boolean canContinueToUse() {
-				return this.canUse();
-			}
-		});
 	}
 
 	@Override
@@ -122,20 +114,15 @@ public class CorruptedStalkerEntity extends Monster implements RangedAttackMob {
 		StalkerOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
-	@Override
-	public void performRangedAttack(LivingEntity target, float flval) {
-		ThunderWarBowEntity.shoot(this, target);
-	}
-
 	public static void init() {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 50);
+		builder = builder.add(Attributes.MAX_HEALTH, 100);
 		builder = builder.add(Attributes.ARMOR, 0.5);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
 		return builder;
 	}

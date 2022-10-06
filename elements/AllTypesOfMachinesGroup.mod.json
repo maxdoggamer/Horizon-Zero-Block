@@ -57,6 +57,12 @@
       },
       {
         "value": "CUSTOM:Watcher"
+      },
+      {
+        "value": "CUSTOM:CorruptedScrapper"
+      },
+      {
+        "value": "CUSTOM:Scrapper"
       }
     ],
     "name": "all_types_of_machines_group",

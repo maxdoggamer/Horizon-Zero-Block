@@ -207,7 +207,7 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		FrostWarBowEntity.shoot(this, target);
+		FrostEntity.shoot(this, target);
 	}
 
 	@Override
@@ -233,9 +233,9 @@ public class GlinthawkEntity extends Monster implements RangedAttackMob {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 26);
+		builder = builder.add(Attributes.MAX_HEALTH, 70);
 		builder = builder.add(Attributes.ARMOR, 1.5);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 1);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;

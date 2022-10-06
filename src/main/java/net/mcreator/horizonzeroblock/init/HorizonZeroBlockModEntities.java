@@ -38,6 +38,7 @@ import net.mcreator.horizonzeroblock.entity.HardBowEntity;
 import net.mcreator.horizonzeroblock.entity.GlinthawkTamedEntity;
 import net.mcreator.horizonzeroblock.entity.GlinthawkEntity;
 import net.mcreator.horizonzeroblock.entity.FrostWarBowEntity;
+import net.mcreator.horizonzeroblock.entity.FrostEntity;
 import net.mcreator.horizonzeroblock.entity.FireHunterBowEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptorEntity;
 import net.mcreator.horizonzeroblock.entity.CorruptedWatcherEntity;
@@ -170,6 +171,9 @@ public class HorizonZeroBlockModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedScrapperEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FrostEntity>> FROST = register("projectile_frost",
+			EntityType.Builder.<FrostEntity>of(FrostEntity::new, MobCategory.MISC).setCustomClientFactory(FrostEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
