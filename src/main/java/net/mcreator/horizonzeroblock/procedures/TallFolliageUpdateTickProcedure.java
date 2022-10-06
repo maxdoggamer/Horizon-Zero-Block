@@ -22,8 +22,10 @@ public class TallFolliageUpdateTickProcedure {
 					.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator.isShiftKeyDown()) {
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 60, 1, (false), (false)));
+					while (entityiterator.isShiftKeyDown()) {
+						if (entity instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 60, 1, (false), (false)));
+					}
 				}
 			}
 		}

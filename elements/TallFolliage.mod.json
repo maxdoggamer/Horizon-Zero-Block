@@ -85,6 +85,9 @@
     ],
     "restrictionBiomes": [],
     "patchSize": 64,
-    "generateAtAnyHeight": false
+    "generateAtAnyHeight": false,
+    "onEntityWalksOn": {
+      "name": "TallFolliageUpdateTick"
+    }
   }
 }
