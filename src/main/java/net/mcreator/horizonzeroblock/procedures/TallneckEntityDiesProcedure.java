@@ -15,7 +15,8 @@ public class TallneckEntityDiesProcedure {
 		if (!world.isClientSide()) {
 			MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 			if (_mcserv != null)
-				_mcserv.getPlayerList().broadcastMessage(new TextComponent("Somehow the tallneck has been defeated"), ChatType.SYSTEM, Util.NIL_UUID);
+				_mcserv.getPlayerList().broadcastMessage(new TextComponent("Somehow the tallneck has been defeated (STOP CHEATING)"), ChatType.SYSTEM,
+						Util.NIL_UUID);
 		}
 		HorizonZeroBlockModVariables.WorldVariables.get(world).Tallneck = false;
 		HorizonZeroBlockModVariables.WorldVariables.get(world).syncData(world);

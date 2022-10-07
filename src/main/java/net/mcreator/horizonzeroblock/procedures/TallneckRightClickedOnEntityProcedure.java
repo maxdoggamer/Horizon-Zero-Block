@@ -62,6 +62,13 @@ public class TallneckRightClickedOnEntityProcedure {
 										MobSpawnType.MOB_SUMMONED, null, null);
 							world.addFreshEntity(entityToSpawn);
 						}
+						{
+							boolean _setval = false;
+							entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.PSI_overrides = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
 				}.start(world, 60);
