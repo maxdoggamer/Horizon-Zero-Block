@@ -93,7 +93,7 @@ public class HorizonZeroBlockModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TallneckEntity>> TALLNECK = register("tallneck",
 			EntityType.Builder.<TallneckEntity>of(TallneckEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.95f));
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GlinthawkEntity>> GLINTHAWK = register("glinthawk",
 			EntityType.Builder.<GlinthawkEntity>of(GlinthawkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkEntity::new)
