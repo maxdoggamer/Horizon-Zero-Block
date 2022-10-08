@@ -86,7 +86,7 @@
     "restrictionBiomes": [],
     "patchSize": 64,
     "generateAtAnyHeight": false,
-    "onRightClicked": {
+    "onEntityCollides": {
       "name": "TallFolliageUpdateTick"
     }
   }
