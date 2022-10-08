@@ -79,14 +79,14 @@
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
     "canBePlacedOn": [],
-    "frequencyOnChunks": 5,
+    "frequencyOnChunks": 2,
     "spawnWorldTypes": [
       "Surface"
     ],
     "restrictionBiomes": [],
-    "patchSize": 64,
+    "patchSize": 3,
     "generateAtAnyHeight": false,
-    "onEntityCollides": {
+    "onRightClicked": {
       "name": "TallFolliageUpdateTick"
     }
   }

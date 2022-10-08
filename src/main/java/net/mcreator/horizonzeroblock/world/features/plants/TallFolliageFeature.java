@@ -35,9 +35,9 @@ public class TallFolliageFeature extends RandomPatchFeature {
 		CONFIGURED_FEATURE = FeatureUtils.register("horizon_zero_block:tall_folliage", FEATURE,
 				FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
 						new SimpleBlockConfiguration(BlockStateProvider.simple(HorizonZeroBlockModBlocks.TALL_FOLLIAGE.get().defaultBlockState())),
-						List.of(), 64));
+						List.of(), 3));
 		PLACED_FEATURE = PlacementUtils.register("horizon_zero_block:tall_folliage", CONFIGURED_FEATURE,
-				List.of(CountPlacement.of(5), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+				List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 		return FEATURE;
 	}
 

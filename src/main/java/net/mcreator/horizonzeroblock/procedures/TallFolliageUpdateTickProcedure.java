@@ -9,9 +9,7 @@ public class TallFolliageUpdateTickProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		while (entity.isShiftKeyDown()) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 20, 1, (false), (false)));
-		}
+		if (entity instanceof LivingEntity _entity)
+			_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 1, (false), (false)));
 	}
 }
