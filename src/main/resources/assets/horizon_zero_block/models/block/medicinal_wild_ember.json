@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/medicinalwildember",
     "particle": "horizon_zero_block:blocks/medicinalwildember"
-  }
+  },
+  "render_type": "cutout"
 }

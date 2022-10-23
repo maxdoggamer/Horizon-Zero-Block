@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "frozen_river",
+    "beach",
+    "river"
+  ],
+  "spawners": {
+    "type": "horizon_zero_block:snapmaw",
+    "weight": 200,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

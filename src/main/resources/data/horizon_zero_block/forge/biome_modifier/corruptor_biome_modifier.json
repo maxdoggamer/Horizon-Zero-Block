@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "badlands",
+    "taiga",
+    "dark_forest",
+    "savanna",
+    "desert"
+  ],
+  "spawners": {
+    "type": "horizon_zero_block:corruptor",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

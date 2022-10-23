@@ -14,7 +14,6 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModTabs;
@@ -37,8 +36,8 @@ public class TearBowItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("With echo-shells atached to the arrow's head"));
-		list.add(new TextComponent("this powerful bow is capable of generating a compressed air blast at the target. NOTE:sometimes may fail"));
+		list.add(Component.literal("With echo-shells atached to the arrow's head"));
+		list.add(Component.literal("this powerful bow is capable of generating a compressed air blast at the target. NOTE:sometimes may fail"));
 	}
 
 	@Override

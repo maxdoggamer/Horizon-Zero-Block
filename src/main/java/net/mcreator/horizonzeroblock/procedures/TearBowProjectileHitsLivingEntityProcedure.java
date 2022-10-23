@@ -11,12 +11,11 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-
-import java.util.Random;
 
 public class TearBowProjectileHitsLivingEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -62,7 +61,7 @@ public class TearBowProjectileHitsLivingEntityProcedure {
 								SoundSource.MASTER, 5, 1, false);
 					}
 				}
-				if (Mth.nextDouble(new Random(), 1, 10) > 5) {
+				if (Mth.nextDouble(RandomSource.create(), 1, 10) > 5) {
 					if (world instanceof Level _level && !_level.isClientSide())
 						_level.explode(null, x, y, z, 4, Explosion.BlockInteraction.NONE);
 					if (entity instanceof LivingEntity _entity)

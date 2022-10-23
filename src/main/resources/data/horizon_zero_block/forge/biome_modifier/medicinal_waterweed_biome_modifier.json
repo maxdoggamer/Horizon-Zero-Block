@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "warm_ocean",
+    "cold_ocean",
+    "river"
+  ],
+  "features": "horizon_zero_block:medicinal_waterweed",
+  "step": "vegetal_decoration"
+}

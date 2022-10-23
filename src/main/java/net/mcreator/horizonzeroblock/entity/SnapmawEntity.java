@@ -4,14 +4,10 @@ package net.mcreator.horizonzeroblock.entity;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.ForgeMod;
 
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -30,7 +26,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -48,20 +43,7 @@ import net.mcreator.horizonzeroblock.procedures.SnapmawRightClickedOnEntityProce
 import net.mcreator.horizonzeroblock.procedures.SnapmawEntityIsHurtProcedure;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
-import java.util.Set;
-
-@Mod.EventBusSubscriber
 public class SnapmawEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_river"), new ResourceLocation("beach"),
-			new ResourceLocation("river"));
-
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.SNAPMAW.get(), 200, 1, 2));
-	}
-
 	public SnapmawEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(HorizonZeroBlockModEntities.SNAPMAW.get(), world);
 	}

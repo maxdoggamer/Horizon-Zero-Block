@@ -9,9 +9,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
-import java.util.Random;
 import java.util.Comparator;
 
 public class StalkerOnEntityTickUpdateProcedure {
@@ -24,7 +24,7 @@ public class StalkerOnEntityTickUpdateProcedure {
 						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 					}
 				}.compareDistOf(x, y, z)).findFirst().orElse(null))) {
-			if (Mth.nextDouble(new Random(), 1, 100) > 25) {
+			if (Mth.nextDouble(RandomSource.create(), 1, 100) > 25) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 1, (false), (false)));
 			}

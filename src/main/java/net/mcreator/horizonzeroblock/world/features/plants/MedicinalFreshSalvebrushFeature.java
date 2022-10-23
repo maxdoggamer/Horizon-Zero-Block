@@ -15,7 +15,6 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -35,20 +34,13 @@ public class MedicinalFreshSalvebrushFeature extends RandomPatchFeature {
 		FEATURE = new MedicinalFreshSalvebrushFeature();
 		CONFIGURED_FEATURE = FeatureUtils.register("horizon_zero_block:medicinal_fresh_salvebrush", FEATURE,
 				FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-						new SimpleBlockConfiguration(
-								BlockStateProvider.simple(HorizonZeroBlockModBlocks.MEDICINAL_FRESH_SALVEBRUSH.get().defaultBlockState())),
+						new SimpleBlockConfiguration(BlockStateProvider.simple(HorizonZeroBlockModBlocks.MEDICINAL_FRESH_SALVEBRUSH.get())),
 						List.of(), 64));
 		PLACED_FEATURE = PlacementUtils.register("horizon_zero_block:medicinal_fresh_salvebrush", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 		return FEATURE;
 	}
 
-	public static Holder<PlacedFeature> placedFeature() {
-		return PLACED_FEATURE;
-	}
-
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("windswept_hills"), new ResourceLocation("snowy_plains"),
-			new ResourceLocation("snowy_slopes"), new ResourceLocation("snowy_taiga"), new ResourceLocation("snowy_beach"));
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public MedicinalFreshSalvebrushFeature() {

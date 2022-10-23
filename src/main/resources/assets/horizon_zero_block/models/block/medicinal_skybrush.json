@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/medicinalskybrush",
     "particle": "horizon_zero_block:blocks/medicinalskybrush"
-  }
+  },
+  "render_type": "cutout"
 }

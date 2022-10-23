@@ -17,7 +17,6 @@ import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.util.valueproviders.BiasedToBottomInt;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -39,7 +38,7 @@ public class RidgeWoodBrushFeature extends RandomPatchFeature {
 		CONFIGURED_FEATURE = FeatureUtils.register("horizon_zero_block:ridge_wood_brush", FEATURE,
 				FeatureUtils.simpleRandomPatchConfiguration(64, PlacementUtils.filtered(Feature.BLOCK_COLUMN,
 						BlockColumnConfiguration.simple(BiasedToBottomInt.of(2, 4),
-								BlockStateProvider.simple(HorizonZeroBlockModBlocks.RIDGE_WOOD_BRUSH.get().defaultBlockState())),
+								BlockStateProvider.simple(HorizonZeroBlockModBlocks.RIDGE_WOOD_BRUSH.get())),
 						BlockPredicate.allOf(BlockPredicate.ONLY_IN_AIR_PREDICATE,
 								BlockPredicate.wouldSurvive(HorizonZeroBlockModBlocks.RIDGE_WOOD_BRUSH.get().defaultBlockState(), BlockPos.ZERO)))));
 		PLACED_FEATURE = PlacementUtils.register("horizon_zero_block:ridge_wood_brush", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
@@ -47,11 +46,6 @@ public class RidgeWoodBrushFeature extends RandomPatchFeature {
 		return FEATURE;
 	}
 
-	public static Holder<PlacedFeature> placedFeature() {
-		return PLACED_FEATURE;
-	}
-
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public RidgeWoodBrushFeature() {

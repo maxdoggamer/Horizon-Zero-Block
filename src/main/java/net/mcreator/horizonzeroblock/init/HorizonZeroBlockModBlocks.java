@@ -7,10 +7,6 @@ package net.mcreator.horizonzeroblock.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
@@ -49,25 +45,4 @@ public class HorizonZeroBlockModBlocks {
 	public static final RegistryObject<Block> RIDGE_WOOD_BRUSH = REGISTRY.register("ridge_wood_brush", () -> new RidgeWoodBrushBlock());
 	public static final RegistryObject<Block> SCRAP_PILE = REGISTRY.register("scrap_pile", () -> new ScrapPileBlock());
 	public static final RegistryObject<Block> TALL_FOLLIAGE = REGISTRY.register("tall_folliage", () -> new TallFolliageBlock());
-
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientSideHandler {
-		@SubscribeEvent
-		public static void clientSetup(FMLClientSetupEvent event) {
-			MedicinalBrightOmenBlock.registerRenderLayer();
-			MedicinalFreshSalvebrushBlock.registerRenderLayer();
-			MedicinalGreyOmenBlock.registerRenderLayer();
-			MedicinalHintergoldBlock.registerRenderLayer();
-			MedicinalOchrebloomBlock.registerRenderLayer();
-			MedicinalSalvebrushBlock.registerRenderLayer();
-			MedicinalSkybrushBlock.registerRenderLayer();
-			MedicinalThawOmenBlock.registerRenderLayer();
-			MedicinalValeysBrushBlock.registerRenderLayer();
-			MedicinalWaterweedBlock.registerRenderLayer();
-			MedicinalWildEmberBlock.registerRenderLayer();
-			RidgeWoodBrushBlock.registerRenderLayer();
-			ScrapPileBlock.registerRenderLayer();
-			TallFolliageBlock.registerRenderLayer();
-		}
-	}
 }

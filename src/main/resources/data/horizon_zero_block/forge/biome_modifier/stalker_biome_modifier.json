@@ -1,0 +1,16 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "forest",
+    "bamboo_jungle",
+    "dark_forest",
+    "birch_forest",
+    "jungle"
+  ],
+  "spawners": {
+    "type": "horizon_zero_block:stalker",
+    "weight": 50,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

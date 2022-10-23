@@ -1,9 +1,6 @@
 
 package net.mcreator.horizonzeroblock.block;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
@@ -16,11 +13,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -52,11 +46,5 @@ public class MedicinalFreshSalvebrushBlock extends FlowerBlock {
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(HorizonZeroBlockModItems.MEDICINAL_BERRIES.get()));
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(HorizonZeroBlockModBlocks.MEDICINAL_FRESH_SALVEBRUSH.get(),
-				renderType -> renderType == RenderType.cutout());
 	}
 }

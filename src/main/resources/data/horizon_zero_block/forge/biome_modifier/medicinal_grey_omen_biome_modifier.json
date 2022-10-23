@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "windswept_hills",
+    "snowy_plains",
+    "snowy_slopes",
+    "snowy_taiga",
+    "snowy_beach"
+  ],
+  "features": "horizon_zero_block:medicinal_grey_omen",
+  "step": "vegetal_decoration"
+}

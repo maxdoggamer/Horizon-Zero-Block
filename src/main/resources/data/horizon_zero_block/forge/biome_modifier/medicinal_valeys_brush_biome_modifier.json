@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "features": "horizon_zero_block:medicinal_valeys_brush",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "horizon_zero_block:glinthawk",
+    "weight": 200,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

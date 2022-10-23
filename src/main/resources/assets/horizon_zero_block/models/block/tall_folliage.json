@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/tftop",
     "particle": "horizon_zero_block:blocks/tftop"
-  }
+  },
+  "render_type": "cutout"
 }

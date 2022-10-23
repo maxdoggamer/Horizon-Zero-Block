@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/medicinalochrebloom",
     "particle": "horizon_zero_block:blocks/medicinalochrebloom"
-  }
+  },
+  "render_type": "cutout"
 }

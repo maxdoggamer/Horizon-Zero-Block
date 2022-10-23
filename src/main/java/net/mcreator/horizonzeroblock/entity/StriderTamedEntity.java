@@ -31,7 +31,7 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.horizonzeroblock.procedures.StriderTamedOnInitialEntitySpawnProcedure;
@@ -48,7 +48,7 @@ public class StriderTamedEntity extends Monster {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
-		setCustomName(new TextComponent("Strider"));
+		setCustomName(Component.literal("Strider"));
 		setCustomNameVisible(true);
 		setPersistenceRequired();
 	}

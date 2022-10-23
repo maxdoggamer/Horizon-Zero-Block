@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/scrappileblock",
     "particle": "horizon_zero_block:blocks/scrappileblock"
-  }
+  },
+  "render_type": "solid"
 }

@@ -14,7 +14,6 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModTabs;
@@ -37,7 +36,7 @@ public class FireHunterBowItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("Shoots fire arrows that burns on contact"));
+		list.add(Component.literal("Shoots fire arrows that burns on contact"));
 	}
 
 	@Override

@@ -1,9 +1,6 @@
 
 package net.mcreator.horizonzeroblock.block;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.FluidState;
@@ -24,14 +21,9 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModBlocks;
 
 import java.util.List;
 
@@ -50,8 +42,8 @@ public class ScrapPileBlock extends Block implements SimpleWaterloggedBlock
 	@Override
 	public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(new TextComponent("hmmm"));
-		list.add(new TextComponent("what can be among this trash?"));
+		list.add(Component.literal("hmmm"));
+		list.add(Component.literal("what can be among this trash?"));
 	}
 
 	@Override
@@ -95,10 +87,5 @@ public class ScrapPileBlock extends Block implements SimpleWaterloggedBlock
 			world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
 		}
 		return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(HorizonZeroBlockModBlocks.SCRAP_PILE.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

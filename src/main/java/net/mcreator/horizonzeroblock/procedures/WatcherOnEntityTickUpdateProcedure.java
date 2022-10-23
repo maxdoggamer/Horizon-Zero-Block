@@ -17,9 +17,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
-import java.util.Random;
 import java.util.Comparator;
 
 public class WatcherOnEntityTickUpdateProcedure {
@@ -27,7 +27,7 @@ public class WatcherOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 16, 16, 16), e -> true).isEmpty()) {
-			if (Mth.nextDouble(new Random(), 1, 100) == 1) {
+			if (Mth.nextDouble(RandomSource.create(), 1, 100) == 1) {
 				if (((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 100, 100, 100), e -> true).stream()
 						.sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
@@ -35,7 +35,7 @@ public class WatcherOnEntityTickUpdateProcedure {
 							}
 						}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, (false), (false)));
-			} else if (Mth.nextDouble(new Random(), 1, 100) == 2) {
+			} else if (Mth.nextDouble(RandomSource.create(), 1, 100) == 2) {
 				for (int index0 = 0; index0 < (int) (8); index0++) {
 					new Object() {
 						private int ticks = 0;

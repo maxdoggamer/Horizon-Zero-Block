@@ -16,5 +16,5 @@ import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 public class HorizonZeroBlockModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES,
 			HorizonZeroBlockMod.MODID);
-	public static final RegistryObject<ParticleType<?>> SPARK = REGISTRY.register("spark", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> SPARK = REGISTRY.register("spark", () -> new SimpleParticleType(false));
 }

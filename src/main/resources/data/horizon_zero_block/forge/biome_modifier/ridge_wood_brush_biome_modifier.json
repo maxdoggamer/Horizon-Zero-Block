@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "features": "horizon_zero_block:ridge_wood_brush",
+  "step": "vegetal_decoration"
+}

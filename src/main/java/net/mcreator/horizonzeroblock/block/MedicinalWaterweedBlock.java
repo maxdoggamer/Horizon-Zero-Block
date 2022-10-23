@@ -2,8 +2,6 @@
 package net.mcreator.horizonzeroblock.block;
 
 import net.minecraftforge.common.PlantType;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
@@ -15,11 +13,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -45,10 +40,5 @@ public class MedicinalWaterweedBlock extends FlowerBlock {
 	@Override
 	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
 		return PlantType.WATER;
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(HorizonZeroBlockModBlocks.MEDICINAL_WATERWEED.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

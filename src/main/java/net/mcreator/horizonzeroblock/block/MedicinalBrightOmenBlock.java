@@ -4,8 +4,6 @@ package net.mcreator.horizonzeroblock.block;
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraftforge.common.PlantType;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.MaterialColor;
@@ -21,11 +19,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -62,9 +57,7 @@ public class MedicinalBrightOmenBlock extends FlowerBlock {
 	@Override
 	public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
 		return groundState.is(Blocks.COBBLESTONE) || groundState.is(Blocks.STONE) || groundState.is(Blocks.ANDESITE) || groundState.is(Blocks.GRANITE)
-				|| groundState.is(Blocks.DIORITE)
-
-		;
+				|| groundState.is(Blocks.DIORITE);
 	}
 
 	@Override
@@ -77,10 +70,5 @@ public class MedicinalBrightOmenBlock extends FlowerBlock {
 	@Override
 	public PlantType getPlantType(BlockGetter world, BlockPos pos) {
 		return PlantType.CAVE;
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(HorizonZeroBlockModBlocks.MEDICINAL_BRIGHT_OMEN.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

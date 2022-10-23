@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[43,)"
 license="Academic Free License v3.0"
 
 [[mods]]
 modId="horizon_zero_block"
-version="1.0.0"
+version="1.1.1"
 displayName="Horizon Zero Block"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
@@ -14,7 +14,7 @@ authors="MaxDogGamer, MCreator"
 [[dependencies.horizon_zero_block]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2]"
+    versionRange="[1.19.2]"
     ordering="NONE"
     side="BOTH"
 

@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/ridgewoodbrush",
     "particle": "horizon_zero_block:blocks/ridgewoodbrush"
-  }
+  },
+  "render_type": "cutout"
 }

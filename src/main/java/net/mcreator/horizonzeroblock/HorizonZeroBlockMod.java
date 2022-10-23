@@ -27,8 +27,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModTabs;
+import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModSounds;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModParticleTypes;
+import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModPaintings;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModMobEffects;
+import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModMenus;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModFeatures;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
@@ -50,15 +53,19 @@ public class HorizonZeroBlockMod {
 	public HorizonZeroBlockMod() {
 		HorizonZeroBlockModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		HorizonZeroBlockModSounds.REGISTRY.register(bus);
 		HorizonZeroBlockModBlocks.REGISTRY.register(bus);
 		HorizonZeroBlockModItems.REGISTRY.register(bus);
 		HorizonZeroBlockModEntities.REGISTRY.register(bus);
 
 		HorizonZeroBlockModFeatures.REGISTRY.register(bus);
 
+		HorizonZeroBlockModPaintings.REGISTRY.register(bus);
 		HorizonZeroBlockModMobEffects.REGISTRY.register(bus);
 
 		HorizonZeroBlockModParticleTypes.REGISTRY.register(bus);
+		HorizonZeroBlockModMenus.REGISTRY.register(bus);
+
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

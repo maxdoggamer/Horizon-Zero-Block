@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/medicinalsalvebrush",
     "particle": "horizon_zero_block:blocks/medicinalsalvebrush"
-  }
+  },
+  "render_type": "cutout"
 }

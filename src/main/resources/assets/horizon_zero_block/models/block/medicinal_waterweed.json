@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/medicinalwaterweed",
     "particle": "horizon_zero_block:blocks/medicinalwaterweed"
-  }
+  },
+  "render_type": "cutout"
 }

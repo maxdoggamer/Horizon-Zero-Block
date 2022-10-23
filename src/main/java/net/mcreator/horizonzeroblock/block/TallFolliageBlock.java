@@ -2,8 +2,6 @@
 package net.mcreator.horizonzeroblock.block;
 
 import net.minecraftforge.common.PlantType;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -21,11 +19,8 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.mcreator.horizonzeroblock.procedures.TallFolliageUpdateTickProcedure;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModBlocks;
 
 import java.util.List;
 import java.util.Collections;
@@ -52,7 +47,7 @@ public class TallFolliageBlock extends DoublePlantBlock {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
+		return Collections.singletonList(new ItemStack(this));
 	}
 
 	@Override
@@ -65,10 +60,5 @@ public class TallFolliageBlock extends DoublePlantBlock {
 		super.use(blockstate, world, pos, entity, hand, hit);
 		TallFolliageUpdateTickProcedure.execute(entity);
 		return InteractionResult.SUCCESS;
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(HorizonZeroBlockModBlocks.TALL_FOLLIAGE.get(), renderType -> renderType == RenderType.cutout());
 	}
 }

@@ -15,7 +15,6 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -35,19 +34,13 @@ public class MedicinalValeysBrushFeature extends RandomPatchFeature {
 		FEATURE = new MedicinalValeysBrushFeature();
 		CONFIGURED_FEATURE = FeatureUtils.register("horizon_zero_block:medicinal_valeys_brush", FEATURE,
 				FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-						new SimpleBlockConfiguration(
-								BlockStateProvider.simple(HorizonZeroBlockModBlocks.MEDICINAL_VALEYS_BRUSH.get().defaultBlockState())),
-						List.of(), 64));
+						new SimpleBlockConfiguration(BlockStateProvider.simple(HorizonZeroBlockModBlocks.MEDICINAL_VALEYS_BRUSH.get())), List.of(),
+						64));
 		PLACED_FEATURE = PlacementUtils.register("horizon_zero_block:medicinal_valeys_brush", CONFIGURED_FEATURE, List.of(CountPlacement.of(5),
 				RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 		return FEATURE;
 	}
 
-	public static Holder<PlacedFeature> placedFeature() {
-		return PLACED_FEATURE;
-	}
-
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public MedicinalValeysBrushFeature() {

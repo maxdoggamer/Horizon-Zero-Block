@@ -2385,7 +2385,7 @@
   "workspaceSettings": {
     "modid": "horizon_zero_block",
     "modName": "Horizon Zero Block",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "author": "MaxDogGamer, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
@@ -2396,10 +2396,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.18.2",
+    "currentGenerator": "forge-1.19.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.horizonzeroblock",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200234517
+  "mcreatorVersion": 202200341417
 }

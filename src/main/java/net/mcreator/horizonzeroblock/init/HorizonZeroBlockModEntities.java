@@ -49,7 +49,7 @@ import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class HorizonZeroBlockModEntities {
-	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, HorizonZeroBlockMod.MODID);
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, HorizonZeroBlockMod.MODID);
 	public static final RegistryObject<EntityType<FireHunterBowEntity>> FIRE_HUNTER_BOW = register("projectile_fire_hunter_bow",
 			EntityType.Builder.<FireHunterBowEntity>of(FireHunterBowEntity::new, MobCategory.MISC).setCustomClientFactory(FireHunterBowEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));

@@ -8,9 +8,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.ChatType;
-import net.minecraft.Util;
+import net.minecraft.network.chat.Component;
 
 import net.mcreator.horizonzeroblock.network.HorizonZeroBlockModVariables;
 import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
@@ -22,8 +20,7 @@ public class TallneckOnInitialEntitySpawnProcedure {
 		if (!world.isClientSide()) {
 			MinecraftServer _mcserv = ServerLifecycleHooks.getCurrentServer();
 			if (_mcserv != null)
-				_mcserv.getPlayerList().broadcastMessage(new TextComponent("The Tallneck has been made by a nearby Cauldron"), ChatType.SYSTEM,
-						Util.NIL_UUID);
+				_mcserv.getPlayerList().broadcastSystemMessage(Component.literal("The Tallneck has been made by a nearby Cauldron"), false);
 		}
 		HorizonZeroBlockModVariables.WorldVariables.get(world).Tallneck = true;
 		HorizonZeroBlockModVariables.WorldVariables.get(world).syncData(world);

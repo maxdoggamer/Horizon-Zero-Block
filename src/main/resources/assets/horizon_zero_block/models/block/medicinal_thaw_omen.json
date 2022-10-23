@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/medicinalthawomen",
     "particle": "horizon_zero_block:blocks/medicinalthawomen"
-  }
+  },
+  "render_type": "cutout"
 }

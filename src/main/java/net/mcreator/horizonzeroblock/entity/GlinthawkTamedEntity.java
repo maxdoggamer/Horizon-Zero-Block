@@ -4,14 +4,10 @@ package net.mcreator.horizonzeroblock.entity;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.RangedAttackMob;
@@ -32,13 +28,13 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.Difficulty;
+import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
@@ -50,17 +46,9 @@ import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 import javax.annotation.Nullable;
 
-import java.util.Random;
 import java.util.EnumSet;
 
-@Mod.EventBusSubscriber
 public class GlinthawkTamedEntity extends Monster implements RangedAttackMob {
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.MONSTER)
-				.add(new MobSpawnSettings.SpawnerData(HorizonZeroBlockModEntities.GLINTHAWK_TAMED.get(), 200, 1, 3));
-	}
-
 	public GlinthawkTamedEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(HorizonZeroBlockModEntities.GLINTHAWK_TAMED.get(), world);
 	}
@@ -134,7 +122,7 @@ public class GlinthawkTamedEntity extends Monster implements RangedAttackMob {
 		this.goalSelector.addGoal(6, new RandomStrollGoal(this, 1.5, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = GlinthawkTamedEntity.this.getRandom();
+				RandomSource random = GlinthawkTamedEntity.this.getRandom();
 				double dir_x = GlinthawkTamedEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_y = GlinthawkTamedEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
 				double dir_z = GlinthawkTamedEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);

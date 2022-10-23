@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package net.mcreator.horizonzeroblock.init;
 
@@ -18,7 +18,7 @@ public class HorizonZeroBlockModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(HorizonZeroBlockModMenus.AMMO_MAKING_BAG, AmmoMakingBagScreen::new);
+			MenuScreens.register(HorizonZeroBlockModMenus.AMMO_MAKING_BAG.get(), AmmoMakingBagScreen::new);
 		});
 	}
 }

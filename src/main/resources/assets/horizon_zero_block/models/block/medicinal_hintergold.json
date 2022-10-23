@@ -3,5 +3,6 @@
   "textures": {
     "cross": "horizon_zero_block:blocks/medicinalhintergold",
     "particle": "horizon_zero_block:blocks/medicinalhintergold"
-  }
+  },
+  "render_type": "cutout"
 }

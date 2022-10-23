@@ -14,7 +14,6 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -34,18 +33,12 @@ public class TallFolliageFeature extends RandomPatchFeature {
 		FEATURE = new TallFolliageFeature();
 		CONFIGURED_FEATURE = FeatureUtils.register("horizon_zero_block:tall_folliage", FEATURE,
 				FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
-						new SimpleBlockConfiguration(BlockStateProvider.simple(HorizonZeroBlockModBlocks.TALL_FOLLIAGE.get().defaultBlockState())),
-						List.of(), 3));
+						new SimpleBlockConfiguration(BlockStateProvider.simple(HorizonZeroBlockModBlocks.TALL_FOLLIAGE.get())), List.of(), 3));
 		PLACED_FEATURE = PlacementUtils.register("horizon_zero_block:tall_folliage", CONFIGURED_FEATURE,
 				List.of(CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 		return FEATURE;
 	}
 
-	public static Holder<PlacedFeature> placedFeature() {
-		return PLACED_FEATURE;
-	}
-
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	public TallFolliageFeature() {

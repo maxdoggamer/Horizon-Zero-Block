@@ -4,16 +4,16 @@
  */
 package net.mcreator.horizonzeroblock.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
-import net.minecraft.world.entity.decoration.Motive;
+import net.minecraft.world.entity.decoration.PaintingVariant;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
+
 public class HorizonZeroBlockModPaintings {
-	@SubscribeEvent
-	public static void registerMotives(RegistryEvent.Register<Motive> event) {
-		event.getRegistry().register(new Motive(128, 64).setRegistryName("horizon_painting"));
-	}
+	public static final DeferredRegister<PaintingVariant> REGISTRY = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS,
+			HorizonZeroBlockMod.MODID);
+	public static final RegistryObject<PaintingVariant> HORIZON_PAINTING = REGISTRY.register("horizon_painting", () -> new PaintingVariant(128, 64));
 }
