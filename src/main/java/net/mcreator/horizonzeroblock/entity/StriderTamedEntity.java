@@ -1,56 +1,31 @@
 
 package net.mcreator.horizonzeroblock.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnGroupData;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.nbt.Tag;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.chat.Component;
-import net.minecraft.nbt.CompoundTag;
-
-import net.mcreator.horizonzeroblock.procedures.StriderTamedOnInitialEntitySpawnProcedure;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
 
 import javax.annotation.Nullable;
 
 public class StriderTamedEntity extends Monster {
+
 	public StriderTamedEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(HorizonZeroBlockModEntities.STRIDER_TAMED.get(), world);
 	}
 
 	public StriderTamedEntity(EntityType<StriderTamedEntity> type, Level world) {
 		super(type, world);
+		maxUpStep = 0.6f;
 		xpReward = 5;
 		setNoAi(false);
+
 		setCustomName(Component.literal("Strider"));
 		setCustomNameVisible(true);
+
 		setPersistenceRequired();
+
 	}
 
 	@Override
@@ -61,10 +36,12 @@ public class StriderTamedEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1.5));
 		this.targetSelector.addGoal(5, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(7, new FloatGoal(this));
+
 	}
 
 	@Override
@@ -103,8 +80,7 @@ public class StriderTamedEntity extends Monster {
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason,
-			@Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		StriderTamedOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
@@ -114,8 +90,11 @@ public class StriderTamedEntity extends Monster {
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
+
 		super.mobInteract(sourceentity, hand);
+
 		sourceentity.startRiding(this);
+
 		return retval;
 	}
 
@@ -130,13 +109,17 @@ public class StriderTamedEntity extends Monster {
 			this.flyingSpeed = this.getSpeed() * 0.15F;
 			this.yBodyRot = entity.getYRot();
 			this.yHeadRot = entity.getYRot();
-			this.maxUpStep = 1.0F;
+
 			if (entity instanceof LivingEntity passenger) {
 				this.setSpeed((float) this.getAttributeValue(Attributes.MOVEMENT_SPEED));
+
 				float forward = passenger.zza;
+
 				float strafe = passenger.xxa;
+
 				super.travel(new Vec3(strafe, 0, forward));
 			}
+
 			this.animationSpeedOld = this.animationSpeed;
 			double d1 = this.getX() - this.xo;
 			double d0 = this.getZ() - this.zo;
@@ -147,12 +130,13 @@ public class StriderTamedEntity extends Monster {
 			this.animationPosition += this.animationSpeed;
 			return;
 		}
-		this.maxUpStep = 0.5F;
 		this.flyingSpeed = 0.02F;
+
 		super.travel(dir);
 	}
 
 	public static void init() {
+
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -162,8 +146,12 @@ public class StriderTamedEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0.5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 2);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 11);
+
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.4);
+
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.5);
+
 		return builder;
 	}
+
 }

@@ -1,8 +1,8 @@
 package net.mcreator.horizonzeroblock.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.horizonzeroblock.network.HorizonZeroBlockModVariables;
+import javax.annotation.Nullable;
 
 public class CorruptorEntityDiesProcedure {
 	public static void execute(Entity sourceentity) {

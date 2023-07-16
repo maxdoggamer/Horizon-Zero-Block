@@ -51,129 +51,99 @@ import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 public class HorizonZeroBlockModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, HorizonZeroBlockMod.MODID);
 	public static final RegistryObject<EntityType<FireHunterBowEntity>> FIRE_HUNTER_BOW = register("projectile_fire_hunter_bow",
-			EntityType.Builder.<FireHunterBowEntity>of(FireHunterBowEntity::new, MobCategory.MISC).setCustomClientFactory(FireHunterBowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<FireHunterBowEntity>of(FireHunterBowEntity::new, MobCategory.MISC).setCustomClientFactory(FireHunterBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PrecisionBowEntity>> PRECISION_BOW = register("projectile_precision_bow",
-			EntityType.Builder.<PrecisionBowEntity>of(PrecisionBowEntity::new, MobCategory.MISC).setCustomClientFactory(PrecisionBowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<PrecisionBowEntity>of(PrecisionBowEntity::new, MobCategory.MISC).setCustomClientFactory(PrecisionBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HardBowEntity>> HARD_BOW = register("projectile_hard_bow",
-			EntityType.Builder.<HardBowEntity>of(HardBowEntity::new, MobCategory.MISC).setCustomClientFactory(HardBowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<HardBowEntity>of(HardBowEntity::new, MobCategory.MISC).setCustomClientFactory(HardBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FrostWarBowEntity>> FROST_WAR_BOW = register("projectile_frost_war_bow",
-			EntityType.Builder.<FrostWarBowEntity>of(FrostWarBowEntity::new, MobCategory.MISC).setCustomClientFactory(FrostWarBowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<FrostWarBowEntity>of(FrostWarBowEntity::new, MobCategory.MISC).setCustomClientFactory(FrostWarBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ThunderWarBowEntity>> THUNDER_WAR_BOW = register("projectile_thunder_war_bow",
-			EntityType.Builder.<ThunderWarBowEntity>of(ThunderWarBowEntity::new, MobCategory.MISC).setCustomClientFactory(ThunderWarBowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<ThunderWarBowEntity>of(ThunderWarBowEntity::new, MobCategory.MISC).setCustomClientFactory(ThunderWarBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HunterBowEntity>> HUNTER_BOW = register("projectile_hunter_bow",
-			EntityType.Builder.<HunterBowEntity>of(HunterBowEntity::new, MobCategory.MISC).setCustomClientFactory(HunterBowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<HunterBowEntity>of(HunterBowEntity::new, MobCategory.MISC).setCustomClientFactory(HunterBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<TearBowEntity>> TEAR_BOW = register("projectile_tear_bow",
-			EntityType.Builder.<TearBowEntity>of(TearBowEntity::new, MobCategory.MISC).setCustomClientFactory(TearBowEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<TearBowEntity>of(TearBowEntity::new, MobCategory.MISC).setCustomClientFactory(TearBowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<WatcherEntity>> WATCHER = register("watcher",
-			EntityType.Builder.<WatcherEntity>of(WatcherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(WatcherEntity::new)
+			EntityType.Builder.<WatcherEntity>of(WatcherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WatcherEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<StriderEntity>> STRIDER = register("strider",
-			EntityType.Builder.<StriderEntity>of(StriderEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(StriderEntity::new)
+			EntityType.Builder.<StriderEntity>of(StriderEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StriderEntity::new)
 
 					.sized(0.6f, 1.7f));
 	public static final RegistryObject<EntityType<StalkerEntity>> STALKER = register("stalker",
-			EntityType.Builder.<StalkerEntity>of(StalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100)
-					.setUpdateInterval(3).setCustomClientFactory(StalkerEntity::new)
+			EntityType.Builder.<StalkerEntity>of(StalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(StalkerEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<SnapmawEntity>> SNAPMAW = register("snapmaw",
-			EntityType.Builder.<SnapmawEntity>of(SnapmawEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(SnapmawEntity::new)
+			EntityType.Builder.<SnapmawEntity>of(SnapmawEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnapmawEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TallneckEntity>> TALLNECK = register("tallneck",
-			EntityType.Builder.<TallneckEntity>of(TallneckEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<TallneckEntity>of(TallneckEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GlinthawkEntity>> GLINTHAWK = register("glinthawk",
-			EntityType.Builder.<GlinthawkEntity>of(GlinthawkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkEntity::new)
+			EntityType.Builder.<GlinthawkEntity>of(GlinthawkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<CorruptorEntity>> CORRUPTOR = register("corruptor",
-			EntityType.Builder.<CorruptorEntity>of(CorruptorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptorEntity::new)
+			EntityType.Builder.<CorruptorEntity>of(CorruptorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptorEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<StriderTamedEntity>> STRIDER_TAMED = register("strider_tamed",
-			EntityType.Builder.<StriderTamedEntity>of(StriderTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StriderTamedEntity::new)
+			EntityType.Builder.<StriderTamedEntity>of(StriderTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(StriderTamedEntity::new)
 
 					.sized(0.6f, 1.7f));
 	public static final RegistryObject<EntityType<StalkerTamedEntity>> STALKER_TAMED = register("stalker_tamed",
-			EntityType.Builder.<StalkerTamedEntity>of(StalkerTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(StalkerTamedEntity::new)
+			EntityType.Builder.<StalkerTamedEntity>of(StalkerTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(StalkerTamedEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<SnapmawTamedEntity>> SNAPMAW_TAMED = register("snapmaw_tamed",
-			EntityType.Builder.<SnapmawTamedEntity>of(SnapmawTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnapmawTamedEntity::new)
+			EntityType.Builder.<SnapmawTamedEntity>of(SnapmawTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SnapmawTamedEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<TallneckTamedEntity>> TALLNECK_TAMED = register("tallneck_tamed",
-			EntityType.Builder.<TallneckTamedEntity>of(TallneckTamedEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckTamedEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TallneckTamedEntity>> TALLNECK_TAMED = register("tallneck_tamed", EntityType.Builder.<TallneckTamedEntity>of(TallneckTamedEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TallneckTamedEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GlinthawkTamedEntity>> GLINTHAWK_TAMED = register("glinthawk_tamed",
-			EntityType.Builder.<GlinthawkTamedEntity>of(GlinthawkTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkTamedEntity::new)
+			EntityType.Builder.<GlinthawkTamedEntity>of(GlinthawkTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GlinthawkTamedEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<StriderCorruptedEntity>> CORRUPTED_STRIDER = register("corrupted_strider",
-			EntityType.Builder.<StriderCorruptedEntity>of(StriderCorruptedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StriderCorruptedEntity::new)
+			EntityType.Builder.<StriderCorruptedEntity>of(StriderCorruptedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(StriderCorruptedEntity::new)
 
 					.sized(0.6f, 1.7f));
 	public static final RegistryObject<EntityType<SnapmawCorruptedEntity>> CORRUPTED_SNAPMAW = register("corrupted_snapmaw",
-			EntityType.Builder.<SnapmawCorruptedEntity>of(SnapmawCorruptedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(SnapmawCorruptedEntity::new)
+			EntityType.Builder.<SnapmawCorruptedEntity>of(SnapmawCorruptedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(SnapmawCorruptedEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<MetalBurnLauncherEntity>> METAL_BURN_LAUNCHER = register("projectile_metal_burn_launcher",
-			EntityType.Builder.<MetalBurnLauncherEntity>of(MetalBurnLauncherEntity::new, MobCategory.MISC)
-					.setCustomClientFactory(MetalBurnLauncherEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MetalBurnLauncherEntity>> METAL_BURN_LAUNCHER = register("projectile_metal_burn_launcher", EntityType.Builder.<MetalBurnLauncherEntity>of(MetalBurnLauncherEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(MetalBurnLauncherEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<CorruptedGlinthawkEntity>> CORRUPTED_GLINTHAWK = register("corrupted_glinthawk",
-			EntityType.Builder.<CorruptedGlinthawkEntity>of(CorruptedGlinthawkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedGlinthawkEntity::new)
+			EntityType.Builder.<CorruptedGlinthawkEntity>of(CorruptedGlinthawkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedGlinthawkEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<CorruptedStalkerEntity>> CORRUPTED_STALKER = register("corrupted_stalker",
-			EntityType.Builder.<CorruptedStalkerEntity>of(CorruptedStalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(CorruptedStalkerEntity::new)
+			EntityType.Builder.<CorruptedStalkerEntity>of(CorruptedStalkerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100).setUpdateInterval(3).setCustomClientFactory(CorruptedStalkerEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<CorruptedWatcherEntity>> CORRUPTED_WATCHER = register("corrupted_watcher",
-			EntityType.Builder.<CorruptedWatcherEntity>of(CorruptedWatcherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedWatcherEntity::new)
+			EntityType.Builder.<CorruptedWatcherEntity>of(CorruptedWatcherEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedWatcherEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ScrapperEntity>> SCRAPPER = register("scrapper",
-			EntityType.Builder.<ScrapperEntity>of(ScrapperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(ScrapperEntity::new)
+			EntityType.Builder.<ScrapperEntity>of(ScrapperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ScrapperEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ScrapperTamedEntity>> SCRAPPER_TAMED = register("scrapper_tamed",
-			EntityType.Builder.<ScrapperTamedEntity>of(ScrapperTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ScrapperTamedEntity::new)
+			EntityType.Builder.<ScrapperTamedEntity>of(ScrapperTamedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ScrapperTamedEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<CorruptedScrapperEntity>> CORRUPTED_SCRAPPER = register("corrupted_scrapper",
-			EntityType.Builder.<CorruptedScrapperEntity>of(CorruptedScrapperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedScrapperEntity::new)
+			EntityType.Builder.<CorruptedScrapperEntity>of(CorruptedScrapperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CorruptedScrapperEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<FrostEntity>> FROST = register("projectile_frost",
-			EntityType.Builder.<FrostEntity>of(FrostEntity::new, MobCategory.MISC).setCustomClientFactory(FrostEntity::new)
-					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<FrostEntity>of(FrostEntity::new, MobCategory.MISC).setCustomClientFactory(FrostEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -28,18 +28,15 @@ import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 public class HorizonZeroBlockModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, HorizonZeroBlockMod.MODID);
-	public static final RegistryObject<Block> MEDICINAL_BRIGHT_OMEN = REGISTRY.register("medicinal_bright_omen",
-			() -> new MedicinalBrightOmenBlock());
-	public static final RegistryObject<Block> MEDICINAL_FRESH_SALVEBRUSH = REGISTRY.register("medicinal_fresh_salvebrush",
-			() -> new MedicinalFreshSalvebrushBlock());
+	public static final RegistryObject<Block> MEDICINAL_BRIGHT_OMEN = REGISTRY.register("medicinal_bright_omen", () -> new MedicinalBrightOmenBlock());
+	public static final RegistryObject<Block> MEDICINAL_FRESH_SALVEBRUSH = REGISTRY.register("medicinal_fresh_salvebrush", () -> new MedicinalFreshSalvebrushBlock());
 	public static final RegistryObject<Block> MEDICINAL_GREY_OMEN = REGISTRY.register("medicinal_grey_omen", () -> new MedicinalGreyOmenBlock());
 	public static final RegistryObject<Block> MEDICINAL_HINTERGOLD = REGISTRY.register("medicinal_hintergold", () -> new MedicinalHintergoldBlock());
 	public static final RegistryObject<Block> MEDICINAL_OCHREBLOOM = REGISTRY.register("medicinal_ochrebloom", () -> new MedicinalOchrebloomBlock());
 	public static final RegistryObject<Block> MEDICINAL_SALVEBRUSH = REGISTRY.register("medicinal_salvebrush", () -> new MedicinalSalvebrushBlock());
 	public static final RegistryObject<Block> MEDICINAL_SKYBRUSH = REGISTRY.register("medicinal_skybrush", () -> new MedicinalSkybrushBlock());
 	public static final RegistryObject<Block> MEDICINAL_THAW_OMEN = REGISTRY.register("medicinal_thaw_omen", () -> new MedicinalThawOmenBlock());
-	public static final RegistryObject<Block> MEDICINAL_VALEYS_BRUSH = REGISTRY.register("medicinal_valeys_brush",
-			() -> new MedicinalValeysBrushBlock());
+	public static final RegistryObject<Block> MEDICINAL_VALEYS_BRUSH = REGISTRY.register("medicinal_valeys_brush", () -> new MedicinalValeysBrushBlock());
 	public static final RegistryObject<Block> MEDICINAL_WATERWEED = REGISTRY.register("medicinal_waterweed", () -> new MedicinalWaterweedBlock());
 	public static final RegistryObject<Block> MEDICINAL_WILD_EMBER = REGISTRY.register("medicinal_wild_ember", () -> new MedicinalWildEmberBlock());
 	public static final RegistryObject<Block> RIDGE_WOOD_BRUSH = REGISTRY.register("ridge_wood_brush", () -> new RidgeWoodBrushBlock());

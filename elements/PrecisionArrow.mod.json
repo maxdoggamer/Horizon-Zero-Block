@@ -1,10 +1,12 @@
 {
-  "_fv": 34,
+  "_fv": 43,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "precisionarrow",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Precision Arrow",
     "rarity": "COMMON",
     "creativeTab": {

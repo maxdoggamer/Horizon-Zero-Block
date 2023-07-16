@@ -1,13 +1,11 @@
 
 package net.mcreator.horizonzeroblock.item;
 
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class MetalburnItem extends Item {
+
 	public MetalburnItem() {
 		super(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).stacksTo(64).rarity(Rarity.COMMON));
 	}
@@ -16,4 +14,5 @@ public class MetalburnItem extends Item {
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
 	}
+
 }

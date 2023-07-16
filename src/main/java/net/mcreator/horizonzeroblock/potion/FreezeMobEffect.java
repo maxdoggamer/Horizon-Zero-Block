@@ -1,13 +1,8 @@
 
 package net.mcreator.horizonzeroblock.potion;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
-import net.mcreator.horizonzeroblock.procedures.FreezeActiveTickConditionProcedure;
-
 public class FreezeMobEffect extends MobEffect {
+
 	public FreezeMobEffect() {
 		super(MobEffectCategory.HARMFUL, -16711681);
 	}
@@ -26,4 +21,5 @@ public class FreezeMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
+
 }

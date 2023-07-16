@@ -1,22 +1,11 @@
 
 package net.mcreator.horizonzeroblock.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-
-import net.mcreator.horizonzeroblock.procedures.AmmoMakingBagOpenOnKeyPressedProcedure;
 import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
-
-import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AmmoMakingBagOpenMessage {
+
 	int type, pressedms;
 
 	public AmmoMakingBagOpenMessage(int type, int pressedms) {
@@ -47,18 +36,21 @@ public class AmmoMakingBagOpenMessage {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
+
 		if (type == 0) {
 
 			AmmoMakingBagOpenOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		}
+
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		HorizonZeroBlockMod.addNetworkMessage(AmmoMakingBagOpenMessage.class, AmmoMakingBagOpenMessage::buffer, AmmoMakingBagOpenMessage::new,
-				AmmoMakingBagOpenMessage::handler);
+		HorizonZeroBlockMod.addNetworkMessage(AmmoMakingBagOpenMessage.class, AmmoMakingBagOpenMessage::buffer, AmmoMakingBagOpenMessage::new, AmmoMakingBagOpenMessage::handler);
 	}
+
 }

@@ -17,34 +17,24 @@ public class HorizonZeroBlockModTrades {
 	@SubscribeEvent
 	public static void registerTrades(VillagerTradesEvent event) {
 		if (event.getType() == VillagerProfession.TOOLSMITH) {
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 20),
-					new ItemStack(HorizonZeroBlockModItems.WIRE.get(), 3), new ItemStack(HorizonZeroBlockModItems.HUNTER_BOW.get()), 1, 5, 0.05f));
+			event.getTrades().get(1)
+					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 20), new ItemStack(HorizonZeroBlockModItems.WIRE.get(), 3), new ItemStack(HorizonZeroBlockModItems.HUNTER_BOW.get()), 1, 5, 0.05f));
 			event.getTrades().get(2)
-					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 35),
-							new ItemStack(HorizonZeroBlockModItems.BLAZE.get(), 5), new ItemStack(HorizonZeroBlockModItems.FIRE_HUNTER_BOW.get()), 1,
-							5, 0.05f));
-			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50),
-					new ItemStack(HorizonZeroBlockModItems.WIRE.get(), 4), new ItemStack(HorizonZeroBlockModItems.HARD_BOW.get()), 1, 5, 0.05f));
+					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 35), new ItemStack(HorizonZeroBlockModItems.BLAZE.get(), 5), new ItemStack(HorizonZeroBlockModItems.FIRE_HUNTER_BOW.get()), 1, 5, 0.05f));
+			event.getTrades().get(2)
+					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50), new ItemStack(HorizonZeroBlockModItems.WIRE.get(), 4), new ItemStack(HorizonZeroBlockModItems.HARD_BOW.get()), 1, 5, 0.05f));
 		}
 		if (event.getType() == VillagerProfession.TOOLSMITH) {
 			event.getTrades().get(3)
-					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 35),
-							new ItemStack(HorizonZeroBlockModItems.SPARKER.get(), 5), new ItemStack(HorizonZeroBlockModItems.THUNDER_WAR_BOW.get()),
-							1, 10, 0.05f));
+					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 35), new ItemStack(HorizonZeroBlockModItems.SPARKER.get(), 5), new ItemStack(HorizonZeroBlockModItems.THUNDER_WAR_BOW.get()), 1, 10, 0.05f));
 			event.getTrades().get(3)
-					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 35),
-							new ItemStack(HorizonZeroBlockModItems.CHILLWATER.get(), 5), new ItemStack(HorizonZeroBlockModItems.FROST_WAR_BOW.get()),
-							1, 10, 0.05f));
+					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 35), new ItemStack(HorizonZeroBlockModItems.CHILLWATER.get(), 5), new ItemStack(HorizonZeroBlockModItems.FROST_WAR_BOW.get()), 1, 10, 0.05f));
 		}
 		if (event.getType() == VillagerProfession.TOOLSMITH) {
 			event.getTrades().get(5)
-					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50),
-							new ItemStack(HorizonZeroBlockModItems.WIRE.get(), 15), new ItemStack(HorizonZeroBlockModItems.PRECISION_BOW.get()), 10,
-							5, 0.05f));
+					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50), new ItemStack(HorizonZeroBlockModItems.WIRE.get(), 15), new ItemStack(HorizonZeroBlockModItems.PRECISION_BOW.get()), 10, 5, 0.05f));
 			event.getTrades().get(5)
-					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50),
-							new ItemStack(HorizonZeroBlockModItems.ECHO_SHELL.get(), 10), new ItemStack(HorizonZeroBlockModItems.TEAR_BOW.get()), 10,
-							5, 0.05f));
+					.add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 50), new ItemStack(HorizonZeroBlockModItems.ECHO_SHELL.get(), 10), new ItemStack(HorizonZeroBlockModItems.TEAR_BOW.get()), 10, 5, 0.05f));
 		}
 		if (event.getType() == VillagerProfession.FLETCHER) {
 			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(HorizonZeroBlockModItems.METAL_SHARDS.get(), 25),

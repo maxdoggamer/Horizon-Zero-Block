@@ -34,8 +34,7 @@ public class HorizonZeroBlockModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping AMMO_MAKING_BAG_OPEN = new KeyMapping("key.horizon_zero_block.ammo_making_bag_open", GLFW.GLFW_KEY_B,
-			"key.categories.misc") {
+	public static final KeyMapping AMMO_MAKING_BAG_OPEN = new KeyMapping("key.horizon_zero_block.ammo_making_bag_open", GLFW.GLFW_KEY_B, "key.categories.misc") {
 		private boolean isDownOld = false;
 
 		@Override

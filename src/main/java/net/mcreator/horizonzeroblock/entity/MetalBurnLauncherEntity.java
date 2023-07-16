@@ -1,26 +1,6 @@
 
 package net.mcreator.horizonzeroblock.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.ItemSupplier;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.util.RandomSource;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
-
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class MetalBurnLauncherEntity extends AbstractArrow implements ItemSupplier {
 	public MetalBurnLauncherEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -76,15 +56,12 @@ public class MetalBurnLauncherEntity extends AbstractArrow implements ItemSuppli
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
-				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
 	public static MetalBurnLauncherEntity shoot(LivingEntity entity, LivingEntity target) {
-		MetalBurnLauncherEntity entityarrow = new MetalBurnLauncherEntity(HorizonZeroBlockModEntities.METAL_BURN_LAUNCHER.get(), entity,
-				entity.level);
+		MetalBurnLauncherEntity entityarrow = new MetalBurnLauncherEntity(HorizonZeroBlockModEntities.METAL_BURN_LAUNCHER.get(), entity, entity.level);
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
@@ -94,9 +71,7 @@ public class MetalBurnLauncherEntity extends AbstractArrow implements ItemSuppli
 		entityarrow.setKnockback(2);
 		entityarrow.setCritArrow(false);
 		entity.level.addFreshEntity(entityarrow);
-		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
-				1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

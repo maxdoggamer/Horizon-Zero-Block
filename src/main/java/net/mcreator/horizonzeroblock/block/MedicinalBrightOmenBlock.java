@@ -1,34 +1,13 @@
 
 package net.mcreator.horizonzeroblock.block;
 
-import org.checkerframework.checker.units.qual.s;
-
-import net.minecraftforge.common.PlantType;
-
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
-
-import java.util.List;
-import java.util.Collections;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
 public class MedicinalBrightOmenBlock extends FlowerBlock {
 	public MedicinalBrightOmenBlock() {
-		super(MobEffects.MOVEMENT_SPEED, 100, BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.GOLD).sound(SoundType.FUNGUS).instabreak()
-				.lightLevel(s -> 3).noCollission());
+		super(MobEffects.MOVEMENT_SPEED, 100, BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.GOLD).sound(SoundType.FUNGUS).instabreak().lightLevel(s -> 3).noCollission());
 	}
 
 	@Override
@@ -56,8 +35,7 @@ public class MedicinalBrightOmenBlock extends FlowerBlock {
 
 	@Override
 	public boolean mayPlaceOn(BlockState groundState, BlockGetter worldIn, BlockPos pos) {
-		return groundState.is(Blocks.COBBLESTONE) || groundState.is(Blocks.STONE) || groundState.is(Blocks.ANDESITE) || groundState.is(Blocks.GRANITE)
-				|| groundState.is(Blocks.DIORITE);
+		return groundState.is(Blocks.COBBLESTONE) || groundState.is(Blocks.STONE) || groundState.is(Blocks.ANDESITE) || groundState.is(Blocks.GRANITE) || groundState.is(Blocks.DIORITE);
 	}
 
 	@Override

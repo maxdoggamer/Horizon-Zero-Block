@@ -1,24 +1,9 @@
-
 package net.mcreator.horizonzeroblock.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.horizonzeroblock.world.inventory.AmmoMakingBagMenu;
-import net.mcreator.horizonzeroblock.network.HorizonZeroBlockModVariables;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMenu> {
+
 	private final static HashMap<String, Object> guistate = AmmoMakingBagMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -46,6 +31,7 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -53,6 +39,7 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
@@ -68,6 +55,7 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -78,31 +66,23 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Ridge-Wood", 43, 22, -10079488);
-		this.font.draw(poseStack, "Metal-Shards", 142, 22, -16777216);
-		this.font.draw(poseStack, "Blaze", 178, 58, -256);
-		this.font.draw(poseStack, "Wire", 187, 103, -13421773);
-		this.font.draw(poseStack, "Chillwater", 151, 148, -16711681);
-		this.font.draw(poseStack, "Sparker", 43, 148, -16777012);
-		this.font.draw(poseStack, "MetalBurn", 7, 112, -65536);
-		this.font.draw(poseStack, "Echo-Shell", 7, 49, -39424);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N1) + "", 43, 31, -10079488);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N2) + "", 142, 31, -12829636);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N3) + "", 178, 67, -256);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N4) + "", 187, 112, -12829636);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N5) + "", 151, 157, -16711681);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N6) + "", 43, 157, -16776961);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N7) + "", 7, 121, -65536);
-		this.font.draw(poseStack, "" + ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).N8) + "", 16, 58, -26368);
-		this.font.draw(poseStack, "RESOURCE BAG", 86, 5, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_ridgewood"), 43, 22, -10079488);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_metalshards"), 142, 22, -16777216);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_blaze"), 178, 58, -256);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_wire"), 187, 103, -13421773);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_chillwater"), 151, 148, -16711681);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_sparker"), 43, 148, -16777012);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_metalburn"), 7, 112, -65536);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_echoshell"), 7, 49, -39424);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn1"), 43, 31, -10079488);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn2"), 142, 31, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn3"), 178, 67, -256);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn4"), 187, 112, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn5"), 151, 157, -16711681);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn6"), 43, 157, -16776961);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn7"), 7, 121, -65536);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_varn8"), 16, 58, -26368);
+		this.font.draw(poseStack, Component.translatable("gui.horizon_zero_block.ammo_making_bag.label_resource_bag"), 86, 5, -12829636);
 	}
 
 	@Override
@@ -114,6 +94,9 @@ public class AmmoMakingBagScreen extends AbstractContainerScreen<AmmoMakingBagMe
 	@Override
 	public void init() {
 		super.init();
+
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+
 	}
+
 }

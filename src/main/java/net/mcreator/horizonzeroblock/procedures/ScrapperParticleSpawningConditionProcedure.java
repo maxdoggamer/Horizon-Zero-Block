@@ -1,8 +1,8 @@
 package net.mcreator.horizonzeroblock.procedures;
 
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
 
 public class ScrapperParticleSpawningConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {

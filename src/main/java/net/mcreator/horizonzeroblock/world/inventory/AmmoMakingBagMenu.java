@@ -1,30 +1,7 @@
 
 package net.mcreator.horizonzeroblock.world.inventory;
 
-import net.minecraftforge.items.SlotItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.horizonzeroblock.procedures.AmmoMakingBagThisGUIIsOpenedProcedure;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModMenus;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
-
-import java.util.function.Supplier;
-import java.util.Map;
-import java.util.HashMap;
+import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 public class AmmoMakingBagMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
@@ -78,51 +55,67 @@ public class AmmoMakingBagMenu extends AbstractContainerMenu implements Supplier
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 89, 41) {
+			private final int slot = 0;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.RIDGE_WOOD.get() == stack.getItem());
+				return HorizonZeroBlockModItems.RIDGE_WOOD.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 125, 41) {
+			private final int slot = 1;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.METAL_SHARDS.get() == stack.getItem());
+				return HorizonZeroBlockModItems.METAL_SHARDS.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 152, 68) {
+			private final int slot = 2;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.BLAZE.get() == stack.getItem());
+				return HorizonZeroBlockModItems.BLAZE.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 152, 104) {
+			private final int slot = 3;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.WIRE.get() == stack.getItem());
+				return HorizonZeroBlockModItems.WIRE.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 125, 131) {
+			private final int slot = 4;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.CHILLWATER.get() == stack.getItem());
+				return HorizonZeroBlockModItems.CHILLWATER.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 89, 131) {
+			private final int slot = 5;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.SPARKER.get() == stack.getItem());
+				return HorizonZeroBlockModItems.SPARKER.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 62, 104) {
+			private final int slot = 6;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.METALBURN.get() == stack.getItem());
+				return HorizonZeroBlockModItems.METALBURN.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 62, 68) {
+			private final int slot = 7;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return (HorizonZeroBlockModItems.ECHO_SHELL.get() == stack.getItem());
+				return HorizonZeroBlockModItems.ECHO_SHELL.get() == stack.getItem();
 			}
 		}));
 		for (int si = 0; si < 3; ++si)
@@ -169,82 +162,7 @@ public class AmmoMakingBagMenu extends AbstractContainerMenu implements Supplier
 		return itemstack;
 	}
 
-	@Override
-	protected boolean moveItemStackTo(ItemStack p_38904_, int p_38905_, int p_38906_, boolean p_38907_) {
-		boolean flag = false;
-		int i = p_38905_;
-		if (p_38907_) {
-			i = p_38906_ - 1;
-		}
-		if (p_38904_.isStackable()) {
-			while (!p_38904_.isEmpty()) {
-				if (p_38907_) {
-					if (i < p_38905_) {
-						break;
-					}
-				} else if (i >= p_38906_) {
-					break;
-				}
-				Slot slot = this.slots.get(i);
-				ItemStack itemstack = slot.getItem();
-				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameTags(p_38904_, itemstack)) {
-					int j = itemstack.getCount() + p_38904_.getCount();
-					int maxSize = Math.min(slot.getMaxStackSize(), p_38904_.getMaxStackSize());
-					if (j <= maxSize) {
-						p_38904_.setCount(0);
-						itemstack.setCount(j);
-						slot.set(itemstack);
-						flag = true;
-					} else if (itemstack.getCount() < maxSize) {
-						p_38904_.shrink(maxSize - itemstack.getCount());
-						itemstack.setCount(maxSize);
-						slot.set(itemstack);
-						flag = true;
-					}
-				}
-				if (p_38907_) {
-					--i;
-				} else {
-					++i;
-				}
-			}
-		}
-		if (!p_38904_.isEmpty()) {
-			if (p_38907_) {
-				i = p_38906_ - 1;
-			} else {
-				i = p_38905_;
-			}
-			while (true) {
-				if (p_38907_) {
-					if (i < p_38905_) {
-						break;
-					}
-				} else if (i >= p_38906_) {
-					break;
-				}
-				Slot slot1 = this.slots.get(i);
-				ItemStack itemstack1 = slot1.getItem();
-				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
-					if (p_38904_.getCount() > slot1.getMaxStackSize()) {
-						slot1.set(p_38904_.split(slot1.getMaxStackSize()));
-					} else {
-						slot1.set(p_38904_.split(p_38904_.getCount()));
-					}
-					slot1.setChanged();
-					flag = true;
-					break;
-				}
-				if (p_38907_) {
-					--i;
-				} else {
-					++i;
-				}
-			}
-		}
-		return flag;
-	}
-
+	@Override /* failed to load code for net.minecraft.world.inventory.AbstractContainerMenu */
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);

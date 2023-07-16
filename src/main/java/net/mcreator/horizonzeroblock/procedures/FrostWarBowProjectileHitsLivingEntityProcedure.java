@@ -1,16 +1,14 @@
 package net.mcreator.horizonzeroblock.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModMobEffects;
+import javax.annotation.Nullable;
 
 public class FrostWarBowProjectileHitsLivingEntityProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(HorizonZeroBlockModMobEffects.FREEZE.get(), 400, 1, (false), (false)));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(HorizonZeroBlockModMobEffects.FREEZE.get(), 400, 1, false, false));
 	}
 }

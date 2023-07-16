@@ -1,11 +1,7 @@
 
 package net.mcreator.horizonzeroblock.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 
 public class MetalburnerItem extends PickaxeItem {
 	public MetalburnerItem() {
@@ -31,7 +27,7 @@ public class MetalburnerItem extends PickaxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.EMPTY;
+				return Ingredient.of();
 			}
 		}, 1, -3f, new Item.Properties().tab(CreativeModeTab.TAB_TOOLS));
 	}

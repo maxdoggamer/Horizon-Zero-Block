@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 43,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -16,14 +16,18 @@
           "inputLimit": {
             "value": "CUSTOM:RidgeWood"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -10079488,
             "falpha": 0.0
           },
           "id": 0,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": false,
-          "name": "Slot #0",
           "x": 177,
           "y": 35
         }
@@ -34,14 +38,18 @@
           "inputLimit": {
             "value": "CUSTOM:MetalShards"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -6710887,
             "falpha": 0.0
           },
           "id": 1,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #1",
           "x": 213,
           "y": 35
         }
@@ -52,14 +60,18 @@
           "inputLimit": {
             "value": "CUSTOM:Blaze"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -256,
             "falpha": 0.0
           },
           "id": 2,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #2",
           "x": 240,
           "y": 62
         }
@@ -70,14 +82,18 @@
           "inputLimit": {
             "value": "CUSTOM:Wire"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
           "id": 3,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #3",
           "x": 240,
           "y": 98
         }
@@ -88,14 +104,18 @@
           "inputLimit": {
             "value": "CUSTOM:Chillwater"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -13369345,
             "falpha": 0.0
           },
           "id": 4,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #4",
           "x": 213,
           "y": 125
         }
@@ -106,14 +126,18 @@
           "inputLimit": {
             "value": "CUSTOM:Sparker"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -16777012,
             "falpha": 0.0
           },
           "id": 5,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #5",
           "x": 177,
           "y": 125
         }
@@ -124,14 +148,18 @@
           "inputLimit": {
             "value": "CUSTOM:Metalburn"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -65536,
             "falpha": 0.0
           },
           "id": 6,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #6",
           "x": 150,
           "y": 98
         }
@@ -142,14 +170,18 @@
           "inputLimit": {
             "value": "CUSTOM:EchoShell"
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "color": {
             "value": -39424,
             "falpha": 0.0
           },
           "id": 7,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #7",
           "x": 150,
           "y": 62
         }
@@ -157,12 +189,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Ridge-Wood",
+          "name": "label_ridgewood",
+          "text": {
+            "fixedValue": "Ridge-Wood"
+          },
           "color": {
             "value": -10079488,
             "falpha": 0.0
           },
-          "name": "Ridge-Wood",
           "x": 132,
           "y": 17
         }
@@ -170,12 +204,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Metal-Shards",
+          "name": "label_metalshards",
+          "text": {
+            "fixedValue": "Metal-Shards"
+          },
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "Metal-Shards",
           "x": 231,
           "y": 17
         }
@@ -183,12 +219,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Blaze",
+          "name": "label_blaze",
+          "text": {
+            "fixedValue": "Blaze"
+          },
           "color": {
             "value": -256,
             "falpha": 0.0
           },
-          "name": "Blaze",
           "x": 267,
           "y": 53
         }
@@ -196,12 +234,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Wire",
+          "name": "label_wire",
+          "text": {
+            "fixedValue": "Wire"
+          },
           "color": {
             "value": -13421773,
             "falpha": 0.0
           },
-          "name": "Wire",
           "x": 276,
           "y": 98
         }
@@ -209,12 +249,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Chillwater",
+          "name": "label_chillwater",
+          "text": {
+            "fixedValue": "Chillwater"
+          },
           "color": {
             "value": -16711681,
             "falpha": 0.0
           },
-          "name": "Chillwater",
           "x": 240,
           "y": 143
         }
@@ -222,12 +264,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Sparker",
+          "name": "label_sparker",
+          "text": {
+            "fixedValue": "Sparker"
+          },
           "color": {
             "value": -16777012,
             "falpha": 0.0
           },
-          "name": "Sparker",
           "x": 132,
           "y": 143
         }
@@ -235,12 +279,14 @@
       {
         "type": "label",
         "data": {
-          "text": "MetalBurn",
+          "name": "label_metalburn",
+          "text": {
+            "fixedValue": "MetalBurn"
+          },
           "color": {
             "value": -65536,
             "falpha": 0.0
           },
-          "name": "MetalBurn",
           "x": 96,
           "y": 107
         }
@@ -248,12 +294,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Echo-Shell",
+          "name": "label_echoshell",
+          "text": {
+            "fixedValue": "Echo-Shell"
+          },
           "color": {
             "value": -39424,
             "falpha": 0.0
           },
-          "name": "Echo-Shell",
           "x": 96,
           "y": 44
         }
@@ -261,12 +309,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N1>",
+          "name": "label_varn1",
+          "text": {
+            "fixedValue": "<VAR:N1>"
+          },
           "color": {
             "value": -10079488,
             "falpha": 0.0
           },
-          "name": "<VAR:N1>",
           "x": 132,
           "y": 26
         }
@@ -274,12 +324,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N2>",
+          "name": "label_varn2",
+          "text": {
+            "fixedValue": "<VAR:N2>"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<VAR:N2>",
           "x": 231,
           "y": 26
         }
@@ -287,12 +339,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N3>",
+          "name": "label_varn3",
+          "text": {
+            "fixedValue": "<VAR:N3>"
+          },
           "color": {
             "value": -256,
             "falpha": 0.0
           },
-          "name": "<VAR:N3>",
           "x": 267,
           "y": 62
         }
@@ -300,12 +354,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N4>",
+          "name": "label_varn4",
+          "text": {
+            "fixedValue": "<VAR:N4>"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<VAR:N4>",
           "x": 276,
           "y": 107
         }
@@ -313,12 +369,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N5>",
+          "name": "label_varn5",
+          "text": {
+            "fixedValue": "<VAR:N5>"
+          },
           "color": {
             "value": -16711681,
             "falpha": 0.0
           },
-          "name": "<VAR:N5>",
           "x": 240,
           "y": 152
         }
@@ -326,12 +384,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N6>",
+          "name": "label_varn6",
+          "text": {
+            "fixedValue": "<VAR:N6>"
+          },
           "color": {
             "value": -16776961,
             "falpha": 0.0
           },
-          "name": "<VAR:N6>",
           "x": 132,
           "y": 152
         }
@@ -339,12 +399,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N7>",
+          "name": "label_varn7",
+          "text": {
+            "fixedValue": "<VAR:N7>"
+          },
           "color": {
             "value": -65536,
             "falpha": 0.0
           },
-          "name": "<VAR:N7>",
           "x": 96,
           "y": 116
         }
@@ -352,12 +414,14 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:N8>",
+          "name": "label_varn8",
+          "text": {
+            "fixedValue": "<VAR:N8>"
+          },
           "color": {
             "value": -26368,
             "falpha": 0.0
           },
-          "name": "<VAR:N8>",
           "x": 105,
           "y": 53
         }
@@ -367,7 +431,6 @@
         "data": {
           "image": "selectwheel.png",
           "use1Xscale": false,
-          "name": "selectwheel.png",
           "x": 141,
           "y": 26
         }
@@ -375,12 +438,14 @@
       {
         "type": "label",
         "data": {
-          "text": "RESOURCE BAG",
+          "name": "label_resource_bag",
+          "text": {
+            "fixedValue": "RESOURCE BAG"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "RESOURCE BAG",
           "x": 175,
           "y": 0
         }

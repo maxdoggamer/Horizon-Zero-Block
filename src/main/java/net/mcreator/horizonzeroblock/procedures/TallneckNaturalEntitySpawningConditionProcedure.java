@@ -1,8 +1,8 @@
 package net.mcreator.horizonzeroblock.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.horizonzeroblock.network.HorizonZeroBlockModVariables;
+import javax.annotation.Nullable;
 
 public class TallneckNaturalEntitySpawningConditionProcedure {
 	public static boolean execute(LevelAccessor world) {

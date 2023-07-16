@@ -2,5 +2,6 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "horizon_zero_block:items/scrappile"
-  }
+  },
+  "render_type": "translucent"
 }

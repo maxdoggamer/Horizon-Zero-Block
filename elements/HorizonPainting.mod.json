@@ -1,9 +1,11 @@
 {
-  "_fv": 34,
+  "_fv": 43,
   "_type": "painting",
   "definition": {
     "texture": "f8ihubteujyoansp5ylp.png",
     "width": 128,
-    "height": 64
+    "height": 64,
+    "title": "Horizon Painting",
+    "author": "Unknown"
   }
 }

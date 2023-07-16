@@ -8,6 +8,9 @@
       "locked_code": false,
       "registry_name": "medicinal_berries_player_finishes_using_item",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/MedicinalBerriesPlayerFinishesUsingItemProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -22,7 +25,13 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_berries"
+      "registry_name": "medicinal_berries",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_berries.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/MedicinalBerriesItem.java"
+        ]
+      }
     },
     {
       "name": "MedicinalBrightOmen",
@@ -30,7 +39,17 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_bright_omen"
+      "registry_name": "medicinal_bright_omen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalBrightOmenBlock.java",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalBrightOmenFeature.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_bright_omen_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_bright_omen.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_bright_omen.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_bright_omen.json"
+        ]
+      }
     },
     {
       "name": "MedicinalFreshSalvebrush",
@@ -38,7 +57,17 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_fresh_salvebrush"
+      "registry_name": "medicinal_fresh_salvebrush",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalFreshSalvebrushBlock.java",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalFreshSalvebrushFeature.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_fresh_salvebrush_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_fresh_salvebrush.json",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_fresh_salvebrush.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_fresh_salvebrush.json"
+        ]
+      }
     },
     {
       "name": "MedicinalGreyOmen",
@@ -46,7 +75,17 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_grey_omen"
+      "registry_name": "medicinal_grey_omen",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_grey_omen_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_grey_omen.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_grey_omen.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalGreyOmenBlock.java",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalGreyOmenFeature.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_grey_omen.json"
+        ]
+      }
     },
     {
       "name": "MedicinalHintergold",
@@ -54,7 +93,17 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_hintergold"
+      "registry_name": "medicinal_hintergold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_hintergold.json",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_hintergold.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalHintergoldBlock.java",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_hintergold.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_hintergold_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalHintergoldFeature.java"
+        ]
+      }
     },
     {
       "name": "MedicinalOchrebloom",
@@ -62,7 +111,17 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_ochrebloom"
+      "registry_name": "medicinal_ochrebloom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalOchrebloomBlock.java",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalOchrebloomFeature.java",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_ochrebloom.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_ochrebloom.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_ochrebloom_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_ochrebloom.json"
+        ]
+      }
     },
     {
       "name": "MedicinalSalvebrush",
@@ -70,7 +129,17 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_salvebrush"
+      "registry_name": "medicinal_salvebrush",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalSalvebrushFeature.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_salvebrush.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_salvebrush_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_salvebrush.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_salvebrush.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalSalvebrushBlock.java"
+        ]
+      }
     },
     {
       "name": "MedicinalSkybrush",
@@ -78,7 +147,17 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_skybrush"
+      "registry_name": "medicinal_skybrush",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalSkybrushBlock.java",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalSkybrushFeature.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_skybrush.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_skybrush_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_skybrush.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_skybrush.json"
+        ]
+      }
     },
     {
       "name": "MedicinalThawOmen",
@@ -86,7 +165,17 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_thaw_omen"
+      "registry_name": "medicinal_thaw_omen",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_thaw_omen.json",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalThawOmenFeature.java",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_thaw_omen.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_thaw_omen_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalThawOmenBlock.java",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_thaw_omen.json"
+        ]
+      }
     },
     {
       "name": "MedicinalValeysBrush",
@@ -94,7 +183,17 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_valeys_brush"
+      "registry_name": "medicinal_valeys_brush",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalValeysBrushBlock.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_valeys_brush.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_valeys_brush_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_valeys_brush.json",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalValeysBrushFeature.java",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_valeys_brush.json"
+        ]
+      }
     },
     {
       "name": "MedicinalWaterweed",
@@ -102,7 +201,17 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_waterweed"
+      "registry_name": "medicinal_waterweed",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_waterweed.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_waterweed.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalWaterweedBlock.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_waterweed_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalWaterweedFeature.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_waterweed.json"
+        ]
+      }
     },
     {
       "name": "MedicinalWildEmber",
@@ -110,7 +219,17 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "medicinal_wild_ember"
+      "registry_name": "medicinal_wild_ember",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/medicinal_wild_ember.json",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/MedicinalWildEmberFeature.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/medicinal_wild_ember_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/medicinal_wild_ember.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/medicinal_wild_ember.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/MedicinalWildEmberBlock.java"
+        ]
+      }
     },
     {
       "name": "HorizonPainting",
@@ -118,7 +237,10 @@
       "sortid": 54,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "horizon_painting"
+      "registry_name": "horizon_painting",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "RangedItems",
@@ -126,7 +248,10 @@
       "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ranged_items"
+      "registry_name": "ranged_items",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "FireArrow",
@@ -135,6 +260,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/fire_arrow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/FireArrowItem.java"
+        ]
+      },
       "path": "~/Fire Bow"
     },
     {
@@ -145,6 +276,9 @@
       "locked_code": false,
       "registry_name": "fire_hunter_bow_projectile_hits_living_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/FireHunterBowProjectileHitsLivingEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -161,6 +295,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_hunter_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/FireHunterBowItem.java",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/FireHunterBowEntity.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/fire_hunter_bow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/FireHunterBowRenderer.java"
+        ]
+      },
       "path": "~/Fire Bow"
     },
     {
@@ -169,7 +311,13 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ridge_wood"
+      "registry_name": "ridge_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/ridge_wood.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/RidgeWoodItem.java"
+        ]
+      }
     },
     {
       "name": "RidgeWoodBrush",
@@ -177,7 +325,17 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ridge_wood_brush"
+      "registry_name": "ridge_wood_brush",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/block/ridge_wood_brush.json",
+          "src/main/resources/assets/horizon_zero_block/blockstates/ridge_wood_brush.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/RidgeWoodBrushBlock.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/ridge_wood_brush.json",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/RidgeWoodBrushFeature.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/ridge_wood_brush_biome_modifier.json"
+        ]
+      }
     },
     {
       "name": "RidgeWoodRightclickedOnBlock",
@@ -187,6 +345,9 @@
       "locked_code": false,
       "registry_name": "ridge_wood_rightclicked_on_block",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/RidgeWoodRightclickedOnBlockProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -213,7 +374,13 @@
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "metal_shards"
+      "registry_name": "metal_shards",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/MetalShardsItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/metal_shards.json"
+        ]
+      }
     },
     {
       "name": "Blaze",
@@ -221,7 +388,13 @@
       "sortid": 30,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "blaze"
+      "registry_name": "blaze",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/BlazeItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/blaze.json"
+        ]
+      }
     },
     {
       "name": "Wire",
@@ -229,7 +402,13 @@
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wire"
+      "registry_name": "wire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/WireItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/wire.json"
+        ]
+      }
     },
     {
       "name": "Chillwater",
@@ -237,7 +416,13 @@
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "chillwater"
+      "registry_name": "chillwater",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/ChillwaterItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/chillwater.json"
+        ]
+      }
     },
     {
       "name": "Sparker",
@@ -245,7 +430,13 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sparker"
+      "registry_name": "sparker",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/sparker.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/SparkerItem.java"
+        ]
+      }
     },
     {
       "name": "Metalburn",
@@ -253,7 +444,13 @@
       "sortid": 34,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "metalburn"
+      "registry_name": "metalburn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/MetalburnItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/metalburn.json"
+        ]
+      }
     },
     {
       "name": "EchoShell",
@@ -261,7 +458,13 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "echo_shell"
+      "registry_name": "echo_shell",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/EchoShellItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/echo_shell.json"
+        ]
+      }
     },
     {
       "name": "AmmoMakingBag",
@@ -269,7 +472,13 @@
       "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ammo_making_bag"
+      "registry_name": "ammo_making_bag",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/world/inventory/AmmoMakingBagMenu.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/gui/AmmoMakingBagScreen.java"
+        ]
+      }
     },
     {
       "name": "AmmoCraftingOnKeyPressed",
@@ -279,6 +488,9 @@
       "locked_code": false,
       "registry_name": "ammo_crafting_on_key_pressed",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/AmmoCraftingOnKeyPressedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -293,7 +505,12 @@
       "sortid": 60,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ammo_crafting"
+      "registry_name": "ammo_crafting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/network/AmmoCraftingMessage.java"
+        ]
+      }
     },
     {
       "name": "AmmoMakingBagOpenOnKeyPressed",
@@ -303,6 +520,9 @@
       "locked_code": false,
       "registry_name": "ammo_making_bag_open_on_key_pressed",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/AmmoMakingBagOpenOnKeyPressedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -333,7 +553,12 @@
       "sortid": 62,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ammo_making_bag_open"
+      "registry_name": "ammo_making_bag_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/network/AmmoMakingBagOpenMessage.java"
+        ]
+      }
     },
     {
       "name": "PrecisionArrow",
@@ -342,6 +567,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "precision_arrow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/precision_arrow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/PrecisionArrowItem.java"
+        ]
+      },
       "path": "~/Precise Bow"
     },
     {
@@ -351,6 +582,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "precision_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/PrecisionBowRenderer.java",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/PrecisionBowEntity.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/precision_bow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/PrecisionBowItem.java"
+        ]
+      },
       "path": "~/Precise Bow"
     },
     {
@@ -360,6 +599,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "hardpoint_arrow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/hardpoint_arrow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/HardpointArrowItem.java"
+        ]
+      },
       "path": "~/Hardpoint Bow"
     },
     {
@@ -369,6 +614,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "hard_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/HardBowEntity.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/hard_bow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/HardBowRenderer.java",
+          "src/main/java/net/mcreator/horizonzeroblock/item/HardBowItem.java"
+        ]
+      },
       "path": "~/Hardpoint Bow"
     },
     {
@@ -377,7 +630,12 @@
       "sortid": 63,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "freeze"
+      "registry_name": "freeze",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/potion/FreezeMobEffect.java"
+        ]
+      }
     },
     {
       "name": "FreezeDamage",
@@ -387,6 +645,9 @@
       "locked_code": false,
       "registry_name": "freeze_damage",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/FreezeDamageProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -403,6 +664,9 @@
       "locked_code": false,
       "registry_name": "freeze_active_tick_condition",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/FreezeActiveTickConditionProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -418,6 +682,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "freeze_arrow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/freeze_arrow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/FreezeArrowItem.java"
+        ]
+      },
       "path": "~/Frost Bow"
     },
     {
@@ -427,6 +697,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "frost_war_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/FrostWarBowRenderer.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/frost_war_bow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/FrostWarBowEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/item/FrostWarBowItem.java"
+        ]
+      },
       "path": "~/Frost Bow"
     },
     {
@@ -437,6 +715,9 @@
       "locked_code": false,
       "registry_name": "frost_war_bow_projectile_hits_living_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/FrostWarBowProjectileHitsLivingEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -453,6 +734,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "shock_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/ShockArrowItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/shock_arrow.json"
+        ]
+      },
       "path": "~/Thundering Bow"
     },
     {
@@ -463,6 +750,9 @@
       "locked_code": false,
       "registry_name": "thunder_war_bow_projectile_hits_living_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/ThunderWarBowProjectileHitsLivingEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -479,6 +769,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "thunder_war_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/ThunderWarBowRenderer.java",
+          "src/main/java/net/mcreator/horizonzeroblock/item/ThunderWarBowItem.java",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/ThunderWarBowEntity.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/thunder_war_bow.json"
+        ]
+      },
       "path": "~/Thundering Bow"
     },
     {
@@ -488,6 +786,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "hunter_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/HunterArrowItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/hunter_arrow.json"
+        ]
+      },
       "path": "~/Hunter Bow"
     },
     {
@@ -497,6 +801,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "hunter_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/HunterBowEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/HunterBowRenderer.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/hunter_bow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/HunterBowItem.java"
+        ]
+      },
       "path": "~/Hunter Bow"
     },
     {
@@ -506,6 +818,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tearblast_arrow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/tearblast_arrow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/TearblastArrowItem.java"
+        ]
+      },
       "path": "~/Tearblast Bow"
     },
     {
@@ -515,6 +833,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tear_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/TearBowItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/tear_bow.json",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/TearBowRenderer.java",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/TearBowEntity.java"
+        ]
+      },
       "path": "~/Tearblast Bow"
     },
     {
@@ -525,6 +851,9 @@
       "locked_code": false,
       "registry_name": "tear_bow_projectile_hits_living_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/TearBowProjectileHitsLivingEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -557,6 +886,9 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "machines",
+      "metadata": {
+        "files": []
+      },
       "path": "~/Machines"
     },
     {
@@ -566,6 +898,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "watcher",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/watcher_spawn_egg.json",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/WatcherRenderer.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/watcher_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/WatcherEntity.java"
+        ]
+      },
       "path": "~/Machines/Recon Class"
     },
     {
@@ -575,6 +915,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "watcher_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/watcher.json"
+        ]
+      },
       "path": "~/Machines/Recon Class"
     },
     {
@@ -585,6 +930,9 @@
       "locked_code": false,
       "registry_name": "watcher_on_entity_tick_update",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/WatcherOnEntityTickUpdateProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -617,6 +965,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "spear",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/SpearItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/spear.json"
+        ]
+      },
       "path": "~/Spear"
     },
     {
@@ -626,6 +980,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/strider_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/StriderEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/StriderRenderer.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/strider_spawn_egg.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Strider"
     },
     {
@@ -635,6 +997,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider_tamed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/StriderTamedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/StriderTamedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Strider"
     },
     {
@@ -645,6 +1013,9 @@
       "locked_code": false,
       "registry_name": "strider_tamed_on_initial_entity_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StriderTamedOnInitialEntitySpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -678,6 +1049,9 @@
       "locked_code": false,
       "registry_name": "strider_right_clicked_on_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StriderRightClickedOnEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -715,6 +1089,9 @@
       "locked_code": false,
       "registry_name": "ammo_making_bag_this_gui_is_opened",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/AmmoMakingBagThisGUIIsOpenedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -730,6 +1107,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/stalker_spawn_egg.json",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/StalkerRenderer.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/stalker_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/StalkerEntity.java"
+        ]
+      },
       "path": "~/Machines/Combat Class/Stalker"
     },
     {
@@ -740,6 +1125,9 @@
       "locked_code": false,
       "registry_name": "stalker_on_entity_tick_update",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StalkerOnEntityTickUpdateProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -773,6 +1161,9 @@
       "locked_code": false,
       "registry_name": "stalker_right_clicked_on_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StalkerRightClickedOnEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -809,6 +1200,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_tamed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/StalkerTamedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/StalkerTamedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Combat Class/Stalker"
     },
     {
@@ -819,6 +1216,9 @@
       "locked_code": false,
       "registry_name": "stalker_tamed_right_clicked_on_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StalkerTamedRightClickedOnEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -840,6 +1240,9 @@
       "locked_code": false,
       "registry_name": "stalker_tamed_on_initial_entity_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StalkerTamedOnInitialEntitySpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -872,6 +1275,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "stalker_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/stalker.json"
+        ]
+      },
       "path": "~/Machines/Combat Class/Stalker"
     },
     {
@@ -881,6 +1289,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/SnapmawEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/SnapmawRenderer.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/snapmaw_spawn_egg.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/snapmaw_biome_modifier.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Snapmaw"
     },
     {
@@ -890,6 +1306,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw_tamed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/SnapmawTamedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/SnapmawTamedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Snapmaw"
     },
     {
@@ -900,6 +1322,9 @@
       "locked_code": false,
       "registry_name": "snapmaw_right_clicked_on_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/SnapmawRightClickedOnEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -937,6 +1362,9 @@
       "locked_code": false,
       "registry_name": "snapmaw_tamed_on_initial_entity_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/SnapmawTamedOnInitialEntitySpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -969,6 +1397,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "snapmaw_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/snapmaw.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Snapmaw"
     },
     {
@@ -978,6 +1411,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/TallneckEntity.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/tallneck_biome_modifier.json",
+          "src/main/resources/assets/horizon_zero_block/models/item/tallneck_spawn_egg.json",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/TallneckRenderer.java"
+        ]
+      },
       "path": "~/Machines/Communication Class"
     },
     {
@@ -988,6 +1429,9 @@
       "locked_code": false,
       "registry_name": "tallneck_on_initial_entity_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/TallneckOnInitialEntitySpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -1017,6 +1461,9 @@
       "locked_code": false,
       "registry_name": "tallneck_entity_dies",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/TallneckEntityDiesProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "world",
@@ -1035,6 +1482,9 @@
       "registry_name": "tallneck_natural_entity_spawning_condition",
       "metadata": {
         "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/TallneckNaturalEntitySpawningConditionProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "world",
@@ -1051,6 +1501,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "tallneck_tamed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/TallneckTamedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/TallneckTamedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Communication Class"
     },
     {
@@ -1060,6 +1516,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "machines_group",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/entity_types/machines_group.json"
+        ]
+      },
       "path": "~/Machines"
     },
     {
@@ -1069,6 +1530,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "machines_tamed",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/entity_types/machines_tamed.json"
+        ]
+      },
       "path": "~/Machines"
     },
     {
@@ -1079,6 +1545,9 @@
       "locked_code": false,
       "registry_name": "tallneck_tamed_on_entity_tick_update",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/TallneckTamedOnEntityTickUpdateProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -1108,6 +1577,9 @@
       "locked_code": false,
       "registry_name": "tallneck_right_clicked_on_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/TallneckRightClickedOnEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1144,6 +1616,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/GlinthawkRenderer.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/glinthawk_spawn_egg.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/glinthawk_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/GlinthawkEntity.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Glinthawk"
     },
     {
@@ -1153,6 +1633,13 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk_tamed",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/glinthawk_tamed_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/GlinthawkTamedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/GlinthawkTamedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Glinthawk"
     },
     {
@@ -1163,6 +1650,9 @@
       "locked_code": false,
       "registry_name": "glinthawk_right_clicked_on_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/GlinthawkRightClickedOnEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1200,6 +1690,9 @@
       "locked_code": false,
       "registry_name": "glinthawk_tamed_on_initial_entity_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/GlinthawkTamedOnInitialEntitySpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1231,7 +1724,10 @@
       "sortid": 92,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "custom_bows"
+      "registry_name": "custom_bows",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "Blazefuel",
@@ -1239,7 +1735,10 @@
       "sortid": 93,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "blazefuel"
+      "registry_name": "blazefuel",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "Ridgewoodcomposter",
@@ -1247,7 +1746,10 @@
       "sortid": 94,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ridgewoodcomposter"
+      "registry_name": "ridgewoodcomposter",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "Metalburner",
@@ -1256,6 +1758,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "metalburner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/models/item/metalburner.json",
+          "src/main/java/net/mcreator/horizonzeroblock/item/MetalburnerItem.java"
+        ]
+      },
       "path": "~/Non Oficial"
     },
     {
@@ -1265,6 +1773,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "metalburnerrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/recipes/metalburnerrecipe.json"
+        ]
+      },
       "path": "~/Non Oficial"
     },
     {
@@ -1274,6 +1787,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "chariot_line",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/entity_types/chariot_line.json"
+        ]
+      },
       "path": "~/Machines/Chariot"
     },
     {
@@ -1283,6 +1801,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "glinthawk_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/glinthawk.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Glinthawk"
     },
     {
@@ -1292,6 +1815,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_strider",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/StriderCorruptedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/StriderCorruptedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Strider"
     },
     {
@@ -1301,6 +1830,13 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_burn_launcher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/MetalBurnLauncherEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/item/MetalBurnLauncherItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/metal_burn_launcher.json"
+        ]
+      },
       "path": "~/Machines/Chariot"
     },
     {
@@ -1310,6 +1846,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corruptor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/CorruptorRenderer.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/corruptor_spawn_egg.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/corruptor_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/CorruptorEntity.java"
+        ]
+      },
       "path": "~/Machines/Chariot"
     },
     {
@@ -1320,6 +1864,9 @@
       "locked_code": false,
       "registry_name": "strider_entity_is_hurt",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StriderEntityIsHurtProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1356,6 +1903,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_snapmaw",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/SnapmawCorruptedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/SnapmawCorruptedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Snapmaw"
     },
     {
@@ -1366,6 +1919,9 @@
       "locked_code": false,
       "registry_name": "snapmaw_entity_is_hurt",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/SnapmawEntityIsHurtProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1402,6 +1958,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "strider_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/strider.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Strider"
     },
     {
@@ -1411,6 +1972,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_strider_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/corrupted_strider.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Strider"
     },
     {
@@ -1420,6 +1986,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_snapmaw_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/corrupted_snapmaw.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Snapmaw"
     },
     {
@@ -1430,6 +2001,9 @@
       "locked_code": false,
       "registry_name": "corruptor_entity_dies",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/CorruptorEntityDiesProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "sourceentity",
@@ -1447,6 +2021,9 @@
       "locked_code": false,
       "registry_name": "master_override",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/MasterOverrideProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1461,7 +2038,12 @@
       "sortid": 104,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "master_overrides"
+      "registry_name": "master_overrides",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/command/MasterOverridesCommand.java"
+        ]
+      }
     },
     {
       "name": "CorruptedGlinthawk",
@@ -1470,6 +2052,13 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_glinthawk",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/corrupted_glinthawk_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/CorruptedGlinthawkEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/CorruptedGlinthawkRenderer.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Glinthawk"
     },
     {
@@ -1480,6 +2069,9 @@
       "locked_code": false,
       "registry_name": "glinthawk_entity_is_hurt",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/GlinthawkEntityIsHurtProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1516,6 +2108,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_glinthawk_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/corrupted_glinthawk.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Glinthawk"
     },
     {
@@ -1525,6 +2122,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_stalker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/CorruptedStalkerRenderer.java",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/CorruptedStalkerEntity.java"
+        ]
+      },
       "path": "~/Machines/Combat Class/Stalker"
     },
     {
@@ -1535,6 +2138,9 @@
       "locked_code": false,
       "registry_name": "stalker_entity_is_hurt",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/StalkerEntityIsHurtProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1571,6 +2177,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_stalker_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/corrupted_stalker.json"
+        ]
+      },
       "path": "~/Machines/Combat Class/Stalker"
     },
     {
@@ -1580,6 +2191,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corruptor_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/corruptor.json"
+        ]
+      },
       "path": "~/Machines/Chariot"
     },
     {
@@ -1589,6 +2205,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_watcher",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/CorruptedWatcherRenderer.java",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/CorruptedWatcherEntity.java"
+        ]
+      },
       "path": "~/Machines/Recon Class"
     },
     {
@@ -1599,6 +2221,9 @@
       "locked_code": false,
       "registry_name": "watcher_entity_is_hurt",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/WatcherEntityIsHurtProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1635,6 +2260,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_watcher_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/corrupted_watcher.json"
+        ]
+      },
       "path": "~/Machines/Recon Class"
     },
     {
@@ -1646,6 +2276,9 @@
       "registry_name": "scrapper_particle_spawning_condition",
       "metadata": {
         "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/ScrapperParticleSpawningConditionProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -1674,6 +2307,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "spark",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/particles/spark.json",
+          "src/main/java/net/mcreator/horizonzeroblock/client/particle/SparkParticle.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Scrapper"
     },
     {
@@ -1683,6 +2322,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "all_types_of_machines_group",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/entity_types/all_types_of_machines_group.json"
+        ]
+      },
       "path": "~/Machines"
     },
     {
@@ -1692,6 +2336,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "scrap_pile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/block/ScrapPileBlock.java",
+          "src/main/resources/assets/horizon_zero_block/blockstates/scrap_pile.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/scrap_pile.json",
+          "src/main/resources/assets/horizon_zero_block/models/item/scrap_pile.json"
+        ]
+      },
       "path": "~/Machines"
     },
     {
@@ -1702,6 +2354,9 @@
       "locked_code": false,
       "registry_name": "create_scrap_pile",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/CreateScrapPileProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1735,6 +2390,9 @@
       "locked_code": false,
       "registry_name": "scrapper_on_entity_tick_update",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/ScrapperOnEntityTickUpdateProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1767,6 +2425,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "scrapper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/ScrapperEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/ScrapperRenderer.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/scrapper_spawn_egg.json",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/scrapper_biome_modifier.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Scrapper"
     },
     {
@@ -1777,6 +2443,9 @@
       "locked_code": false,
       "registry_name": "tall_folliage_update_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/TallFolliageUpdateTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1791,7 +2460,18 @@
       "sortid": 120,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tall_folliage"
+      "registry_name": "tall_folliage",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/horizon_zero_block/blockstates/tall_folliage.json",
+          "src/main/java/net/mcreator/horizonzeroblock/world/features/plants/TallFolliageFeature.java",
+          "src/main/resources/data/horizon_zero_block/forge/biome_modifier/tall_folliage_biome_modifier.json",
+          "src/main/java/net/mcreator/horizonzeroblock/block/TallFolliageBlock.java",
+          "src/main/resources/assets/horizon_zero_block/models/block/tall_folliage_bottom.json",
+          "src/main/resources/assets/horizon_zero_block/models/block/tall_folliage.json",
+          "src/main/resources/assets/horizon_zero_block/models/item/tall_folliage.json"
+        ]
+      }
     },
     {
       "name": "ScrapperTamed",
@@ -1800,6 +2480,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "scrapper_tamed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/ScrapperTamedEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/ScrapperTamedRenderer.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Scrapper"
     },
     {
@@ -1810,6 +2496,9 @@
       "locked_code": false,
       "registry_name": "scrapper_tamed_on_initial_entity_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/ScrapperTamedOnInitialEntitySpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1843,6 +2532,9 @@
       "locked_code": false,
       "registry_name": "scrapper_right_clicked_on_entity",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/ScrapperRightClickedOnEntityProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1879,6 +2571,12 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_scrapper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/client/renderer/CorruptedScrapperRenderer.java",
+          "src/main/java/net/mcreator/horizonzeroblock/entity/CorruptedScrapperEntity.java"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Scrapper"
     },
     {
@@ -1889,6 +2587,9 @@
       "locked_code": false,
       "registry_name": "scrapper_entity_is_hurt",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/ScrapperEntityIsHurtProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1925,6 +2626,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "scrapper_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/scrapper_loot.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Scrapper"
     },
     {
@@ -1934,6 +2640,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_scrapper_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/entities/corrupted_scrapper.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Scrapper"
     },
     {
@@ -1943,6 +2654,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "scrap_pile_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/loot_tables/blocks/scrap_pile.json"
+        ]
+      },
       "path": "~/Machines"
     },
     {
@@ -1956,7 +2672,11 @@
         "eh": false,
         "el": false,
         "eb": false,
-        "ec": true
+        "ec": true,
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/item/RepulsionArmorItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/repulsion_armor_chestplate.json"
+        ]
       },
       "path": "~/Non Oficial"
     },
@@ -1967,6 +2687,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "repulsion_armor_helmet_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/recipes/repulsion_armor_helmet_recipe.json"
+        ]
+      },
       "path": "~/Non Oficial"
     },
     {
@@ -1976,6 +2701,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "repulsion_armor_body_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/recipes/repulsion_armor_body_recipe.json"
+        ]
+      },
       "path": "~/Non Oficial"
     },
     {
@@ -1985,6 +2715,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "repulsion_armor_leggings_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/recipes/repulsion_armor_leggings_recipe.json"
+        ]
+      },
       "path": "~/Non Oficial"
     },
     {
@@ -1994,6 +2729,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "repulsion_armor_boots_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/horizon_zero_block/recipes/repulsion_armor_boots_recipe.json"
+        ]
+      },
       "path": "~/Non Oficial"
     },
     {
@@ -2004,6 +2744,9 @@
       "locked_code": false,
       "registry_name": "repulsion",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/procedures/RepulsionProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -2040,6 +2783,13 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "frost",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/horizonzeroblock/entity/FrostEntity.java",
+          "src/main/java/net/mcreator/horizonzeroblock/item/FrostItem.java",
+          "src/main/resources/assets/horizon_zero_block/models/item/frost.json"
+        ]
+      },
       "path": "~/Machines/Acquisition Class/Glinthawk"
     }
   ],
@@ -2194,13 +2944,12 @@
       "entity.horizon_zero_block.stalker": "Stalker",
       "item.horizon_zero_block.snapmaw_spawn_egg": "Snapmaw Spawn Egg",
       "entity.horizon_zero_block.corrupted_watcher": "Corrupted Watcher",
-      "entity.horizon_zero_block.strider_tamed": "Strider",
-      "entity.horizon_zero_block.watcher": "Watcher",
       "item.horizon_zero_block.precision_arrow": "Precision Arrow",
       "block.horizon_zero_block.medicinal_valeys_brush": "Medicinal Valey\u0027s Brush",
+      "entity.horizon_zero_block.watcher": "Watcher",
+      "entity.horizon_zero_block.strider_tamed": "Strider",
       "block.horizon_zero_block.medicinal_wild_ember": "Medicinal Wild Ember",
       "itemGroup.tabmachines": "Machines",
-      "item.horizon_zero_block.corrupted_scrapper_spawn_egg": "Scrapper Spawn Egg",
       "entity.horizon_zero_block.corrupted_snapmaw": "Corrupted Snapmaw",
       "key.horizon_zero_block.ammo_making_bag_open": "Ammo Making Bag Open",
       "block.horizon_zero_block.scrap_pile": "Scrap Pile",
@@ -2211,53 +2960,49 @@
       "entity.horizon_zero_block.corrupted_scrapper": "Scrapper",
       "item.horizon_zero_block.frost": "Frost",
       "block.horizon_zero_block.medicinal_grey_omen": "Medicinal Grey Omen",
-      "item.horizon_zero_block.stalker_tamed_spawn_egg": "Stalker Spawn Egg",
+      "gui.horizon_zero_block.ammo_making_bag.label_metalburn": "MetalBurn",
       "item.horizon_zero_block.scrapper_spawn_egg": "Scrapper Spawn Egg",
-      "item.horizon_zero_block.corrupted_stalker_spawn_egg": "Stalker Spawn Egg",
       "item.horizon_zero_block.tear_bow": "Sharpshot Bow (Tearblast)",
-      "item.horizon_zero_block.corrupted_glinthawk_spawn_egg": "Corrupted Glinthawk Spawn Egg",
+      "gui.horizon_zero_block.ammo_making_bag.label_blaze": "Blaze",
       "block.horizon_zero_block.ridge_wood_brush": "Ridge Wood Brush",
       "block.horizon_zero_block.medicinal_bright_omen": "Medicinal Bright Omen",
-      "effect.horizon_zero_block.freeze": "Freeze",
       "item.horizon_zero_block.repulsion_armor_chestplate": "Repulsion Chestplate",
-      "item.horizon_zero_block.scrapper_tamed_spawn_egg": "Scrapper Spawn Egg",
+      "gui.horizon_zero_block.ammo_making_bag.label_echoshell": "Echo-Shell",
+      "effect.horizon_zero_block.freeze": "Freeze",
+      "gui.horizon_zero_block.ammo_making_bag.label_resource_bag": "RESOURCE BAG",
       "item.horizon_zero_block.ridge_wood": "Ridge Wood",
       "block.horizon_zero_block.medicinal_salvebrush": "Medicinal Salvebrush",
       "item.horizon_zero_block.metalburn": "Metalburn",
-      "item.horizon_zero_block.strider_tamed_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.blaze": "Blaze",
       "item.horizon_zero_block.watcher_spawn_egg": "Watcher Spawn Egg",
-      "item.horizon_zero_block.corrupted_strider_spawn_egg": "Corrupted Strider Spawn Egg",
-      "item.horizon_zero_block.corrupted_snapmaw_spawn_egg": "Corrupted Snapmaw Spawn Egg",
-      "item.horizon_zero_block.tearblast_arrow": "Tearblast Arrow",
+      "gui.horizon_zero_block.ammo_making_bag.label_wire": "Wire",
       "item.horizon_zero_block.wire": "Wire",
-      "item.horizon_zero_block.spear": "Spear",
+      "item.horizon_zero_block.tearblast_arrow": "Tearblast Arrow",
       "subtitles.soundblast": "tearblast arrow explosion sound",
-      "item.horizon_zero_block.repulsion_armor_leggings": "Repulsion Leggings",
+      "item.horizon_zero_block.spear": "Spear",
       "item.horizon_zero_block.stalker_spawn_egg": "Stalker Spawn Egg",
-      "item.horizon_zero_block.tallneck_tamed_spawn_egg": "Tallneck Spawn Egg",
+      "gui.horizon_zero_block.ammo_making_bag.label_ridgewood": "Ridge-Wood",
       "item.horizon_zero_block.fire_arrow": "Fire Arrow",
       "block.horizon_zero_block.medicinal_ochrebloom": "Medicinal Ochrebloom",
       "item.horizon_zero_block.thunder_war_bow": "War Bow (Shock)",
       "item.horizon_zero_block.glinthawk_spawn_egg": "Glinthawk Spawn Egg",
       "entity.horizon_zero_block.corrupted_strider": "Corrupted Strider",
-      "item.horizon_zero_block.glinthawk_tamed_spawn_egg": "Glinthawk Spawn Egg",
       "item.horizon_zero_block.strider_spawn_egg": "Strider Spawn Egg",
       "item.horizon_zero_block.echo_shell": "Echo Shell",
       "item.horizon_zero_block.fire_hunter_bow": "Hunter Bow (fire)",
       "item.horizon_zero_block.metal_shards": "Metal Shards",
-      "item.horizon_zero_block.repulsion_armor_boots": "Repulsion Boots",
+      "gui.horizon_zero_block.ammo_making_bag.label_metalshards": "Metal-Shards",
+      "gui.horizon_zero_block.ammo_making_bag.label_chillwater": "Chillwater",
       "item.horizon_zero_block.chillwater": "Chillwater",
       "entity.horizon_zero_block.corruptor": "Corruptor",
+      "gui.horizon_zero_block.ammo_making_bag.label_sparker": "Sparker",
       "entity.horizon_zero_block.tallneck_tamed": "Tallneck",
-      "item.horizon_zero_block.repulsion_armor_helmet": "Repulsion Helmet",
       "item.horizon_zero_block.freeze_arrow": "Freeze Arrow",
-      "item.horizon_zero_block.sparker": "Sparker",
       "key.horizon_zero_block.ammo_crafting": "Ammo Crafting",
       "entity.horizon_zero_block.tallneck": "Tallneck",
-      "item.horizon_zero_block.shock_arrow": "Shock Arrow",
+      "item.horizon_zero_block.sparker": "Sparker",
       "item.horizon_zero_block.metalburner": "Metalburner",
-      "item.horizon_zero_block.corrupted_watcher_spawn_egg": "Corrupted Watcher Spawn Egg",
+      "item.horizon_zero_block.shock_arrow": "Shock Arrow",
       "block.horizon_zero_block.medicinal_fresh_salvebrush": "Medicinal Fresh Salvebrush",
       "entity.horizon_zero_block.strider": "Strider",
       "block.horizon_zero_block.tall_folliage": "FolliageSeeds",
@@ -2269,17 +3014,24 @@
       "item.horizon_zero_block.frost_war_bow": "War Bow (Freeze)",
       "block.horizon_zero_block.medicinal_thaw_omen": "Medicinal Thaw Omen",
       "itemGroup.tabranged_items": "Ranged Items",
-      "item.horizon_zero_block.snapmaw_tamed_spawn_egg": "Snapmaw Spawn Egg",
-      "item.horizon_zero_block.hunter_arrow": "Hunter Arrow",
       "block.horizon_zero_block.medicinal_skybrush": "Medicinal Skybrush",
-      "block.horizon_zero_block.medicinal_waterweed": "Medicinal Waterweed",
+      "item.horizon_zero_block.hunter_arrow": "Hunter Arrow",
       "entity.horizon_zero_block.glinthawk": "Glinthawk",
+      "block.horizon_zero_block.medicinal_waterweed": "Medicinal Waterweed",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn2": "\u003cVAR:N2\u003e",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn3": "\u003cVAR:N3\u003e",
       "item.horizon_zero_block.metal_burn_launcher": "Metalburn Launcher",
-      "item.horizon_zero_block.precision_bow": "Sharpshot Bow (precision)",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn1": "\u003cVAR:N1\u003e",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn6": "\u003cVAR:N6\u003e",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn7": "\u003cVAR:N7\u003e",
       "item.horizon_zero_block.hardpoint_arrow": "Hardpoint Arrow",
+      "item.horizon_zero_block.precision_bow": "Sharpshot Bow (precision)",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn4": "\u003cVAR:N4\u003e",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn5": "\u003cVAR:N5\u003e",
       "item.horizon_zero_block.tallneck_spawn_egg": "Tallneck Spawn Egg",
       "item.horizon_zero_block.corruptor_spawn_egg": "Corruptor Spawn Egg",
-      "item.horizon_zero_block.hard_bow": "Shadow Hunter Bow (Hard)"
+      "item.horizon_zero_block.hard_bow": "Shadow Hunter Bow (Hard)",
+      "gui.horizon_zero_block.ammo_making_bag.label_varn8": "\u003cVAR:N8\u003e"
     }
   },
   "foldersRoot": {
@@ -2401,5 +3153,5 @@
     "modElementsPackage": "net.mcreator.horizonzeroblock",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200341417
+  "mcreatorVersion": 202300326610
 }

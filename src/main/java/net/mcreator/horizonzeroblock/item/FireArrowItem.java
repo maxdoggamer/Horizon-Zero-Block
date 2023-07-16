@@ -1,14 +1,11 @@
 
 package net.mcreator.horizonzeroblock.item;
 
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModTabs;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class FireArrowItem extends Item {
+
 	public FireArrowItem() {
 		super(new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_RANGED_ITEMS).stacksTo(20).rarity(Rarity.COMMON));
 	}
@@ -17,4 +14,5 @@ public class FireArrowItem extends Item {
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.EAT;
 	}
+
 }

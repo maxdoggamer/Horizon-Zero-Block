@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 43,
   "_type": "livingentity",
   "definition": {
     "mobName": "Stalker",
@@ -50,6 +50,7 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.30000000000000004,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.5,
     "trackingRange": 100,
     "followRange": 32,
@@ -92,13 +93,6 @@
     "stepSound": {
       "value": ""
     },
-    "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
     "onRightClickedOn": {
       "name": "StalkerTamedRightClickedOnEntity"
     },
@@ -116,6 +110,8 @@
       "value": ""
     },
     "rangedItemType": "ThunderWarBow",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,

@@ -13,7 +13,6 @@ import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 public class HorizonZeroBlockModPaintings {
-	public static final DeferredRegister<PaintingVariant> REGISTRY = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS,
-			HorizonZeroBlockMod.MODID);
+	public static final DeferredRegister<PaintingVariant> REGISTRY = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, HorizonZeroBlockMod.MODID);
 	public static final RegistryObject<PaintingVariant> HORIZON_PAINTING = REGISTRY.register("horizon_painting", () -> new PaintingVariant(128, 64));
 }

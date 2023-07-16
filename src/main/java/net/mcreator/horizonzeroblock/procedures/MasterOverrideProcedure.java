@@ -1,23 +1,18 @@
 package net.mcreator.horizonzeroblock.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.horizonzeroblock.network.HorizonZeroBlockModVariables;
+import javax.annotation.Nullable;
 
 public class MasterOverrideProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).PSI_overrides == false
-				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).XI_overrides == false
-				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).RHO_overrides == false
-				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).ZETA_overrides == false
-				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new HorizonZeroBlockModVariables.PlayerVariables())).SIGMA_overrides == false) {
+		if ((entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HorizonZeroBlockModVariables.PlayerVariables())).PSI_overrides == false
+				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HorizonZeroBlockModVariables.PlayerVariables())).XI_overrides == false
+				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HorizonZeroBlockModVariables.PlayerVariables())).RHO_overrides == false
+				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HorizonZeroBlockModVariables.PlayerVariables())).ZETA_overrides == false
+				&& (entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new HorizonZeroBlockModVariables.PlayerVariables())).SIGMA_overrides == false) {
 			{
 				boolean _setval = true;
 				entity.getCapability(HorizonZeroBlockModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

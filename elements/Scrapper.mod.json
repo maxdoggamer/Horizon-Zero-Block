@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 43,
   "_type": "livingentity",
   "definition": {
     "mobName": "Scrapper",
@@ -50,6 +50,7 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
+    "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
@@ -92,13 +93,6 @@
     "stepSound": {
       "value": ""
     },
-    "spawnParticles": true,
-    "particleToSpawn": {
-      "value": "CUSTOM:Spark"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
     "whenMobIsHurt": {
       "name": "ScrapperEntityIsHurt"
     },
@@ -119,6 +113,8 @@
       "value": ""
     },
     "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 130,

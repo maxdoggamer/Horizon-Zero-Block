@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 43,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -95,6 +95,7 @@
         "value": "Blocks.STONE#3"
       }
     ],
+    "isBonemealable": false,
     "frequencyOnChunks": 5,
     "spawnWorldTypes": [
       "Surface"

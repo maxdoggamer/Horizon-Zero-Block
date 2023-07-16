@@ -48,28 +48,17 @@ import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 public class HorizonZeroBlockModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, HorizonZeroBlockMod.MODID);
 	public static final RegistryObject<Item> MEDICINAL_BERRIES = REGISTRY.register("medicinal_berries", () -> new MedicinalBerriesItem());
-	public static final RegistryObject<Item> MEDICINAL_BRIGHT_OMEN = block(HorizonZeroBlockModBlocks.MEDICINAL_BRIGHT_OMEN,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_FRESH_SALVEBRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_FRESH_SALVEBRUSH,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_GREY_OMEN = block(HorizonZeroBlockModBlocks.MEDICINAL_GREY_OMEN,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_HINTERGOLD = block(HorizonZeroBlockModBlocks.MEDICINAL_HINTERGOLD,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_OCHREBLOOM = block(HorizonZeroBlockModBlocks.MEDICINAL_OCHREBLOOM,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_SALVEBRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_SALVEBRUSH,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_SKYBRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_SKYBRUSH,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_THAW_OMEN = block(HorizonZeroBlockModBlocks.MEDICINAL_THAW_OMEN,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_VALEYS_BRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_VALEYS_BRUSH,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_WATERWEED = block(HorizonZeroBlockModBlocks.MEDICINAL_WATERWEED,
-			CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> MEDICINAL_WILD_EMBER = block(HorizonZeroBlockModBlocks.MEDICINAL_WILD_EMBER,
-			CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_BRIGHT_OMEN = block(HorizonZeroBlockModBlocks.MEDICINAL_BRIGHT_OMEN, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_FRESH_SALVEBRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_FRESH_SALVEBRUSH, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_GREY_OMEN = block(HorizonZeroBlockModBlocks.MEDICINAL_GREY_OMEN, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_HINTERGOLD = block(HorizonZeroBlockModBlocks.MEDICINAL_HINTERGOLD, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_OCHREBLOOM = block(HorizonZeroBlockModBlocks.MEDICINAL_OCHREBLOOM, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_SALVEBRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_SALVEBRUSH, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_SKYBRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_SKYBRUSH, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_THAW_OMEN = block(HorizonZeroBlockModBlocks.MEDICINAL_THAW_OMEN, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_VALEYS_BRUSH = block(HorizonZeroBlockModBlocks.MEDICINAL_VALEYS_BRUSH, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_WATERWEED = block(HorizonZeroBlockModBlocks.MEDICINAL_WATERWEED, CreativeModeTab.TAB_DECORATIONS);
+	public static final RegistryObject<Item> MEDICINAL_WILD_EMBER = block(HorizonZeroBlockModBlocks.MEDICINAL_WILD_EMBER, CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Item> RIDGE_WOOD_BRUSH = block(HorizonZeroBlockModBlocks.RIDGE_WOOD_BRUSH, CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Item> FIRE_HUNTER_BOW = REGISTRY.register("fire_hunter_bow", () -> new FireHunterBowItem());
 	public static final RegistryObject<Item> FIRE_ARROW = REGISTRY.register("fire_arrow", () -> new FireArrowItem());
@@ -93,37 +82,28 @@ public class HorizonZeroBlockModItems {
 	public static final RegistryObject<Item> SPARKER = REGISTRY.register("sparker", () -> new SparkerItem());
 	public static final RegistryObject<Item> METALBURN = REGISTRY.register("metalburn", () -> new MetalburnItem());
 	public static final RegistryObject<Item> ECHO_SHELL = REGISTRY.register("echo_shell", () -> new EchoShellItem());
-	public static final RegistryObject<Item> WATCHER = REGISTRY.register("watcher_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.WATCHER, -16763905, -10066330,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
-	public static final RegistryObject<Item> STRIDER = REGISTRY.register("strider_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.STRIDER, -13369345, -13369600,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
-	public static final RegistryObject<Item> STALKER = REGISTRY.register("stalker_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.STALKER, -6710887, -3355444,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
-	public static final RegistryObject<Item> SNAPMAW = REGISTRY.register("snapmaw_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.SNAPMAW, -39424, -16777012,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
-	public static final RegistryObject<Item> TALLNECK = REGISTRY.register("tallneck_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.TALLNECK, -6710887, -39424,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
-	public static final RegistryObject<Item> GLINTHAWK = REGISTRY.register("glinthawk_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.GLINTHAWK, -16777012, -16777216,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
-	public static final RegistryObject<Item> CORRUPTOR = REGISTRY.register("corruptor_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.CORRUPTOR, -65536, -3407872,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> WATCHER_SPAWN_EGG = REGISTRY.register("watcher_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.WATCHER, -16763905, -10066330, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> STRIDER_SPAWN_EGG = REGISTRY.register("strider_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.STRIDER, -13369345, -13369600, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> STALKER_SPAWN_EGG = REGISTRY.register("stalker_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.STALKER, -6710887, -3355444, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> SNAPMAW_SPAWN_EGG = REGISTRY.register("snapmaw_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.SNAPMAW, -39424, -16777012, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> TALLNECK_SPAWN_EGG = REGISTRY.register("tallneck_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.TALLNECK, -6710887, -39424, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> GLINTHAWK_SPAWN_EGG = REGISTRY.register("glinthawk_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.GLINTHAWK, -16777012, -16777216, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> CORRUPTOR_SPAWN_EGG = REGISTRY.register("corruptor_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.CORRUPTOR, -65536, -3407872, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
 	public static final RegistryObject<Item> SPEAR = REGISTRY.register("spear", () -> new SpearItem());
 	public static final RegistryObject<Item> METAL_BURN_LAUNCHER = REGISTRY.register("metal_burn_launcher", () -> new MetalBurnLauncherItem());
 	public static final RegistryObject<Item> METALBURNER = REGISTRY.register("metalburner", () -> new MetalburnerItem());
 	public static final RegistryObject<Item> SCRAP_PILE = block(HorizonZeroBlockModBlocks.SCRAP_PILE, CreativeModeTab.TAB_MISC);
-	public static final RegistryObject<Item> SCRAPPER = REGISTRY.register("scrapper_spawn_egg",
-			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.SCRAPPER, -6710887, -3381760,
-					new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
+	public static final RegistryObject<Item> SCRAPPER_SPAWN_EGG = REGISTRY.register("scrapper_spawn_egg",
+			() -> new ForgeSpawnEggItem(HorizonZeroBlockModEntities.SCRAPPER, -6710887, -3381760, new Item.Properties().tab(HorizonZeroBlockModTabs.TAB_MACHINES)));
 	public static final RegistryObject<Item> TALL_FOLLIAGE = doubleBlock(HorizonZeroBlockModBlocks.TALL_FOLLIAGE, CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> REPULSION_ARMOR_CHESTPLATE = REGISTRY.register("repulsion_armor_chestplate",
-			() -> new RepulsionArmorItem.Chestplate());
+	public static final RegistryObject<Item> REPULSION_ARMOR_CHESTPLATE = REGISTRY.register("repulsion_armor_chestplate", () -> new RepulsionArmorItem.Chestplate());
 	public static final RegistryObject<Item> FROST = REGISTRY.register("frost", () -> new FrostItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {

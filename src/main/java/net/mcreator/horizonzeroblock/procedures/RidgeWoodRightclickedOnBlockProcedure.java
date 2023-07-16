@@ -1,9 +1,8 @@
 package net.mcreator.horizonzeroblock.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModBlocks;
+import javax.annotation.Nullable;
 
 public class RidgeWoodRightclickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {

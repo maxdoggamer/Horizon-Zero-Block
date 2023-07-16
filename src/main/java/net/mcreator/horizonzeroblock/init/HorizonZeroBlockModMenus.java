@@ -16,6 +16,5 @@ import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 public class HorizonZeroBlockModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, HorizonZeroBlockMod.MODID);
-	public static final RegistryObject<MenuType<AmmoMakingBagMenu>> AMMO_MAKING_BAG = REGISTRY.register("ammo_making_bag",
-			() -> IForgeMenuType.create(AmmoMakingBagMenu::new));
+	public static final RegistryObject<MenuType<AmmoMakingBagMenu>> AMMO_MAKING_BAG = REGISTRY.register("ammo_making_bag", () -> IForgeMenuType.create(AmmoMakingBagMenu::new));
 }

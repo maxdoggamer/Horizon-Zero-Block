@@ -15,6 +15,5 @@ import net.mcreator.horizonzeroblock.HorizonZeroBlockMod;
 
 public class HorizonZeroBlockModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, HorizonZeroBlockMod.MODID);
-	public static final RegistryObject<SoundEvent> SOUNDBLAST = REGISTRY.register("soundblast",
-			() -> new SoundEvent(new ResourceLocation("horizon_zero_block", "soundblast")));
+	public static final RegistryObject<SoundEvent> SOUNDBLAST = REGISTRY.register("soundblast", () -> new SoundEvent(new ResourceLocation("horizon_zero_block", "soundblast")));
 }

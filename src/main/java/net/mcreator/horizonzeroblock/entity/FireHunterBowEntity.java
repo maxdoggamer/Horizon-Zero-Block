@@ -1,28 +1,6 @@
 
 package net.mcreator.horizonzeroblock.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.ItemSupplier;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.util.RandomSource;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.Packet;
-
-import net.mcreator.horizonzeroblock.procedures.FireHunterBowProjectileHitsLivingEntityProcedure;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModItems;
-import net.mcreator.horizonzeroblock.init.HorizonZeroBlockModEntities;
-
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class FireHunterBowEntity extends AbstractArrow implements ItemSupplier {
 	public FireHunterBowEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -85,9 +63,7 @@ public class FireHunterBowEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setKnockback(knockback);
 		entityarrow.setSecondsOnFire(100);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
-				1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
@@ -103,9 +79,7 @@ public class FireHunterBowEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setCritArrow(true);
 		entityarrow.setSecondsOnFire(100);
 		entity.level.addFreshEntity(entityarrow);
-		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-				ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1,
-				1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }
